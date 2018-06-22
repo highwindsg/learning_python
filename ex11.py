@@ -1,0 +1,11 @@
+#print("How old are you?", end=' ')
+#age = input()
+age = input("How old are you?: ")
+#print("How tall are you (meters)?", end=' ')
+#height = input()
+height = input("How tall are you? (meters): ")
+#print("How much do you weigh (kg)?", end=' ')
+#weight = input()
+weight = input("How heavy are you? (kg): ")
+
+print(f"So, you're {age} years old, {height}m tall and {weight}kg.")
