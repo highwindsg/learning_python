@@ -3,22 +3,22 @@ def break_words(stuff):
     words = stuff.split(' ')
     return words
 
-def sort_words(words):
+def sort_words(A_to_Z):
     """Sorts the words."""
-    return sorted(words)
+    return sorted(A_to_Z)
 
-def print_first_word(words):
+def print_first_word(first_word):
     """Prints the first word after popping it off."""
-    word = words.pop(0)
+    word = first_word.pop(0)
     print(word)
 
-def print_last_word(words):
+def print_last_word(last_word):
     """Prints the last word after popping it off."""
-    word = words.pop(-1)
+    word = last_word.pop(-1)
     print(word)
 
 def sort_sentence(sentence):
-    """Tales in a full sentence and retuens the sorted words."""
+    """Takes in a full sentence and returns the sorted words."""
     words = break_words(sentence)
     return sort_words(words)
 
@@ -33,3 +33,4 @@ def print_first_and_last_sorted(sentence):
     words = sort_sentence(sentence)
     print_first_word(words)
     print_last_word(words)
+
