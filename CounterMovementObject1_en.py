@@ -3,7 +3,7 @@ import math
 import cv2
 import numpy as np
 
-#variaveis globais
+#global variables
 width = 0
 height = 0
 CounterEntries = 0
@@ -123,7 +123,7 @@ while True:
     print("Found contours: "+str(ContourQty))
 
     #Write in the picture the number of people who entered or left the surveillance area
-    cv2.putText(Frame, "Entrances: {}".format(str(CounterEntries)), (10, 50),
+    cv2.putText(Frame, "Entries: {}".format(str(CounterEntries)), (10, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (250, 0, 1), 2)
     cv2.putText(Frame, "Exits: {}".format(str(AccountReceiver)), (10, 70),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
