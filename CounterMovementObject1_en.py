@@ -3,7 +3,7 @@ import math
 import cv2
 import numpy as np
 
-#variaveis globais
+#global variables
 width = 0
 height = 0
 CounterEntries = 0
