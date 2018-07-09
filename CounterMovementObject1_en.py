@@ -9,8 +9,8 @@ height = 0
 CounterEntries = 0
 AccountReceiver = 0
 AreaLimitMin = 3000  #This value is empirical. Adjust it as required 
-ThresholdBinary = 70  #This value is empirical. Adjust it as required
-OffsetLinesRef = 150  #This value is empirical. Adjust it as required
+ThresholdBinary = 40  #This value is empirical. Adjust it as required
+OffsetLinesRef = 80  #This value is empirical. Adjust it as required
 
 #Checks whether the detected body is entering the monitored area
 def IntersectionTest(y, CoordinateYLineInput, CoordinateYLineOutput):
