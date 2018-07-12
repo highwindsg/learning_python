@@ -38,8 +38,10 @@ camera.set(4,480)
 
 FirstFrame = None
 
-#does some frame reads before consenting the analysis
-#Reason: some cameras may take longer to "acuminate the light" when they connect, capturing consecutive frames with a lot of brightness. In order not to bring this effect to image processing, successive captures are made outside the image processing, giving the camera time to "get accustomed" to the brightness of the environment
+#Does some frame reads before consenting the analysis.
+#Reason: some cameras may take longer to "acuminate the light" when they connect, capturing consecutive frames with a lot of brightness.
+#In order not to bring this effect to image processing, successive captures are made outside the image processing, 
+#giving the camera time to "get accustomed" to the brightness of the environment.
 
 for i in range(0,20):
     (grabbed, Frame) = camera.read()
@@ -101,9 +103,9 @@ while True:
 
         #determines the center point of the contour and draws a circle to indicate
         CoordinateXContourCenter = (x+x+w)/2
-    	CoordinateYContourCenter = (y+y+h)/2
-    	OutlineCenter = (CoordinateXContourCenter,CoordinateYContourCenter)
-    	cv2.circle(Frame, OutlineCenter, 1, (0, 0, 0), 5)
+        CoordinateYContourCenter = (y+y+h)/2
+        OutlineCenter = (CoordinateXContourCenter,CoordinateYContourCenter)
+        cv2.circle(Frame, OutlineCenter, 1, (0, 0, 0), 5)
         
         #intersect the centers of the contours with the reference lines
         #dessa forma, contabiliza-se quais contornos cruzaram quais linhas (num determinado sentido)
