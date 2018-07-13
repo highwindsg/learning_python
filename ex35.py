@@ -62,7 +62,7 @@ def dead(why):
 
 def start():
     print("You are in a dark room.")
-    print("There is a door to your right and left.")
+    print("There is a door to your left and right.")
     print("Which one do you take? (left or right)")
 
     choice = input("> ")
