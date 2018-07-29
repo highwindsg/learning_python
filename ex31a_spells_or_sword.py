@@ -3,6 +3,26 @@
 #and within each choice functions, have their own mini story line.
 from sys import exit
 
+def slytherins():
+    print("You followed the Slytherins prefects who just stares blankly at you.")
+    print("You arrived at a basement that looks like dungeons and sees other fellow Slytherins.")
+    exit(0)
+
+def gryffindor():
+    print("You followed the Gryffindor prefects and are very friendly and chatty.")
+    print("You arrived at the upper levels that looks like a tower and sees other follow Gryffindors.")
+    exit(0)
+
+def rohan():
+    print("You were lead into the golden great hall of the Rohinrians.")
+    print("And your trainer presented you with a new training swoord.")
+    exit(0)
+
+def minastirith():
+    print("You were brought to the steward of the castle of Minas Thrith.")
+    print("The steward assigns you to be trained by his own son Boromir.")
+    exit(0)
+
 print("\n")
 print("You are born to this world and are now presented with two choices.")
 print("Would you choose the Book or the Sword?")
@@ -22,9 +42,9 @@ if choice == "1":
     classes = input("> ")
 
     if classes == "1":
-        print("House of Slytherin you go!")
+        slytherins()
     elif classes == "2":
-        print("House of Gryffindor you go!")
+        gryffindor()
     else:
         print(f"Well ... not choosing {classes} any I see. Perhaps you wish to reconsider.")
 
@@ -38,11 +58,12 @@ elif choice == "2":
     swordsmen = input("> ")
 
     if swordsmen == "1":
-        print("The land of Rohan you go!")
+        rohan()
     elif swordsmen == "2":
-        print("The castle of Minas Tirith you go!")
+        minastirith()
     else:
         print("Well ... not choosing {swordsmen} any I see. Perhaps you wish to reconsider.")
+
 
 else:
     print("Perhaps you wish you were never born, I think.")
