@@ -19,7 +19,7 @@ def rohan():
     exit(0)
 
 def minastirith():
-    print("You were brought to the steward of the castle of Minas Thrith.")
+    print("You were brought to the steward at the castle of Minas Tirith.")
     print("The steward assigns you to be trained by his own son, Boromir.")
     exit(0)
 
@@ -63,7 +63,6 @@ elif choice == "2":
         minastirith()
     else:
         print("Well ... not choosing {swordsmen} any I see. Perhaps you wish to reconsider.")
-
 
 else:
     print("Perhaps you wish you were never born, I think.")
