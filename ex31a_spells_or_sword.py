@@ -3,24 +3,24 @@
 #and within each choice functions, have their own mini story line.
 from sys import exit
 
-def slytherins():
-    print("You followed the Slytherins prefects who just stares blankly at you.")
+def slytherin():
+    print("You now follow the Slytherin prefects who just stares blankly at you.")
     print("You arrived at a basement that looks like dungeons and sees other fellow Slytherins.")
     exit(0)
 
 def gryffindor():
-    print("You followed the Gryffindor prefects and are very friendly and chatty.")
-    print("You arrived at the upper levels that looks like a tower and sees other follow Gryffindors.")
+    print("You now follow the Gryffindor prefects who are very friendly and chatty.")
+    print("You arrived at the upper levels that looks like a tower and sees other fellow Gryffindors.")
     exit(0)
 
 def rohan():
-    print("You were lead into the golden great hall of the Rohinrians.")
+    print("You were lead into the golden great hall of the Rohirrim.")
     print("And your trainer presented you with a new training swoord.")
     exit(0)
 
 def minastirith():
     print("You were brought to the steward of the castle of Minas Thrith.")
-    print("The steward assigns you to be trained by his own son Boromir.")
+    print("The steward assigns you to be trained by his own son, Boromir.")
     exit(0)
 
 print("\n")
@@ -33,16 +33,16 @@ print("[Press 1 or 2 and press Enter]")
 choice = input("> ")
 
 if choice == "1":
-    print("There are the two different classes of discipline.")
-    print("Pick one discipline.")
-    print("1. Warlock")
-    print("2. Cleric")
+    print("Which type of characteristics below best describes you?")
+    print("Choose wisely:")
+    print("1. Dark and Quiet")
+    print("2. Brave and Strong")
     print("[Press 1 or 2 and press Enter]")
 
     classes = input("> ")
 
     if classes == "1":
-        slytherins()
+        slytherin()
     elif classes == "2":
         gryffindor()
     else:
