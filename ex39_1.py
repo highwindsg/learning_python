@@ -1,4 +1,4 @@
-# create a mapping of state to abbriviation
+# create a mapping of state to abbreviation
 states = {
     'Oregon': 'OR',
     'Florida': 'FL',
