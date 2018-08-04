@@ -1,4 +1,4 @@
-# create a mapping of state to abbreviation
+# create a mapping or dictionary of states to abbreviation
 states = {
     'Oregon': 'OR',
     'Florida': 'FL',
@@ -7,29 +7,29 @@ states = {
     'Michigan': 'MI'
 }
 
-# create a basic set of states and some cities in them
+# create a basic dictionary set of states and some cities in them
 cities = {
     'CA': 'San Francisco',
     'MI': 'Detroit',
     'FL': 'Jacksonville'
 }
 
-# add some more cities
+# add some more cities to the dictionary
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
 
-# print out some cities
+# print out some cities from the cities dictionary
 print('-' * 10)
 print("NY State has: ", cities['NY'])
 print("OR State has: ", cities['OR'])
 
-# print some states
+# print out some states from the states dictionary
 print('-' * 10)
 print("Michigan's abbreviation is: ", states['Michigan'])
 print("Florida's abbreviation is: ", states['Florida'])
 
-# do it by using the states, and then cities dict
+# do it by using the states, and then cities dictionary
 print('-' * 10)
 print("Michigan has: ", cities[states['Michigan']])
 print("Florida has: ", cities[states['Florida']])
