@@ -14,6 +14,19 @@ happy_bday = Song(["Happy birthday to you",
 bulls_on_parade = Song(["They rally around the family",
                         "With pockets full of shells"])
 
-happy_bday.sing_me_a_song()
+why_you_so_like_that = Song(["Once upon an island",
+                             "a coconut tree or two",
+                             "enjoying the breeze"])
 
+love_you = Song(["Now and then, I want to hold you",
+                 "in my arms tonight..."
+                 "How I wish, that I could tell you",
+                 "and make you mine"])
+
+happy_bday.sing_me_a_song()
+print("\n")
 bulls_on_parade.sing_me_a_song()
+print("\n")
+why_you_so_like_that.sing_me_a_song()
+print("\n")
+love_you.sing_me_a_song()
