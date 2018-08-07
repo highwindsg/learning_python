@@ -2,5 +2,8 @@
 def apple():
     print("I AM APPLES!")
 
+def watermelon():
+    print("I AM WATERMELON!")
+
 # this is just a variable
-tangerine = "Living reflection of a dream"
+tangerine = "Eating tangerine is reflection of a dream"
