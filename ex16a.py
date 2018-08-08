@@ -3,7 +3,7 @@ import time
 
 script, booktitle = argv
 
-print(f"We're going to erase the content in this {booktitle}.")
+print("We're going to erase the content in this {booktitle}.")
 print("If you don't want that, hit CTRL-C (^C).")
 print("But if you do indeed want to do that, hit RETURN.")
 
