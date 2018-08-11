@@ -22,7 +22,11 @@ PHRASES = {
 
 # do they want to drill phrases first
 if len(sys.argv) == 2 and sys.argv[1] == "english":
+<<<<<<< HEAD
     PHRASES_FIRST = True
+=======
+    PHRASE_FIRST = True
+>>>>>>> dd0e22b96907123e0a83df33c8d8c875865816f1
 else:
     PHRASE_FIRST = False
 
@@ -54,7 +58,11 @@ def convert(snippet, phrase):
         for word in other_names:
             result = result.replace("***", word, 1)
 
+<<<<<<< HEAD
         # fake parameter lists
+=======
+        #fake parameter lists
+>>>>>>> dd0e22b96907123e0a83df33c8d8c875865816f1
         for word in param_names:
             result = result.replace("@@@", word, 1)
 
@@ -62,7 +70,10 @@ def convert(snippet, phrase):
 
     return results
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dd0e22b96907123e0a83df33c8d8c875865816f1
 # keep going until they hit CTRL-D
 try:
     while True:
@@ -81,3 +92,7 @@ try:
             print(f"ANSWER:  {answer}\n\n")
 except EOFError:
     print("\nBye")
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd0e22b96907123e0a83df33c8d8c875865816f1
