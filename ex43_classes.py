@@ -1,12 +1,12 @@
-class Scene(object):
+class Scene(object):    # Make a class named Scene that is-a object.
 
-    def enter(self):
+    def enter(self):    # Define a enter function with params self.
         pass
 
 
-class Engine(object):
+class Engine(object):   # Make a class named Engine that is-a object.
 
-    def __init__(self, scene_map):
+    def __init__(self, scene_map):  # The init function that takes self and scene_map params.
         pass
 
     def play(self):
