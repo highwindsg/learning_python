@@ -37,7 +37,6 @@ class Death(Scene):     # Make a class named Death that is-a Scene.
         "Such a looser.",
         "I have a small puppy that's better at this.",
         "You're worse than your Dad's jokes."
-
     ]
 
     def enter(self):    # Define a enter function with a params self.
@@ -59,11 +58,18 @@ class CentralCorridor(Scene):   # Make a class named CentralCorridor that is-a S
             Armory when a Gothon jumps out, red scaly skin, dark grimy
             filled body. He's blocking the door to the Armory and
             about to pull a weapon to blast you.
+
+            What would you choose to do?
+            Press 1, 2 or 3 to decide your next course of action.
+            1. Shoot!
+            2. Dodge!
+            3. Tell a joke.
             """))
 
         action = input("> ")
 
-        if action == "shoot!":
+        #if action == "shoot!":
+        if action == "1":
             print(dedent("""
                Quick on the draw you yank out your blaster and fire
                it at the Gothon. His clown costume is flowing and
@@ -76,7 +82,8 @@ class CentralCorridor(Scene):   # Make a class named CentralCorridor that is-a S
                """))
             return 'death'
 
-        elif action == "dodge!":
+        #elif action == "dodge!":
+        elif action == "2":
             print(dedent("""
                 Like a world class boxer you dodge, weave, slip and
                 slide right as the Gothon's blaster cranks a laser
@@ -87,7 +94,8 @@ class CentralCorridor(Scene):   # Make a class named CentralCorridor that is-a S
                 """))
             return 'death'
 
-        elif action == "tell a joke":
+        #elif action == "tell a joke":
+        elif action == "3":
             print(dedent("""
                 Lucky for you they made you learn Gothon insults in
                 the academy. You tell the one Gothon joke you know:
@@ -101,7 +109,7 @@ class CentralCorridor(Scene):   # Make a class named CentralCorridor that is-a S
             return 'laser_weapon_armory'
 
         else:
-            print("DOES NOT COMPUTE!")
+            print("DOES NOT COMPUTE! TRY AGAIN!")
             return 'central_corridor'
 
 
@@ -114,7 +122,7 @@ class LaserWeaponArmory(Scene):     # Make a class named LaserWeaponArmory that 
             quiet, too quiet. You stand up and run to the far side of
             the room and find the neutron bomb in its container.
             There's a keypad lock on the box and you need the code to
-            get the bomb out. If you ge the code wrong 10 times then
+            get the bomb out. If you get the code wrong 10 times then
             the lock closes forever and you can't get the bomb. The
             code is 3 digits.
             """))
@@ -123,7 +131,7 @@ class LaserWeaponArmory(Scene):     # Make a class named LaserWeaponArmory that 
         guess = input("[keypad]> ")
         guesses = 0
 
-        while guess != code and guesses < 10:
+        while guess != code and guesses < 9:
             print("BZZZZEDDD!")
             guesses += 1
             guess = input("[keypad]> ")
