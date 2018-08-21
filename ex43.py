@@ -128,6 +128,8 @@ class LaserWeaponArmory(Scene):     # Make a class named LaserWeaponArmory that 
             """))
 
         code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}"
+        #code = "%d%d%d" % (randint(1,9), randint(1,9), randint(1,9))
+        print(code)     # This cheat line will display the three random integers needed.
         guess = input("[keypad]> ")
         guesses = 0
 
@@ -165,11 +167,15 @@ class TheBridge(Scene):     # Make a class named TheBridge that is-a Scene.
             clown costume than the last. They haven't pulled their
             weapons out yet, as they see the active bomb under your
             arm and don't want to set it off.
+            What would you do now?
+            1. Throw the bomb
+            2. Slowly place the bomb
             """))
 
         action = input("> ")
 
-        if action == "throw the bomb":
+        #if action == "Throw the bomb":
+        if action == "1":
             print(dedent("""
                 In a panic you throw the bomb at the group of Gothons
                 and make a leap for the door. Right as you drop it a
@@ -180,13 +186,14 @@ class TheBridge(Scene):     # Make a class named TheBridge that is-a Scene.
                 """))
             return 'death'
 
-        elif action == "slowly place the bomb":
+        #elif action == "Slowly place the bomb":
+        elif action == "2":
             print(dedent("""
                 You point your blaster at the bomb under your arm and
                 the Gothons put their hands up and start to sweat.
                 You inch backward to the door, open it, and then
-                carefully place the bomb on the floor, poinitng your
-                baslter at it. You then jump back through the door,
+                carefully place the bomb on the floor, pointing your
+                blaster at it. You then jump back through the door,
                 punch the close button and blast the lock so the
                 Gothons can't get out. Now that the bomb is placed
                 you run to the escape pod to get off this tin can.
@@ -212,6 +219,7 @@ class EscapePod(Scene):     # Make a class named EscapePod that is-a Scene.
             """))
 
         good_pod = randint(1,5)
+        print(good_pod)     # This line is a cheat to display the random integer.
         guess = input("[pod #]> ")
 
         if int(guess) != good_pod:
