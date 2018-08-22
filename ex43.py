@@ -1,13 +1,13 @@
 from sys import exit
 from random import randint
-from textwrap import dedent     # This little function helps write our rooms descriptions
+from textwrap import dedent     # This dedent function helps write our rooms descriptions
                                 # using """ (triple-quote) strings. It strips leading white-spaces
                                 # from the beginnings of lines in a string.
 
 class Scene(object):    # Make a class named Scene that is-a object.
 
     def enter(self):    # Define a enter function with params self.
-        print("This scene is not not yet configured.")
+        print("This scene is not yet configured.")
         print("Subclass it and implement enter().")
         exit(1)
 
