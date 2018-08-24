@@ -6,8 +6,8 @@ class Parent(object):   # Make a class named Parent that has its own object para
 class Child(Parent):    # Make a class named Child that inherits from Parent.
     pass
 
-dad = Parent()  # Set dad to an instance of class Parent.
-son = Child()   # Set son to an instance of class Child.
+dad = Parent()  # Set the dad variable to an instance of class Parent.
+son = Child()   # Set the son variable to an instance of class Child.
 
 dad.implicit()
 son.implicit()

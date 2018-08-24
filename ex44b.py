@@ -8,8 +8,8 @@ class Child(Parent):    # Make a class named Child that has the Parent params.
     def override(self):     # define a override function with its self params.
         print("CHILD override()")
 
-dad = Parent()  # Set dad to an instance of class Parent.
-son = Child()   # Set son to an instance of class Child.
+dad = Parent()  # Set the dad variable to an instance of class Parent.
+son = Child()   # Set the son variable to an instance of class Child.
 
 dad.override()
 son.override()
