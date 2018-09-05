@@ -9,13 +9,13 @@ class Scene(object):    # Make a class named Scene that is-a object.
     def enter(self):    # Define a enter function with params self.
         print("This scene is not yet configured.")
         print("Subclass it and implement enter().")
-        exit(1)
+        exit(1)         # In order to come out of any condition, use the exit() function.
 
 
 class Engine(object):   # Make a class named Engine that is-a object.
 
     def __init__(self, scene_map):  # The init function that takes self and scene_map params.
-        self.scene_map = scene_map
+        self.scene_map = scene_map  # From self, get the attributes of scene_map and assign it to scene_map.
 
     def play(self):     # Define a play function with a params self.
         current_scene = self.scene_map.opening_scene()

@@ -1,27 +1,27 @@
 #try to refer to ex35.py
 #create functions for different choices
 #and within each choice functions, have their own mini story line.
-from sys import exit
+from sys import exit    # From the module sys, take the function exit.
 
 def slytherin():
     print("You now follow the Slytherin prefects who just stares blankly at you.")
     print("You arrived at a basement that looks like dungeons and sees other fellow Slytherins.")
-    exit(0)
+    exit(0)             # To come out of any condition by using the exit function.
 
 def gryffindor():
     print("You now follow the Gryffindor prefects who are very friendly and chatty.")
     print("You arrived at the upper levels that looks like a tower and sees other fellow Gryffindors.")
-    exit(0)
+    exit(0)             # To come out of any condition by using the exit function.
 
 def rohan():
     print("You were lead into the golden great hall of the Rohirrim.")
-    print("And your trainer presented you with a new training swoord.")
-    exit(0)
+    print("And your trainer presented you with a new training sword.")
+    exit(0)             # To come out of any condition by using the exit function.
 
 def minastirith():
     print("You were brought to the steward at the castle of Minas Tirith.")
     print("The steward assigns you to be trained by his own son, Boromir.")
-    exit(0)
+    exit(0)             # To come out of any condition by using the exit function.
 
 print("\n")
 print("You are born to this world and are now presented with two choices.")
