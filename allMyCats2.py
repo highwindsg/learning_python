@@ -8,3 +8,5 @@ while True:
 print("The cat names are:")
 for name in catNames:
     print("  " + name)
+
+# len(catNames) is to calculate the length or number of catNames that is added to the catNames list.
