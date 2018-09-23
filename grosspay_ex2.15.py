@@ -1,0 +1,7 @@
+print("Enter hours worked: ")
+Hours = int(input())
+print("Enter per hourly rate: ")
+Rate = float(input())
+Pay = float(Hours * Rate)
+print("Your total gross pay is: ")
+print(Pay)
