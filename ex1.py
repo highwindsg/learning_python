@@ -1,9 +1,3 @@
-print("Hello World!")
-print("Hello Again")
-print("I like typing this.")
-print("This is fun.")
-print('Yay! Printing.')
-print("I'd much rather you 'not'.")
-print('I "said" do not touch this.')
-print("Testing upload to git.")
-print("So this is how GIT uploads.")
+a=[5,10,15,20,25]
+a[3]
+a[0]
