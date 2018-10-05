@@ -1,6 +1,7 @@
 fhand = open("mbox-short.txt")
 for line in fhand:
-    line = line.rstrip()
+    line = line.rstrip()    # The 'rstrip()' function removes white spaces
+                            # on the right side after the last word.
     # Skip "uninteresting lines" that does not starts with "From:".
     if not line.startswith("From:"):
         continue
