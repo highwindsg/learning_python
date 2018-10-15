@@ -7,7 +7,7 @@ allGuests = {"Alice": {"apples": 5, "pretzels": 12},
 def totalBrought(guests, things):
     numBrought = 0
     for k, v in guests.items():     # The string of the guest's name is assigned to k,
-                                    # and the dict of the items they're are bringing are
+                                    # and the dict of the items they brought are
                                     # assigned to v.
         numBrought = numBrought + v.get(things, 0)  # If the things parm exists as a key
                                                     # in this dict, it's value (the qty)
