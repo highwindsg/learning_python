@@ -3,7 +3,7 @@ stuff = {"rope": 1, "torch": 6, "gold coin": 42, "dagger": 1, "arrow": 12}
 def displayInventory(self):     # Define a function named 'displayInventory' with
                                 # it's own self parm.
     print("Inventory:")
-    item_total = 0              # First start the item_total with 0.
+    item_total = 0              # First start the item_total with 0 count.
     for k, v in self.items():   # For whatever are the items in self, assign it
                                 # with k(key) and v(value).
         print(str(v) + ' ' + k)     # Print the string v first, then k.
