@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 # pw.py - An insecure password locker program.
 
 PASSWORDS = {"email": "F7minlBDDuvMJuxESSKHFhTxFtjVB6",
