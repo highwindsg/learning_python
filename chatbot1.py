@@ -37,7 +37,12 @@ user_says = ""
 # Request input from user using the 'input()' function. And whatever the user
 # enters is stored in a var 'user_says'.
 while user_says != "bye":
-    user_says = input("Talk to me: ")
+    user_says = ""
+    while user_says == "":  # Nested while loop prevents users from entering nothing.
+        user_says = input("Talk to me: ")
+# In line 40 above, var 'user_says' is reset again to nothing as compared to
+# line 35 so that the block underneath at line 41-42 can run.
+# The input() function (line 42) cannot run if var 'user_says' is not empty again.
 
 # The next line picks an index no. for the random response.
 # Give 'random.randint()' function two nos. to work with (or two arguments).
