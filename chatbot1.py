@@ -39,7 +39,7 @@ user_says = ""
 while user_says != "bye":
     user_says = input("Talk to me: ")
 
-# The next line picks and index no. for the random response.
+# The next line picks an index no. for the random response.
 # Give 'random.randint()' function two nos. to work with (or two arguments).
 # The first no. is the smallest possible no. '1'.
 # The second is the highest possible no., which is the length of the no. of

@@ -17,9 +17,10 @@ if len(sys.argv) < 2:
 # if they forget to add it (that is, if the 'sys.argv' list has fewer than two
 # values in it).
     print("Usage: python pw.py [account] - copy account password")
-    sys.exit()
+    sys.exit()          # Exit the python program.
 
-account = sys.argv[1]    # first command line arg is the account name
+account = sys.argv[1]   # first command line arg is the account name.
+                        # [0] is pw.py, [1] is the account name.
 
 if account in PASSWORDS:
     pyperclip.copy(PASSWORDS[account])

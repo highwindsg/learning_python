@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# bulletPointaAdder.py - Adds Wikipedia bullet points to the start
+# bulletPointAdder.py - Adds Wikipedia bullet points to the start
 # of each line of text on the clipboard.
 # 1. Paste text from the clipboard.
 # 2. Do something to it, like add a star and a space at each line.
