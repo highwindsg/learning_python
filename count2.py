@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# This program request user to enter the filenname and then counts
+# the words and how many times it occurs. And then presents in a sorted dictionary.
+
 import string
 
 fname = input("Enter the file name: ")
@@ -9,7 +12,7 @@ except:
     print("File cannot be opened:", fname)
     exit()
 
-counts  = dict()
+counts = dict()
 for line in fhand:
     line = line.rstrip()
     line = line.translate(line.maketrans("", "", string.punctuation))

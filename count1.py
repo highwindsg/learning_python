@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # This program request user to enter the filenname and then counts
-# the words and how many times in occurs. And then presents in a dictionary.
+# the words and how many times it occurs. And then presents in a dictionary.
 
 fname = input("Enter the file name: ")
 try:
