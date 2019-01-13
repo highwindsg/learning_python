@@ -15,6 +15,6 @@ def negativePositiveZero(numericIn):
 
 # Test cases
 
-EnterNum = int(input("Enter a integer numeric: "))
+EnterNum = float(input("Enter a integer numeric: "))
 FinalAns = negativePositiveZero(EnterNum)
 print(EnterNum, "is", FinalAns)
