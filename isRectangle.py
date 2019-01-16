@@ -7,10 +7,12 @@
 
 def isRectangle(left, right, top, bottom):
     if left == right and top == bottom:
-        rectangleSides = True
+#        rectangleSides = True      # Redundant line.
+        return True
     else:
-        rectangleSides = False
-    return rectangleSides
+#        rectangleSides = False     # Redundant line.
+        return False
+#    return rectangleSides          # Redundant line.
 
 def printRectangle(side1, side2, side3, side4):
     # Next line calls the 'isRectangle' function and parses in four sides of the
