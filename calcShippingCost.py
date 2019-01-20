@@ -30,7 +30,7 @@ def calculateShipping(country, nWidgets):
             Cost = 25.00
 
     else:
-        shippingCost = NOT_YET
+        Cost = NOT_YET
 
     return Cost
 
@@ -51,7 +51,3 @@ if AmtforShipping == NOT_YET:
     print("Sorry, we do not ship to", CountryLoc)
 else:
     print("It will cost $", AmtforShipping, "to ship your package.")
-
-
-
-
