@@ -26,4 +26,3 @@ while nFlips < maxFlips:
 
 print()
 print("Out of", nFlips, "coin tosses, we had:", nHeads, "heads, and", nTails, "tails.")
-
