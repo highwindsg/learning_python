@@ -13,5 +13,6 @@ words = [
         "."
         ]
 
-sentence = "".join(words)    # Joining the words on an empty string.
+sentence = " ".join(words)  # Joining the words on an empty string, separated
+                            # by a empty space in between words.
 print(sentence)
