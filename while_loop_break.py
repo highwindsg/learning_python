@@ -8,7 +8,6 @@ questions = [                   # First prepare the questions in a list.
 
 n = 0                           # Let the index variable of the questions
                                 # starts at 0 and assign to variable 'n'.
-
 while True:
     print("Type q to quit")
     a = input(questions[n])     # Ask for inputs to the questions list and
@@ -21,10 +20,10 @@ expression (n + 1) % 3, which enables you to cycle indefinitely through
 every questions in your 'questions' list.
 
 The first time around the loop, 'n' starts at '0'.
-Next, 'n' is assigned the value of the expression (0 + 1) % 3,
+So 'n' is assigned the value of the expression (0 + 1) % 3,
 which evaluates to 1.
 
-Then, 'n' is assigned to the value of (1 + 1) % 3,
+Next, 'n' is assigned to the value of (1 + 1) % 3,
 which evaluates to 2, because whenever the first number in an expression
 using modulo is smaller than the second, the answer is the first number.
 
