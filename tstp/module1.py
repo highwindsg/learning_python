@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
 # Code in  module1
-print("Hello!!!")
+if __name__ == "__main__":
+    print("Hello!!!")
 

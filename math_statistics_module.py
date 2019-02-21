@@ -34,3 +34,8 @@ print("The median of the numbers is:", medianNumber)
 modeNumber = statistics.mode(nums)
 print("The mode of the numbers is:", modeNumber)
 
+# median_high
+# Calculate the median high of the given numbers.
+medianhigh = statistics.median_high(nums)
+print("The median high value of the numbers is:", medianhigh)
+
