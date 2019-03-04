@@ -13,4 +13,11 @@ class Orange:                   # Create a class named 'Orange'.
 or1 = Orange(10, "dark orange")
 print(or1.color)
 print(or1.weight)
-
+print("")
+print("Changing the value of the instance variable:")
+or1 = Orange(10, "dark orange")
+or1.weight = 100
+or1.color = "light orange"
+print(or1.weight)
+print(or1.color)
+print(or1)  # Result of this print shows the Orange object at some memory location.
