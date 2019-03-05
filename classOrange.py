@@ -10,7 +10,8 @@ class Orange:                   # Create a class named 'Orange'.
 
 # After defining the class above, we 'instantiate' the Orange class below with the code
 # and print it out.
-or1 = Orange(10, "dark orange")
+or1 = Orange(10, "dark orange") # Assign or1 with the class Orange() and assign the params
+                                # of 10 and 'dark orange'.
 print(or1.color)
 print(or1.weight)
 print("")

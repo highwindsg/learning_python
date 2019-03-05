@@ -3,7 +3,7 @@
 # Now we give the orange the ability to rot.
 
 class Orange():                 # Create a class named 'Orange()'.
-    def __init__(self, w, c):   # Define a init start function with parms self, w and c.
+    def __init__(self, w, c):   # Define a init start function with params self, w and c.
         self.weight = w         # From self, get the attribute of weight and assign to w
         self.color = c          # From self, get the attribute of color and assign to c
         self.mold = 0           # From self, get the attribute of mold and assign to 0 even
