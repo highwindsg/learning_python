@@ -2,7 +2,7 @@
 
 # Create a Hexagon class with a method called calculate_perimeter that
 # calculates and returns its perimeter.
-# Then create a Hexagon object, and call the calculate_perimeter method
+# Then create a my_Hexagon object, and call the calculate_perimeter method
 # on it, and print the result.
 class Hexagon():
     def __init__(self, s1, s2, s3, s4, s5, s6):
