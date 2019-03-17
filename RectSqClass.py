@@ -6,8 +6,8 @@ Rectangle and Square objects and call the method on both of them.
 """
 class Rectangle():  # Create a class named Rectangle().
     def __init__(self, w, l):
-        self.width = w
-        self.length = l
+        self.width = w  # From self, get the width attribute and set it to w.
+        self.length = l # From self, get the length attribute and set it to l.
 
     def calc_perimeter(self):   # Create a method named calc_perimeter that
                                 # calculates the perimeter of the rectangle.
@@ -16,7 +16,7 @@ class Rectangle():  # Create a class named Rectangle().
 
 class Square(): # Create a class named Square().
     def __init__(self, s):
-        self.side = s
+        self.side = s   # From self, get the side attribute, and set it to s.
 
     def calc_perimeter(self):   # Create a method named calc_perimeter that
                                 # calculates the perimeter of the square.
