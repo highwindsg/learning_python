@@ -11,7 +11,7 @@ class Rectangle():  # Create a class named Rectangle().
 
     def calc_perimeter(self):   # Create a method named calc_perimeter that
                                 # calculates the perimeter of the rectangle.
-        return self.width + self.width + self.length + self.length
+        return self.width * 2 + self.length * 2
 
 
 class Square(): # Create a class named Square().
