@@ -22,13 +22,13 @@ class Square(): # Create a class named Square().
                                 # calculates the perimeter of the square.
         return self.side * 4
 
+# Create a Rectangle object and assign it with the Rectangle() class with
+# param 2 and 5 respectively.
+Rectangle = Rectangle(2, 5)
+# Print the output of Rectangle object by calling the calc_perimeter method on it.
+print("The perimeter if the rectangle is", Rectangle.calc_perimeter())
 
-Rectangle = Rectangle(2, 5) # Create a Rectangle object and assign it with the
-                            # Rectangle() class with param 2 and 5 respectively.
-print(Rectangle.calc_perimeter())   # Print the output of Rectangle object by
-                                    # calling the calc_perimeter method on it.
-
-Square = Square(3)  # Create a Square object and assign it with the Square()
-                    # class with param 3.
-print(Square.calc_perimeter())  # Print the output of Square object by calling
-                                # the calc_perimeter method on it.
+# Create a Square object and assign it with the Square() class with param 3.
+Square = Square(3)
+# Print the output of Square object by calling the calc_perimeter method on it.
+print("The perimeter of the square is", Square.calc_perimeter())
