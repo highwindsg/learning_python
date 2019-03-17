@@ -18,6 +18,13 @@ class Rider():
 johnny = Rider("Johnny Julian")
 buff = Horse("Buffie", "Mustang", johnny)
 
+# Print out the horse's owner/rider name. From buff which has been assigned the
+# Horse class of params, obtain the owner param which is the var johnny, that
+# has been assigned the Rider class with param "Johnny Julian".
 print(buff.owner.name)
+
+# Print out the horse's name, its breed and the rider's name.
+# From var buff, which has been assigned the Horse params, get the name.
+# From var buff, which has been assigned the Horse params, get the breed.
 print("The horse", buff.name, "is a", buff.breed, "breed and has-a rider named",
       buff.owner.name + ".")
