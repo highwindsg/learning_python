@@ -116,6 +116,50 @@ class Deck:
             return self.cards.pop()
 
 
+"""
+A class to represent each player in the group to keep track of
+their cards and how many rounds they've won.
+"""
+class Player:
+    def __init__(self, name):
+        # instance var 'wins' to keep track of how many rounds
+        # a player has won.
+        self.wins = 0
+        # instance var 'card' to represent the card a player is
+        # currently holding.
+        self.card = None
+        # instance var 'name' to keep track of a player's name.
+        self.name = name
+
+
+"""
+When you create the game obj class, Python calls the __init__
+method and collects the names of the two players and stores them
+in the vars name1 and name2.
+Next, create a new Deck object and store it in the instance var
+deck, and create two Player objs using the names in name1 and name2.
+"""
+class Game:
+    def __init__(self):
+        name1 = input("p1 name: ")
+        name2 = input("p2 name: ")
+        # From self, set deck to an instance of class Deck.
+        self.deck = Deck()
+        # From self, set p1 and p2 to player name1 and name2.
+        self.p1 = Player(name1) # p1 is-a name1
+        self.p2 = Player(name2) # p2 is-a name2
+
+    def wins(self, winner):
+        w = "{} wins this round"
+        w = w.format(winner)
+        print(w)
+
+    def draw(self, p1n, p1c, p2n, p2c):
+        d = "{} drew {} {} drew {}"
+        d = d.format(p1n, p1c, p2n, p2c)
+        print(d)
+
+
 # Client call to test out the lesser than function method.
 card1 = Card(10, 2)
 card2 = Card(11, 3)
