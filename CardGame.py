@@ -141,8 +141,8 @@ deck, and create two Player objs using the names in name1 and name2.
 """
 class Game:
     def __init__(self):
-        name1 = input("p1 name: ")
-        name2 = input("p2 name: ")
+        name1 = input("Type in player one's name: ")
+        name2 = input("Type in player two's name: ")
         # From self, set deck to an instance of class Deck.
         self.deck = Deck()
         # From self, set p1 and p2 to player name1 and name2.
@@ -150,14 +150,81 @@ class Game:
         self.p2 = Player(name2) # p2 is-a name2
 
     def wins(self, winner):
-        w = "{} wins this round"
+        w = "{} wins this round."
         w = w.format(winner)
         print(w)
 
+    # p1n - player1 name; p1c - player1 card.
     def draw(self, p1n, p1c, p2n, p2c):
-        d = "{} drew {} {} drew {}"
+        d = "{} drew {}, and {} drew {}."
         d = d.format(p1n, p1c, p2n, p2c)
         print(d)
+
+    """
+    The play_game in the Game class starts the game.
+    The loop in the method keeps the game going as long as there
+    are two or more cards left in the deck, and as long as the
+    var response does not equal to q.
+    """
+    def play_game(self):
+        cards = self.deck.cards
+        print("Beginning War!")
+        """
+        Each time around the loop, you assign the var response to
+        the input of the user. The game continues until either the
+        user types "q", or when there are less than two cards left
+        in the deck.
+        """
+        while len(cards) >= 2:
+            m = "Type q to quit or any key to play: "
+            response = input(m)
+            if response == "q":
+                break
+            """
+            Two cards are drawn each time through the loop.
+            The play_game method assigns the first card to p1, and
+            the second card to p2.
+            """
+            p1c = self.deck.rm_card()
+            p2c = self.deck.rm_card()
+            """
+            Then it prints the name of each player and the card they
+            drew, compares the two cards to see which card is greater,
+            increments the 'wins' instance var for the player with
+            the greater card, and prints a message that says who won.
+            """
+            p1n = self.p1.name
+            p2n = self.p2.name
+            self.draw(p1n, p1c, p2n, p2c)
+            if p1c > p2c:
+                self.p1.wins += 1
+                self.wins(self.p1.name)
+            else:
+                self.p2.wins += 1
+                self.wins(self.p2.name)
+
+        """
+        When the Deck obj runs out of cards, the 'play_game' method
+        prints a message saying the war is over, calls the 'winner'
+        method (passing in both p1 and p2), and prints a message with
+        the results--the name of the player who won.
+        """
+        win = self.winner(self.p1, self.p2)
+
+        print("War is over. {} wins.".format(win))
+
+    """
+    The Game class also has a method called 'winner' that takes two
+    player objs, looks at the number of rounds they won, and returns
+    the player who won the most rounds.
+    """
+    def winner(self, p1, p2):
+        if p1.wins > p2.wins:
+            return p1.name
+        if p1.wins < p2.wins:
+            return p2.name
+        else:   # This else line can be redundant/omitted.
+            return "It was a tie!"
 
 
 # Client call to test out the lesser than function method.
@@ -184,4 +251,9 @@ print("")
 deck = Deck()
 for card in deck.cards:
     print(card)
+    print("")
+
+# Start of the full game.
+game = Game()       # Set var game to an instance of class Game.
+game.play_game()    # From game, call the 'play_game' method.
 
