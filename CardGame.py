@@ -4,12 +4,12 @@ from random import shuffle
 
 class Card:
 
-    # suits and values lists are class variables.
+    # suits and values lists are 'class variables'.
 
     """
-    suits are arranged in order of strength--with the strongest
-    suit last, and thus assigned the highest index, and the least
-    powerful suit assigned the lowest index.
+    suits, a class var, are arranged in order of strength--with the
+    strongest suit last, and thus assigned the highest index, and
+    the least powerful suit assigned the lowest index.
     """
     suits = ["spades",  # spades is the weakest suit at index 0.
              "hearts",
@@ -17,9 +17,10 @@ class Card:
              "clubs"]   # while clubs is the strongest suit at index 3.
 
     """
-    The items at the first two indexes of the values list are None,
-    so that the strings in the list match up with the index they
-    represent--so the string "2" in the values list is at index 2.
+    values, a class var, have items at the first two indexes of the
+    values list as None, so that the strings in the list match
+    up with the index they represent--so the string "2" in the values
+    list is at index 2.
     """
     values = [None, None, "2", "3",
               "4", "5", "6", "7",
@@ -28,10 +29,10 @@ class Card:
               "King", "Ace"]
 
     """
-    Card objs have two instance variables: suit and value---each
+    Card objs have 'two instance variables': suit and value---each
     represented by an integer. Together, the instance variables
     represents what kind of card the Card obj is.
-    eg. you create a 2 of hearts by creating a Card obj and passing
+    eg. you create a '2 of hearts' by creating a Card obj and passing
     it the params 2 (for the suit) and 1 (for the value--1 because
     hearts is at index 1 in the suits list).
     """
@@ -54,8 +55,8 @@ class Card:
     def __lt__(self, c2):   # c2 param represent comparing card two.
         if self.value < c2.value:
             return True
-        if self.value == c2.value:
-            if self.suit < c2.suit:
+        if self.value == c2.value:  # So if the two cards are same value,
+            if self.suit < c2.suit: # we then compare the suit as well.
                 return True
             else:
                 return False
