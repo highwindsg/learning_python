@@ -9,7 +9,7 @@ import re
 text =  """Giraffes have aroused
  the curiosity of __PLURAL_NOUN__
  since earliest time. The
- giraffee is the tallest of all
+ giraffe is the tallest of all
  living __PLURAL_NOUN__, but
  scientists are unable to
  explain how it got its long
