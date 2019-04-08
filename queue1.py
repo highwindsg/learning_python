@@ -4,6 +4,11 @@
 Queue is another data structure. But unlike a stack, a queue is a
 firstin-firstout (FIFO) whereby first item added is also first to be
 taken out.
+- enqueue():    read as entry to a queue line (firstin).
+- dequeue():    read as to delist from a queue line (firstout).
+- is_empty():   checks and returns True if the queue line is empty, or
+                returns False if otherwise.
+- size():       returns the number of items in the queue line.
 """
 
 class Queue:
