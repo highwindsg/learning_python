@@ -44,7 +44,7 @@ class Stack:    # Create a class named Stack.
 
 stack = Stack() # Assign the var 'stack' with the class Stack().
 print(stack.is_empty()) # Print out the value of is_empty() method by calling the stack
-                        # obj var on the is_empty() method.
+                        # var obj on the is_empty() method.
                         # As there is indeed nothing and empty in var obj 'stack,
                         # is_empty() method will return True.
 
