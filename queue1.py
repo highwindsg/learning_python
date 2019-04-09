@@ -33,7 +33,7 @@ class Queue:
         # pop method to delist the first one in line (FIFO).
         return self.items.pop()
 
-    def size(self): # Create a function method named size.
+    def size(self): # Create a function method named size with param self.
         return len(self.items)  # Return the number of items to the size function
                                 # method by using the len method on the items list.
 
@@ -42,5 +42,32 @@ a_queue = Queue()   # Set var 'a_queue' to class Queue.
 print(a_queue.is_empty())   # Print out the value of var 'a_queue' by calling
                             # the is_empty() method on var obj 'a_queue'.
                             # As there is indeed nothing and empty in var obj
-                            # 'a_queue', is_empty() will return True.
+                            # 'a_queue' for now, is_empty() will return True.
 
+print() # Prints a empty line.
+
+# Add items and check the queue's size.
+for i in range(5):  # Iterate from range 0 up to 5 but does not include 5.
+    a_queue.enqueue(i)  # For a_queue, use the enqueue() method on it and pass
+                        # in the param of int i.
+print(a_queue.size())   # Call the print function on var a_queue and use the
+                        # size() method to return the number of items in the
+                        # queue line. Number of items in queue line will be 5.
+
+print() # Prints a empty line.
+
+# Remove each item from the queue.
+for i in range(5):  # Iterate from range 0 up to 5 but does not include 5.
+    print(a_queue.dequeue())    # Call the print function on a_queue and use
+                                # the dequeue() method to delist items on it.
+                                # Print output will show item removed one by one
+                                # starting from 0 to 4 (FIFO).
+
+print() # Prints a empty line.
+
+print(a_queue.size())   # Calling the print() function on a_queue and use the
+                        # size() method to return the number of items in the
+                        # queue line. Number now is 0 as it has been delisted.
+
+print(a_queue.is_empty())   # is_empty() method on a_queue will also be True
+                            # as the var a_queue is empty again.
