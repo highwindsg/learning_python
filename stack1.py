@@ -63,7 +63,7 @@ print(stack.is_empty()) # Now print out the value of is_empty() method by callin
                         # function method on line 57 removed the last item, therefore
                         # is_empty() will return True, as the stack is empty again.
 
-# Now finally, take a peek at the stack's content and get its size.
+# Now finally, take a look at the stack's content and get its size.
 for i in range(0, 6):   # Up to index 6 but does not include 6.
     stack.push(i)   # push() method will add onto the stack six times in this for_loop.
 
