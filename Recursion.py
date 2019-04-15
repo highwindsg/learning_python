@@ -26,8 +26,8 @@ Note: https://interactivepython.org/runestone/static/pythonds/Recursion/TheThree
 """
 
 def bottles_of_beer(bob):
-    """Prints 99 Bottle of Beer on the Wall lyrics.
-    :param bob: Must be a positive integer.
+    """Prints '99 Bottle of Beer' on the Wall lyrics.
+    :param bob: Must have a value of positive integer.
     'bob' is read as 'bottles of beer'."""
 
     # The 'if' statemt below is the first law of recursion
@@ -44,11 +44,10 @@ def bottles_of_beer(bob):
         return  # When the var 'bob' becomes less than 1, the
                 # function returns and stops calling itself.
 
-    tmp = bob
+    tmp = bob   # Set var tmp to a value of bob.
 
     # The line 'bob -= 1' satisfies the second law of recursion
-    # by decrementing the var 'bob' thus moving toward your
-    # base case.
+    # of moving toward your base case, by decrementing the var 'bob'.
     bob -= 1
     print("""{} bottles of
             beer on the
@@ -68,10 +67,10 @@ def bottles_of_beer(bob):
     The first time the function calls itself (line 48),
     it will pass itself 98 as a param, then 97, then 96, until
     finally, it passes itself a param less than 1, which
-    satisfies the base case being set.
-    """
+    satisfies the base case being set."""
+
     bottles_of_beer(bob)
 
 
-# Client calls function bottles_of_beer() with param 99.
+# Client calls function bottles_of_beer() with param 99 to start with.
 bottles_of_beer(99)
