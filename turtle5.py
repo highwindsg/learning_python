@@ -2,7 +2,7 @@
 
 from turtle import *
 
-color("red")
+color("blue")
 
 # Below for loop draws a 20-point star.
 for i in range(20):

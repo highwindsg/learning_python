@@ -10,3 +10,4 @@ for i in range(6):
 	left(120)
 
 bye()
+
