@@ -4,7 +4,7 @@
 Turtle graphics is a popular way for introducing programming to kids.
 Imagine a robotic turtle starting at (0, 0) in the x-y plane.
 """
-from turtle import * 
+from turtle import *
 
 forward(200)
 
