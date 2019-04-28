@@ -19,8 +19,18 @@ class Fraction:     # Create a class named Fraction.
         newnum = self.numerator * otherfraction.denominator + \
                     self.denominator * otherfraction.numerator
         newden = self.denominator * otherfraction.denominator
-
+#        common = gcd(newnum, newden)
+#        return Fraction(newnum//common, newden//common)
         return Fraction(newnum, newden)
+
+#    def gcd(m, n):
+#        while m%n != 0:
+#            oldm = m
+#            oldn = n
+
+#           m = oldn
+#           n = oldm%oldn
+#       return n
 
     def __str__(self):
         return str(self.numerator)+"/"+str(self.denominator)
