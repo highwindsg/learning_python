@@ -6,3 +6,4 @@ if feeling.lower() == "great":  # Whatever case the user enters the word, it wil
     print("I feel great too.")
 else:
     print("I hope the rest of your day is good.")
+

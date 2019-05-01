@@ -50,7 +50,7 @@ print(stack.is_empty()) # Print out the value of is_empty() method by calling th
 
 stack.push(1)   # In the 'stack' var obj, add in a new item by using the push() method
                 # and putting the param with int 1.
-print(stack.is_empty()) # Now print out the value of is_empty() method by calling the
+iprint(stack.is_empty()) # Now print out the value of is_empty() method by calling the
                         # is_empty() method on the stack var obj. As now there is a
                         # int 1 in var obj 'stack', is_empty() method will return False.
 
