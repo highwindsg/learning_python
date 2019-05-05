@@ -22,4 +22,4 @@ plt.xticks(range(26), alphabet) # letter labels on x-axis
 plt.tick_params(axis = "x", bottom = False) # no ticks, only labels on x-axis
 plt.title("Frequency of each letter")
 plt.savefig("output.png")
-
+plt.show()  # Display it
