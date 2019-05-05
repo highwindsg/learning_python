@@ -13,7 +13,7 @@ taken out.
 
 class Queue:
     def __init__(self): # Create a init start function with param self.
-        self.items = [] # From self, get the items attribute and set to a
+        self.items = [] # From self, set the items attribute and assign it to a
                         # empty list for now.
 
     def is_empty(self): # Create a is_empty function method with param self.
