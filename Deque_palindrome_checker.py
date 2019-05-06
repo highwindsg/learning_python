@@ -22,7 +22,7 @@ def palchecker(aString):
     for ch in aString:
         chardeque.addRear(ch)
 
-    # Set the var stillEqual to True so that the algo
+    # Set the var stillEqual to True so that the algorithm
     # can continue to run.
     stillEqual = True
 

@@ -45,21 +45,21 @@ class Deque:
         return len(self.items)  # Return/show an integer.
 
 
-d = Deque()
+d = Deque() # Set var d to the class Deque.
 
 print(d.isEmpty())  # Use print() to see what is the return boolean value.
 
-d.addRear(4)
-d.addRear("dog")
-d.addFront("cat")
-d.addFront(True)
+d.addRear(4)    # From Deque class use the addRear() method with param 4.
+d.addRear("dog")    # From Deque class use the addRear() method with param "dog".
+d.addFront("cat")   # From Deque class use the addFront() method with param "cat".
+d.addFront(True)    # From Deque class use the addFront() method with param True.
 
 print(d.size()) # Use print() to see what is the return number of items
                 # still remaining in the deque.
 
 print(d.isEmpty())  # Use print() to see what is the return boolean value.
 
-d.addRear(8.4)
+d.addRear(8.4)  # From Deque class use the addRear() method with param 8.4.
 
 print(d.removeRear())   # Use print() to see what is the first item that
                         # is being removed from the extreme left.
