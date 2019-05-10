@@ -3,7 +3,7 @@
 from turtle import *
 
 t = Turtle()    # Create a turtle 't' with the Turtle() func.
-myWin = t.getscreen()   # Create a window fot 't' to draw in
+myWin = t.getscreen()   # Create a window for 't' to draw in
                         # using the .getscreen() method.
 
 def tree(branchLen, t): # Create a tree func with branch length,
@@ -11,9 +11,9 @@ def tree(branchLen, t): # Create a tree func with branch length,
     if branchLen > 5:
         t.forward(branchLen)
         t.right(20)
-        tree(branchLen -15, t)
+        tree(branchLen -15, t)  # Recursive func call.
         t.left(40)
-        tree(branchLen -10, t)
+        tree(branchLen -10, t)  # Recursive func call.
         t.right(20)
         t.backward(branchLen)
 
