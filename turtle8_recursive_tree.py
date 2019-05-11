@@ -8,6 +8,7 @@ myWin = t.getscreen()   # Create a window for 't' to draw in
 
 def tree(branchLen, t): # Create a tree func with branch length,
                         # and the 't' turtle params.
+
     if branchLen > 5:
         t.forward(branchLen)
         t.right(20)
