@@ -14,13 +14,16 @@ def drawSpiral(myTurtle, lineLen):
     # we instruct the turtle to go forward by len units
     # and then turn right 90 degrees.
     if lineLen > 0:
-        myTurtle.forward(lineLen)
-        myTurtle.right(90)
+        myTurtle.forward(lineLen)   # myTurtle uses .forward method
+                                    # with the length of line param.
+        myTurtle.right(90)  # myTurtle turn right 90 degrees.
         # The recursive step is when we call drawSpiral
         # again with a reduced length.
         drawSpiral(myTurtle, lineLen -5)
 
 
+# So by giving a param lineLen of 100, myTurtle will draw
+# from 100 and reducing every time by -5, until lineLen is 0.
 drawSpiral(myTurtle, 100)
 
 # The func below is a method of the window that puts the
