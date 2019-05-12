@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
-# To try drawing a spiral triangle bigger and bigger.
+# To drawing a spiral triangle bigger and bigger indefinitely.
+
 from turtle import *
 
 t = Turtle()
 myWin = t.getscreen()
 
-color("red")
+t.color("red")
 
 def triangle(lineLen, t):
     if lineLen > 5:
