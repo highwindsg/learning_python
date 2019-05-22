@@ -15,7 +15,7 @@ exampleZip = zipfile.ZipFile("example1.zip")
 print(exampleZip.namelist())
 
 # Create a var 'spamInfo' and set it to using the Zipfile() obj's .getinfo()
-# method with param of a txt file. This is to get the details of of the txt file.
+# method with param of a txt file. This is to get the details of the txt file.
 spamInfo = exampleZip.getinfo("spam.txt")
 
 # Then print out the file size from 'spamInfo' using the .file_size method.
