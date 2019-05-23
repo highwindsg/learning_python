@@ -4,6 +4,7 @@
 import zipfile, os
 
 # From 'os' use the .chdir() method and parse in the working dir as param.
+# Have to provide the absolute path to the working dir.
 os.chdir("/Users/mac/Documents/GitHub/learning_python")
 
 # Set var 'exampleZip' with the zipfile module's .ZipFile() method and
