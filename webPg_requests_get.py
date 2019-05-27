@@ -11,8 +11,22 @@ import requests
 # .get method from the requests module, and parse in the URL params.
 res = requests.get("http://automatetheboringstuff.com/files/rj.txt")
 
+# Use the 'try' and 'except' statements to handle this error
+# without crashing.
+try:
+    res.raise_for_status()  # Always call the 'raise_for_status()'
+                            # after calling the 'requests.get()'.
+                            # you want to be sure that the download
+                            # has actually worked before your program
+                            # continues.
+
+except Exception as exc:
+    print("There was a problem: %s" % (exc))
+
 # Print out to see what is the data type of var 'res'.
 print(type(res))
+
+#res.status_code == requests.codes.ok
 
 # Print out to see what is the total length of the entire text file
 # without downloading the entire text file completely.
