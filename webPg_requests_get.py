@@ -16,7 +16,7 @@ res = requests.get("http://automatetheboringstuff.com/files/rj.txt")
 try:
     res.raise_for_status()  # Always call the 'raise_for_status()'
                             # after calling the 'requests.get()'.
-                            # you want to be sure that the download
+                            # You want to be sure that the download
                             # has actually worked before your program
                             # continues.
 
