@@ -15,8 +15,10 @@ for word in words:
 """
 The .get method have two params.
 First param will get the word, and
-if the word is not there then will
-accept the second param's word.
+if the word is not there, then the
+second param means that it will
+accept the word as the default
+value..
 """
 
 print(output)
