@@ -2,7 +2,7 @@
 
 # Importing a manually created module of file converters.py
 # that is in the same working dir.
-import converters
+import converters       # Remove file extension in Python syntax.
 from converters import kg_to_lbs
 
 # Since the method 'kg_to_lbs' has already been imported from 'converters', we
