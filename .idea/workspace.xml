@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9edc8bfa-19aa-42c2-8e16-00bd33306919" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dict_count_histogram2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/learning_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning_python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blastoff.py" beforeDir="false" afterPath="$PROJECT_DIR$/blastoff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dict_count_histogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/dict_count_histogram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dict_keys_values.py" beforeDir="false" afterPath="$PROJECT_DIR$/dict_keys_values.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +28,19 @@
   <component name="ProjectId" id="1OpCk9bflXTaRagpUK7hmHqMlzr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="learning_python" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="learning_python" />
+      </console-settings>
+    </option>
+    <option name="myUseExistingConsole" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -42,8 +54,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.blastoff">
-    <configuration name="blastoff" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.dict_count_histogram2">
+    <configuration name="birthdays" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -55,7 +67,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blastoff.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/birthdays.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -64,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="func_greetuser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dict_count_histogram" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,7 +88,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/func_greetuser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dict_count_histogram.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +97,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="turtle1_linecurve" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dict_count_histogram2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,9 +109,48 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/turtle1_linecurve.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dict_count_histogram2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dict_in_listsandtuple" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dict_in_listsandtuple.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dict_keys_values" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dict_keys_values.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -108,9 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.blastoff" />
-        <item itemvalue="Python.func_greetuser" />
-        <item itemvalue="Python.turtle1_linecurve" />
+        <item itemvalue="Python.dict_count_histogram2" />
+        <item itemvalue="Python.dict_count_histogram" />
+        <item itemvalue="Python.dict_in_listsandtuple" />
+        <item itemvalue="Python.dict_keys_values" />
+        <item itemvalue="Python.birthdays" />
       </list>
     </recent_temporary>
   </component>
