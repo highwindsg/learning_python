@@ -4,7 +4,7 @@
 import sqlite3
 
 # Use the .connect() method from sqlite3 module and pass in param of the filename 'emaildb.sqlite', and assign
-# it to var 'conn'.
+# it to var 'conn'. This will create the filename 'emaildb.sqlite' if it does not exist yet.
 conn = sqlite3.connect("emaildb.sqlite")
 
 # Use the .cursor() method from var obj 'conn', and assign to var 'cur', and can read as current db file.
@@ -22,7 +22,7 @@ cur.execute("CREATE TABLE Counts (email TEXT, count INTEGER)")
 fname = input("Enter file name (or press Enter for default 'mbox-short.txt'): ")
 if (len(fname) < 1): fname = "mbox-short.txt"
 
-fh = open(fname)    # Use the open() func and pass in the 'fname' var,
+fh = open(fname)    # Use the open() func and pass in the 'fname'
                     # and assign it to var 'fh' (read as file-in-hand).
 for line in fh:
     if not line.startswith("From: "):   # Only for every line in 'fh' that starts with 'From: ',
