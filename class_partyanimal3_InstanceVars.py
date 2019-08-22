@@ -3,7 +3,7 @@
 # Creating two different instance vars from a single class.
 
 class PartyAnimal:      # Create a class named 'PartyAnimal.
-    x = 0               # Set var 'x' with 0 first.
+    x = 0               # Set var 'x' as a counter and start with 0 first.
     name = ""           # Set var 'name' with empty string first.
 
     def __init__(self, z):  # Define a init start func with params self and z.
