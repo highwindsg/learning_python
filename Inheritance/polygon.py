@@ -25,7 +25,7 @@ class Rectangle(Polygon):   # Create a subclass named Rectangle, that inherits f
 class Triangle(Polygon):    # Create a subclass named Triangle, that inherits from the Polygon() superclass.
     def area(self):         # Define a func named area() with param self.
         return self.get_width() * self.get_height() / 2     # Calculate the area of triangle and return the answer
-                                                        # to the area() func in class Rectangle().
+                                                            # to the area() func in class Rectangle().
 
 """
 So when a subclass inherits from a superclass, the parameters and member vars from the superclass can then
