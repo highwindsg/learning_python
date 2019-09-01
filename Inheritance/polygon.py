@@ -16,26 +16,7 @@ class Polygon:          # Create a superclass named Polygon.
         return self.__height    # Get the private value of __height from self and return it to the get_height() func.
 
 
-class Rectangle(Polygon):   # Create a subclass named Rectangle, that inherits from the Polygon() superclass.
-    def area(self):         # Define a func named area() with param self.
-        return self.get_width() * self.get_height()     # Calculate the area of rectangle and return the answer
-                                                        # to the area() func in class Rectangle().
-
-
-class Triangle(Polygon):    # Create a subclass named Triangle, that inherits from the Polygon() superclass.
-    def area(self):         # Define a func named area() with param self.
-        return self.get_width() * self.get_height() / 2     # Calculate the area of triangle and return the answer
-                                                            # to the area() func in class Rectangle().
-
 """
 So when a subclass inherits from a superclass, the parameters and member vars (except for private vars) from the
 superclass can then be used by the other subclass also.
 """
-
-rect = Rectangle()          # rect is-a Rectangle() class.
-tri = Triangle()            # tri is-a Triangle() class.
-rect.set_values(50, 40)     # From rect var obj, set the attrib of .set_values with param 50 and 40)
-tri.set_values(50, 40)      # From tri var obj, set the attrib of .set_values with param 50 and 40)
-
-print(rect.area())
-print(tri.area())
