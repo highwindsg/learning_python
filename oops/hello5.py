@@ -21,9 +21,9 @@ class Employee:     # Create a class named 'Employee'.
         is the container. """
 
     def total_salary(self):     # Define func named 'total_salary' with param 'self'.
-        return self.obj_salary.annual_salary()  # From 'self.obj_salary' attrib, get the func of 'annual_salary()'
-                                                # and return the ans to the func.
-
+        return self.obj_salary.annual_salary()  # From 'self.obj_salary', which is-a Salary() class, get the func
+                                                # of 'annual_salary()', and return the calculated ans to the
+                                                # total_salary() function.
 
 emp = Employee("Max", 25, 15000, 10000)     # Client call the 'Employee()' class and pass in the values,
                                             # and assign to var 'emp'.
