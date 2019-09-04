@@ -4,7 +4,7 @@ class Polygon:          # Create a superclass named Polygon.
     __width = None      # Set a private __width var to None.
     __height = None     # Set a private __height var to None.
 
-    def set_values(self, width, height):    # Define a set_values() func with param self, width and height).
+    def set_values(self, width, height):    # Define a set_values() func with param self, width and height.
         self.__width = width        # From self, set the private var __width to width.
         self.__height = height      # From self, set the private var __height to height.
     
