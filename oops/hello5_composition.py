@@ -18,7 +18,7 @@ class Employee:     # Create a class named 'Employee'.
         self.obj_salary = Salary(pay, bonus)    # Compose a new 'self.obj_salary' attrib and assigning it
                                                 # with the Salary() class with 'pay' and 'bonus' params.
         """ Therefore the 'Salary(pay, bonus)' in 'self.obj_salary' obj is the content, and the Employee() class
-        is the container. """
+        is the container. Or can say that Salary() class is part-of the Employee() class. """
 
     def total_salary(self):     # Define func named 'total_salary' with param 'self'.
         return self.obj_salary.annual_salary()  # From 'self.obj_salary', which is-a Salary() class, get the func
@@ -26,5 +26,6 @@ class Employee:     # Create a class named 'Employee'.
                                                 # total_salary() function.
 
 emp = Employee("Max", 25, 15000, 10000)     # Client call the 'Employee()' class and pass in the values,
-                                            # and assign to var 'emp'.
+                                            # and assign to var 'emp'. Note that if 'emp' obj is deleted,
+                                            # then the '.obj_salary' will also be deleted.
 print(emp.total_salary())       # From 'emp' var obj, get the ans from the 'total_salary()' func.

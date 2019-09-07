@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 from polygon import Polygon     # From the polygon.py file/module, import the Polygon superclass.
-from shape import Shape
+from shape import Shape         # From the shape.py file/module, import the Shape superclass.
 
-# A subclass can inherit multiple super class.
+# A subclass can inherit multiple superclass.
 # Create a subclass named Triangle, that inherits from the Polygon() superclass and Shape() superclass.
 class Triangle(Polygon, Shape):   
     def area(self):         # Define a func named area() with param self.
