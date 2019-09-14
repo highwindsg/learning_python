@@ -7,7 +7,7 @@ fh = open("demo.txt", "w")
 try:
     for i in range(10):
         fh.write("This is line no %d\n" %(i+1))
-finally:
+finally:    # The 'finally:' body will execute even if the 'try:' body encounters error.
     fh.close()
 
 # Alternatively, the line 7-9 can be re-written as below.
