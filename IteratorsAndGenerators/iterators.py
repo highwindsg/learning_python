@@ -8,7 +8,7 @@ class ListIterator:
 
     def __init__(self, list):   # Define a init start func with params 'self' and 'list'.
         self.__list = list      # From self, set a private '.__list' attrib and assign to var obj 'list'.
-        self.__index = -1       # From self, set a private '.__index' attrib and assign to a value of '-1'.
+        self.__index = -1       # From self, set a private '.__index' attrib and start with a value of '-1'.
 
     def __iter__(self):     # Define a '__iter__()' func with 'self' param.
         return self         # Return the value of 'self' to the func.
@@ -34,3 +34,8 @@ print(next(it))     # Again client call ...
 print(next(it))     # Again client call ...
 print(next(it))     # Again client call the last number.
 print(next(it))     # This extra client call will have error as it is out of range of list 'a'.
+
+# Comment out the above lines 29 - 36 and run the for loop below to see that the 'iter()' func does the same thing.
+#for i in it:
+#    print(i)
+
