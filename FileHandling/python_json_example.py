@@ -20,14 +20,24 @@ a = {
 print(json.dumps(a))
 
 # Can also use indentation to indent 4 spaces for var obj 'a' in the json format,
-# and also sort the dictiionary's key in alphabetical order.
-print(json.dumps(a, indent = 4, sort_keys=True))
+# and also sort the dictionary's key in alphabetical order.
+print(json.dumps(a, indent = 4, sort_keys = True))
 
 print("")
 
-# Can also use the 'with open()' function to open a new json file and then write into it.
+# Can also use the 'with open()' function to open a new json file and then save/write into it.
 with open("demo.json", "w") as fh:
     fh.write(json.dumps(a, indent = 2))
+
+print("")
+
+# To read json values from a file by converting it into a dictionary first.
+with open("demo.json", "r") as fh:
+    json_str = fh.read()    # Read the content of var 'fh' and assign in to var 'json_str' as json is a string file.
+    json_value = json.loads(json_str)   # Use the 'json.loads()' method, pass in 'json_str' var and assign it to new
+                                        # a var 'json_value'.
+    # print(type(json_value))   # Check the data type of 'json_value' to see that it is indeed of class dict.
+    print(json_value["name"])   # From the dict 'json_value', get the key value of 'name' and print out.
 
 print("")
 
