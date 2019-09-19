@@ -11,13 +11,13 @@ if __name__ == "__main__":
     # Initialise the parser.
     # Use the '.ArgumentParser()' method with optional param and assign to var 'parser'.
     parser = argparse.ArgumentParser(
-        description="my math script"
+        description="my math script"    # The string will show if -h is used in the command line.
     )
 
-    # Add the params positional/optional arguments.
-    parser.add_argument("num1", help="Number 1", type=float)
-    parser.add_argument("num2", help="Number 2", type=float)
-    parser.add_argument("operation", help="provide operator")
+    # Add the params positional/optional arguments. This will show if the -h is used in command line.
+    parser.add_argument("--num1", help="Number 1", type=float)
+    parser.add_argument("--num2", help="Number 2", type=float)
+    parser.add_argument("--operation", help="provide operator + - * / or power", default="+")
 
     # Parse the arguments
     args = parser.parse_args()
@@ -33,9 +33,12 @@ if __name__ == "__main__":
         result = args.num1 * args.num2
     if args.operation == "/":
         result = args.num1 / args.num2
-    if args.operation == "pow":
+    if args.operation == "power":
         result = pow(args.num1, args.num2)
 
     print("Result: ", result)
     """ Therefore in terminal mode, change dir to /Users/cay1sgp/Documents/GitHub/learning_python/argparse/
-    and run the file. (eg. $ python3 myparser.py 84 41 +) and this will give you the sum of the two numbers."""
+    and run the file.
+    (eg. $ python3 myparser.py --num1 84 --operation - --num3 41) and this will give you the different of the two numbers.
+    But if not --operation option is used, then the default + operation will be used.
+    (eg. $ python3 myparser.py --num1 84 --num3 41) will give you the sum of the two numbers."""
