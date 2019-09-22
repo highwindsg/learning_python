@@ -19,3 +19,9 @@ print(next(mylist))
 print(next(mylist))
 print(next(mylist))
 print(next(mylist))     # This will cause a StopIteration error automatically as it exceeds the list.
+
+"""
+In cases where you do not know how long is the list or if the stream of data is very large,
+it is therefore better to use a generator and yield so that it can generate the data for you
+one by one, without having you to provide a list of fixed number of data.
+"""

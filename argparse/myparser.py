@@ -15,9 +15,9 @@ if __name__ == "__main__":
     )
 
     # Add the params positional/optional arguments. This will show if the -h is used in command line.
-    parser.add_argument("--num1", help="Number 1", type=float)
-    parser.add_argument("--num2", help="Number 2", type=float)
-    parser.add_argument("--operation", help="provide operator + - * / or power", default="+")
+    parser.add_argument("-n1", "--num1", help="Number 1", type=float)
+    parser.add_argument("-n2", "--num2", help="Number 2", type=float)
+    parser.add_argument("-op", "--operation", help="provide operator + - * / or power", default="+")
 
     # Parse the arguments
     args = parser.parse_args()
@@ -41,4 +41,7 @@ if __name__ == "__main__":
     and run the file.
     (eg. $ python3 myparser.py --num1 84 --operation - --num3 41) and this will give you the different of the two numbers.
     But if not --operation option is used, then the default + operation will be used.
-    (eg. $ python3 myparser.py --num1 84 --num3 41) will give you the sum of the two numbers."""
+    (eg. $ python3 myparser.py --num1 84 --num3 41) will give you the sum of the two numbers.
+    Alternatively, can also use the short-hand notation option.
+    (eg. $ python3 myparser.py -n1=84 -n2=70 -op=+) Must use '=', cannot use a empty space.
+    """
