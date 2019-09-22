@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 """ So instead of creating the iterator class in 'iterators.py' file where the '__iter__()' and
-'__next__()' functions are explicitly defined with the raise exception, we can shorten the program
-by using the 'yield' generator keyword in a for loop.
+'__next__()' functions are explicitly defined with the raise 'StopIteration' exception, we can shorten the program
+by using the 'yield' generator keyword in a 'for loop'.
 """
 
 def list_iterator(list):    # Define a func named 'list_iterator()' with param 'list'.

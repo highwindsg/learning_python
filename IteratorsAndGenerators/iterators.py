@@ -24,6 +24,7 @@ class ListIterator:
 a = [1, 2, 3, 6, 5, 4]      # Create a list of numbers and assign to var obj 'a'.
 mylist = ListIterator(a)    # Client call the 'ListIterator' class and pass in the param obj 'a'.
 it = iter(mylist)       # Use the 'iter()' func, pass in the var 'mylist' and assign it var 'it'.
+                        # So now you have the 'it' iterator obj using the 'ListIterator' class.
 
 
 print(next(it))     # Client call the 'next()' method and pass in the var 'it' that will printout the next
@@ -35,7 +36,7 @@ print(next(it))     # Again client call ...
 print(next(it))     # Again client call the last number.
 print(next(it))     # This extra client call will have error as it is out of range of list 'a'.
 
-# Comment out the above lines 29 - 36 and run the for loop below to see that the 'iter()' func does the same thing.
+# Comment out the above lines 30 - 37 and run the for loop below to see that the 'iter()' func does the same thing.
 #for i in it:
 #    print(i)
 
