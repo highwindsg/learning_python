@@ -19,4 +19,3 @@ doc = nlp(text)
 # For example, this will print out all the named entities that were detected:
 for entity in doc.ents:
     print(f"{entity.text} ({entity.label_})")
-
