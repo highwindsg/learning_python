@@ -10,6 +10,6 @@ def func():
 x = "global"            # Assign var 'x' with the value of 'global'. This var 'x' is a global var as it is outside
                         # of the 'func()' function.
 
-                        
+
 func()                  # Client call the 'func()' function.
 print("3-------", x)    # Print out the value of var 'x' and will be 'local' as line 6 assigns 'x' as 'local' again.
