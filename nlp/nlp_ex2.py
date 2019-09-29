@@ -26,4 +26,3 @@ Syntactic Structures revolutionized Linguistics with 'universal grammar', a rule
 """
 
 print(scrub(s))
-
