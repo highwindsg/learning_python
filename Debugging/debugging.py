@@ -12,6 +12,9 @@ if __name__ == "__main__":
     z = add(x, y)
     print(z)
 
+if __name__ == "__main__":
+    main()
+
 """
 The program above will show a concatenation result instead of an addition result. So we use debugging to find out why.
 Open a cmd line window and go to the folder of this python file.
@@ -27,4 +30,7 @@ In the (Pdb) mode, there are some options you can use.
                 # eg. (Pdb) break 13. This will set a break point from line 13. And then press 'c' or 'continue' to
                 # next line to input the number. After the two input finishes, pdb will stops at line 13.
 (Pdb) q         # To quit and exit out of the debugging mode.
+
+Note that you can use the PyCharm debugging utilities for debugging Python program.
+Click on the green bug icon on he top right and set the red break point on the required line in the script.
 """
