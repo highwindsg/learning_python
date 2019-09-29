@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
 """
-Let’s say you are trying to comply with the new GDPR privacy regulations and you’ve discovered that you have thousands of documents with personally identifiable information in them like people’s names. You’ve been given the task of removing any and all names from your documents.
-Going through thousands of documents and trying to redact all the names by hand could take years. But with NLP, it’s a breeze. Here’s a simple scrubber that removes all the names it detects.
+Let’s say you are trying to comply with the new GDPR privacy regulations and you’ve discovered that you have thousands
+of documents with personally identifiable information in them like people’s names.
+You’ve been given the task of removing any and all names from your documents.
+Going through thousands of documents and trying to redact all the names by hand could take years.
+But with NLP, it’s a breeze. Here’s a simple scrubber that removes all the names it detects.
 """
 
 import spacy
