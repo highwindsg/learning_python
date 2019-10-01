@@ -14,6 +14,7 @@ import spacy
 nlp = spacy.load('en_core_web_lg')
 
 # Replace a token with "REDACTED" if it is a name
+# Create a func named 'replace_name_with_placeholder()' with param 'token'.
 def replace_name_with_placeholder(token):
     if token.ent_iob != 0 and token.ent_type_ == "PERSON":
         return "[REDACTED] "
@@ -21,6 +22,7 @@ def replace_name_with_placeholder(token):
         return token.string
 
 # Loop through all the entities in a document and check if they are names
+# Create a func named 'scrub() with param 'text'.
 def scrub(text):
     doc = nlp(text)
     for ent in doc.ents:
