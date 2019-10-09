@@ -82,3 +82,25 @@ print(test_3)
 print(type(test_1))
 print(type(test_2))
 print(type(test_3))
+print("")
+
+# (age, country, knows_python)
+survey = (27, "Vietname", True)
+
+age = survey[0]
+country = survey[1]
+knows_python = survey[2]
+
+print("Age =", age)
+print("Country =", country)
+print("Knows Python?", knows_python)
+print("")
+
+# Tuple unpacking and assigning values in order, in a single line.
+# Make sure that the number of vars matches the number of elements in the tuple.
+survey2 = (21, "Switzerland", False)
+age, country, knows_python = survey2
+print("Age =", age)
+print("Country =", country)
+print("Knows Python?", knows_python)
+print("")
