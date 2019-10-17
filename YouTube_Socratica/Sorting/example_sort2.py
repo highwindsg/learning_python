@@ -7,7 +7,7 @@ Radius: Radius at equator in kilometers.
 Density: Average density in g/cm^3.
 Distance from sun: Avg distance to sun in AUs.
 
-1 Astronomical unit is est. avrg distance of earth to sun.
+1 Astronomical unit is est. avg distance of earth to sun.
 """
 
 planets = [
@@ -21,6 +21,7 @@ planets = [
     ("Neptune", 24764, 1.64, 30.070)
 ]
 
+
 # Sort the planets by their size, with the largest planet first, so we look at the radius.
 
 # Using lambda anonymous func at index 1 as the second slice which is the radius, and assign to var obj 'size'.
@@ -31,3 +32,17 @@ size = lambda planet: planet[1]
 planets.sort(key=size, reverse=True)
 
 print(planets)
+print("")
+
+
+# Sort the planets by the least density first.
+
+# Using lambda anonymous func to create the sorting function at index 2 as the third slice which is the density,
+# and assign to the var obj 'density'.
+density = lambda planet: planet[2]
+
+# Sort the 'planets' list with param key value set to var obj 'density'.
+planets.sort(key=density)
+
+print(planets)
+print("")
