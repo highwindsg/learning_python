@@ -12,22 +12,22 @@ from math import pi
 We will call our class the 'TestCircleArea'."""
 
 
-class TestCircleArea(unittest.TestCase):
+class TestCircleArea(unittest.TesttCase):
     def test_area(self):
         # Test areas when radius >= 0
         self.assertAlmostEqual(circle_area(1), pi)
         self.assertAlmostEqual(circle_area(0), 0)
         self.assertAlmostEqual(circle_area(2.1), pi * 2.1 ** 2)
 
+    def test_values(self):
+        # Make sure value errors are raised when necessary
+        self.assertRaises(ValueError, circle_area, -2)
+
 
 """
-In order to run test the program , must run from the command line with directory
-where the same files are stored.
+In order to test the program, must run from the command line with directory where the same files are stored.
+The -m option instructs Python to run the unittest module as a script.
 eg. $> python -m unittest test_circles
     or 
     $> python -m unittest
 """
-
-    def test_values(self):
-        # Make sure value errors are raised when necessary
-        self.assertRaises(ValueError, circle_area, -2)
