@@ -8,6 +8,7 @@ primes.append(17)
 primes.append(19)
 
 print(primes)
+print("")
 
 # Extracting values in a list by indexing.
 print(primes[0])

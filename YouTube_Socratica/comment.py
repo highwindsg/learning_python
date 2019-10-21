@@ -6,3 +6,10 @@ I'm going to make him an offer he can't refuse.
 Do you know who said this?"""
 
 print(movie_quote)
+print("")
+
+nlp_test = """This is a blog of text to test natural language processing's
+capabilities."""
+
+print(nlp_test)
+print("")
