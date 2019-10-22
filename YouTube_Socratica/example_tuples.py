@@ -85,8 +85,9 @@ print(type(test_3))
 print("")
 
 # (age, country, knows_python)
-survey = (27, "Vietname", True)
+survey = (27, "Vietnam", True)
 
+# Assigning tuple components to individual var.
 age = survey[0]
 country = survey[1]
 knows_python = survey[2]
