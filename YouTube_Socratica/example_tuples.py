@@ -48,7 +48,7 @@ print("Tuple size = ", sys.getsizeof(tuple_eg))
 # We use a timeit module to see how long it takes for the computer to make one million lists and one million of tuples.
 import timeit
 
-# From timeit mobule, use the timeit method and pass in the params of a list statement and a number of one million.
+# From timeit module, use the timeit method and pass in the params of a list statement and a number of one million.
 # The output will show how long it takes to make a million of this list.
 list_test = timeit.timeit(stmt="[1,2,3,4,5]", number=1000000)
 tuple_test = timeit.timeit(stmt="(1,2,3,4,5)", number=1000000)
