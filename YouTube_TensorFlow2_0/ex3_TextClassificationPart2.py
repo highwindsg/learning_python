@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# What is an Embedding Layer?
+
 """
 Tutorial obtained from
 https://www.youtube.com/watch?v=6g4O5UOH304&t=1648s
@@ -41,13 +43,13 @@ train_data = keras.preprocessing.sequence.pad_sequences(train_data, value=word_i
 test_data = keras.preprocessing.sequence.pad_sequences(test_data, value=word_index["<PAD>"], padding="post", maxlen=250)
 
 
-print(len(train_data), len(test_data))
+# print(len(train_data), len(test_data))
 
 def decode_review(text):
     return " ".join([reverse_word_index.get(i, "?") for i in text])
 
 
-print(decode_review(test_data[0]))
+# print(decode_review(test_data[0]))
 
 # Building the architecture of the model down here.
 
@@ -60,3 +62,5 @@ model.add(keras.layers.Dense(1, activation="sigmoid"))
 And so the output neuron should be either 0 or 1, or somewhere in between there to give us kind of a probability.
 We accomplish this by using sigmoid function because whatever our value is in between 0 and 1, it will test if our 
 model is actually working properly and to get the value that we want."""
+
+model.summary()
