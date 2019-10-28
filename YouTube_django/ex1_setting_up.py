@@ -3,7 +3,8 @@
 """
 https://www.youtube.com/watch?v=Z4D3M-NSN58&list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9
 
-In command line, first create a sub-folder eg. django_tutorial/
+In command line, from the working dir of "/Users/cay1sgp/Documents/GitHub/learning_python/",
+first create a sub-folder eg. YouTube_django/
 Then run the cmd django-admin to create the new site template.
 $ django-admin startproject mysite
 
