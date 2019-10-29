@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+    'main.apps.MainConfig',     # This line is added so that we can tell django we have another application
+]                               # that needs to be setup inside of our project.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
