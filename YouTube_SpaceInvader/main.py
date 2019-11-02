@@ -26,11 +26,22 @@ playerImg = pygame.image.load("player.png")
 # Set the player's starting location axis.
 playerX = 370
 playerY = 480
+playerX_change = 0
+
+# Enemy
+enemyImg = pygame.image.load("enemy.png")
+# Set the enemy's starting location axis.
+enemyX = 370
+enemyY = 50
+enemyX_change = 0
 
 
-def player():  # Create a func named 'player()'.
-    screen.blit(playerImg, (playerX, playerY))  # Use the .blit() method from screen to draw on on the surface of
-    # the game window.
+def player(x, y):  # Create a func named 'player()' with x and y params.
+    screen.blit(playerImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
+
+
+def enemy(x, y):  # Create a func named 'enemy()' with x and y params.
+    screen.blit(enemyImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
 
 
 # Game loop
@@ -41,9 +52,32 @@ while running:
     # To set the bg color to black.
     # RGB - Red, Green, Blue and number does from 0 to 255. 0 is black.
     screen.fill((0, 0, 0))
+
+    """An 'event' is anything that happens within the game window. Eg. it may be a keystroke or mouse click."""
     for event in pygame.event.get():  # To get the state of the event in pygame using the .get() method.
         if event.type == pygame.QUIT:
             running = False
 
-    player()  # Client call the player() func so that it will appear after the screen appears.
+        # If keystroke is pressed check whether its left or right.
+        if event.type == pygame.KEYDOWN:  # KEYDOWN means when you press down a key.
+            if event.key == pygame.K_LEFT:
+                print("Left arrow is pressed")
+                playerX_change = -5
+            if event.key == pygame.K_RIGHT:
+                print("Right arrow is pressed")
+                playerX_change = 5
+        if event.type == pygame.KEYUP:  # KEYUP means when you release a previously pressed key.
+            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                print("Keystroke has been released")
+                playerX_change = 0  # Setting value to 0 so that when keystroke is release, the spaceship will not move.
+
+    playerX += playerX_change
+
+    if playerX <= 0:
+        playerX = 0
+    elif playerX >= 736:  # 736 is set because we need to offset 800 pixels width against 64 pixels of the spaceship.
+        playerX = 736
+
+    player(playerX, playerY)  # Client call the player() func so that it will appear after the screen appears.
+    enemy(enemyX, enemyY)  # Client call the enemy() func so that it will appear after the screen appears.
     pygame.display.update()  # Then update the display game window.
