@@ -5,6 +5,7 @@ https://www.youtube.com/watch?v=FfWpgLFMI7w&list=PLOgeKhf41meTmtKSF8IKOzFcfh28Ks
 """
 
 import pygame
+import random
 
 # Initialize the pygame
 pygame.init()
@@ -13,9 +14,10 @@ pygame.init()
 # Top left of the windows in (0, 0) and top right is (0, 800), bottom left is (0, 600) and bottom right is (800, 0)
 screen = pygame.display.set_mode((800, 600))
 
+# Background
+background = pygame.image.load("background.png")
 # Game window title and icon
 pygame.display.set_caption("Space Invaders")
-
 # For the window title, load the icon picture and assign to a var named 'icon'
 icon = pygame.image.load("ufo.png")
 # Use the pygame display .set_icon() method and pass in the icon var that contains the png file.
@@ -31,9 +33,10 @@ playerX_change = 0
 # Enemy
 enemyImg = pygame.image.load("enemy.png")
 # Set the enemy's starting location axis.
-enemyX = 370
-enemyY = 50
-enemyX_change = 0
+enemyX = random.randint(0, 800)
+enemyY = random.randint(50, 150)
+enemyX_change = 4
+enemyY_change = 40
 
 
 def player(x, y):  # Create a func named 'player()' with x and y params.
@@ -52,6 +55,8 @@ while running:
     # To set the bg color to black.
     # RGB - Red, Green, Blue and number does from 0 to 255. 0 is black.
     screen.fill((0, 0, 0))
+    # Background image
+    screen.blit(background, (0, 0))
 
     """An 'event' is anything that happens within the game window. Eg. it may be a keystroke or mouse click."""
     for event in pygame.event.get():  # To get the state of the event in pygame using the .get() method.
@@ -71,12 +76,23 @@ while running:
                 print("Keystroke has been released")
                 playerX_change = 0  # Setting value to 0 so that when keystroke is release, the spaceship will not move.
 
+    # Checking for boundaries of spaceship so it doesn't go out of bound.
     playerX += playerX_change
 
     if playerX <= 0:
         playerX = 0
     elif playerX >= 736:  # 736 is set because we need to offset 800 pixels width against 64 pixels of the spaceship.
         playerX = 736
+
+    # Enemy movement.
+    enemyX += enemyX_change
+
+    if enemyX <= 0:
+        enemyX_change = 4
+        enemyY += enemyY_change
+    elif enemyX >= 736:  # 736 is set because we need to offset 800 pixels width against 64 pixels of the spaceship.
+        enemyX_change = -4
+        enemyY += enemyY_change
 
     player(playerX, playerY)  # Client call the player() func so that it will appear after the screen appears.
     enemy(enemyX, enemyY)  # Client call the enemy() func so that it will appear after the screen appears.
