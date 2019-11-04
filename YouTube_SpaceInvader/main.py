@@ -38,6 +38,16 @@ enemyY = random.randint(50, 150)
 enemyX_change = 4
 enemyY_change = 40
 
+# Bullet
+bulletImg = pygame.image.load("bullet.png")
+# Set the enemy's starting location axis.
+bulletX = 0
+bulletY = 480
+bulletX_change = 0
+bulletY_change = 10
+bullet_state = "ready"  # 'ready' means you can't see the bullet on the screen. 'fire' means the bullet is currently
+# moving.
+
 
 def player(x, y):  # Create a func named 'player()' with x and y params.
     screen.blit(playerImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
@@ -45,6 +55,12 @@ def player(x, y):  # Create a func named 'player()' with x and y params.
 
 def enemy(x, y):  # Create a func named 'enemy()' with x and y params.
     screen.blit(enemyImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
+
+
+def fire_bullet(x, y):
+    global bullet_state     # Set the 'bullet_state' var as a global var.
+    bullet_state = "fire"
+    screen.blit(bulletImg, (x + 16, y + 10))
 
 
 # Game loop
@@ -71,6 +87,12 @@ while running:
             if event.key == pygame.K_RIGHT:
                 print("Right arrow is pressed")
                 playerX_change = 5
+            if event.key == pygame.K_SPACE:
+                if bullet_state is "ready":
+                    # Get current X coordinate of the spaceship.
+                    bulletX = playerX
+                    fire_bullet(bulletX, bulletY)
+
         if event.type == pygame.KEYUP:  # KEYUP means when you release a previously pressed key.
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 print("Keystroke has been released")
@@ -93,6 +115,16 @@ while running:
     elif enemyX >= 736:  # 736 is set because we need to offset 800 pixels width against 64 pixels of the spaceship.
         enemyX_change = -4
         enemyY += enemyY_change
+
+    # Bullet Movement
+    if bulletY <= 0:
+        bulletY = 480
+        bullet_state = "ready"
+
+    if bullet_state is "fire":
+        fire_bullet(bulletX, bulletY)
+        bulletY -= bulletY_change
+
 
     player(playerX, playerY)  # Client call the player() func so that it will appear after the screen appears.
     enemy(enemyX, enemyY)  # Client call the enemy() func so that it will appear after the screen appears.
