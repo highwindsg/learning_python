@@ -6,6 +6,7 @@ https://www.youtube.com/watch?v=FfWpgLFMI7w&list=PLOgeKhf41meTmtKSF8IKOzFcfh28Ks
 
 import pygame
 import random
+import math
 
 # Initialize the pygame
 pygame.init()
@@ -33,7 +34,7 @@ playerX_change = 0
 # Enemy
 enemyImg = pygame.image.load("enemy.png")
 # Set the enemy's starting location axis.
-enemyX = random.randint(0, 800)
+enemyX = random.randint(0, 735)
 enemyY = random.randint(50, 150)
 enemyX_change = 4
 enemyY_change = 40
@@ -44,9 +45,11 @@ bulletImg = pygame.image.load("bullet.png")
 bulletX = 0
 bulletY = 480
 bulletX_change = 0
-bulletY_change = 10
+bulletY_change = 20
 bullet_state = "ready"  # 'ready' means you can't see the bullet on the screen. 'fire' means the bullet is currently
 # moving.
+
+score = 0
 
 
 def player(x, y):  # Create a func named 'player()' with x and y params.
@@ -58,9 +61,22 @@ def enemy(x, y):  # Create a func named 'enemy()' with x and y params.
 
 
 def fire_bullet(x, y):
-    global bullet_state     # Set the 'bullet_state' var as a global var.
+    global bullet_state  # Set the 'bullet_state' var as a global var.
     bullet_state = "fire"
     screen.blit(bulletImg, (x + 16, y + 10))
+
+
+# Create a func named 'isCollision()' with four params.
+"""The math formula can be learned from https://www.mathplanet.com/education/algebra-2/conic-sections/distance
+-between-two-points-and-the-midpoint """
+
+
+def isCollision(enemyX, enemyY, bulletX, bulletY):
+    distance = math.sqrt((math.pow(enemyX - bulletX, 2)) + (math.pow(enemyY - bulletY, 2)))
+    if distance < 27:
+        return True
+    else:
+        return False
 
 
 # Game loop
@@ -83,10 +99,10 @@ while running:
         if event.type == pygame.KEYDOWN:  # KEYDOWN means when you press down a key.
             if event.key == pygame.K_LEFT:
                 print("Left arrow is pressed")
-                playerX_change = -5
+                playerX_change = -10
             if event.key == pygame.K_RIGHT:
                 print("Right arrow is pressed")
-                playerX_change = 5
+                playerX_change = 10
             if event.key == pygame.K_SPACE:
                 if bullet_state is "ready":
                     # Get current X coordinate of the spaceship.
@@ -125,6 +141,15 @@ while running:
         fire_bullet(bulletX, bulletY)
         bulletY -= bulletY_change
 
+    # Collision
+    collision = isCollision(enemyX, enemyY, bulletX, bulletY)
+    if collision:
+        bulletY = 480
+        bullet_state = "ready"
+        score += 1
+        print(score)
+        enemyX = random.randint(0, 735)
+        enemyY = random.randint(50, 150)
 
     player(playerX, playerY)  # Client call the player() func so that it will appear after the screen appears.
     enemy(enemyX, enemyY)  # Client call the enemy() func so that it will appear after the screen appears.
