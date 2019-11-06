@@ -32,12 +32,20 @@ playerY = 480
 playerX_change = 0
 
 # Enemy
-enemyImg = pygame.image.load("enemy.png")
-# Set the enemy's starting location axis.
-enemyX = random.randint(0, 735)
-enemyY = random.randint(50, 150)
-enemyX_change = 4
-enemyY_change = 40
+enemyImg = []
+enemyX = []
+enemyY = []
+enemyX_change = []
+enemyY_change = []
+num_of_enemies = 5
+
+for i in range(num_of_enemies):
+    enemyImg.append(pygame.image.load("enemy.png"))
+    # Set the enemy's starting location axis.
+    enemyX.append(random.randint(0, 735))
+    enemyY.append(random.randint(50, 150))
+    enemyX_change.append(4)
+    enemyY_change.append(40)
 
 # Bullet
 bulletImg = pygame.image.load("bullet.png")
@@ -49,15 +57,23 @@ bulletY_change = 20
 bullet_state = "ready"  # 'ready' means you can't see the bullet on the screen. 'fire' means the bullet is currently
 # moving.
 
-score = 0
+# Score
+score_value = 0
+font = pygame.font.Font("Cream_Peach.ttf", 32)
 
+textX = 10
+textY = 10
+
+def show_score(x, y):
+    score = font.render("Score :" + str(score_value), True, (0, 255, 0))
+    screen.blit(score, (x, y))
 
 def player(x, y):  # Create a func named 'player()' with x and y params.
     screen.blit(playerImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
 
 
-def enemy(x, y):  # Create a func named 'enemy()' with x and y params.
-    screen.blit(enemyImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
+def enemy(x, y, i):  # Create a func named 'enemy()' with x and y params.
+    screen.blit(enemyImg[i], (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
 
 
 def fire_bullet(x, y):
@@ -123,14 +139,26 @@ while running:
         playerX = 736
 
     # Enemy movement.
-    enemyX += enemyX_change
+    for i in range(num_of_enemies):
+        enemyX[i] += enemyX_change[i]
+        if enemyX[i] <= 0:
+            enemyX_change[i] = 8
+            enemyY[i] += enemyY_change[i]
+        elif enemyX[
+            i] >= 736:  # 736 is set because we need to offset 800 pixels width against 64 pixels of the spaceship.
+            enemyX_change[i] = -8
+            enemyY[i] += enemyY_change[i]
 
-    if enemyX <= 0:
-        enemyX_change = 4
-        enemyY += enemyY_change
-    elif enemyX >= 736:  # 736 is set because we need to offset 800 pixels width against 64 pixels of the spaceship.
-        enemyX_change = -4
-        enemyY += enemyY_change
+        # Collision
+        collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
+        if collision:
+            bulletY = 480
+            bullet_state = "ready"
+            score_value += 1
+            enemyX[i] = random.randint(0, 735)
+            enemyY[i] = random.randint(50, 150)
+
+        enemy(enemyX[i], enemyY[i], i)  # Client call the enemy() func so that it will appear after the screen appears.
 
     # Bullet Movement
     if bulletY <= 0:
@@ -141,16 +169,6 @@ while running:
         fire_bullet(bulletX, bulletY)
         bulletY -= bulletY_change
 
-    # Collision
-    collision = isCollision(enemyX, enemyY, bulletX, bulletY)
-    if collision:
-        bulletY = 480
-        bullet_state = "ready"
-        score += 1
-        print(score)
-        enemyX = random.randint(0, 735)
-        enemyY = random.randint(50, 150)
-
     player(playerX, playerY)  # Client call the player() func so that it will appear after the screen appears.
-    enemy(enemyX, enemyY)  # Client call the enemy() func so that it will appear after the screen appears.
+    show_score(textX, textY)
     pygame.display.update()  # Then update the display game window.
