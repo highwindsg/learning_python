@@ -2,11 +2,14 @@
 
 """
 https://www.youtube.com/watch?v=FfWpgLFMI7w&list=PLOgeKhf41meTmtKSF8IKOzFcfh28Ks7Cx&index=155&t=169s
+
+https://github.com/attreyabhatt/Space-Invaders-Pygame/
 """
 
 import pygame
 import random
 import math
+from pygame import mixer    # Importing the sound mixer module from pygame library.
 
 # Initialize the pygame
 pygame.init()
@@ -17,10 +20,17 @@ screen = pygame.display.set_mode((800, 600))
 
 # Background
 background = pygame.image.load("background.png")
+
+# Background Sound
+mixer.music.load("background.wav")  # Use the 'mixer.music' to load the music as the background music.
+mixer.music.play(-1)    # '-1' is to play on loop continuously.
+
 # Game window title and icon
 pygame.display.set_caption("Space Invaders")
+
 # For the window title, load the icon picture and assign to a var named 'icon'
 icon = pygame.image.load("ufo.png")
+
 # Use the pygame display .set_icon() method and pass in the icon var that contains the png file.
 pygame.display.set_icon(icon)
 
@@ -64,9 +74,17 @@ font = pygame.font.Font("Cream_Peach.ttf", 32)
 textX = 10
 textY = 10
 
+# Game Over text
+over_font = pygame.font.Font("Cream_Peach.ttf", 64)
+
+
 def show_score(x, y):
     score = font.render("Score :" + str(score_value), True, (0, 255, 0))
     screen.blit(score, (x, y))
+
+def game_over_text():
+    over_text = over_font.render("GAME OVER", True, (0, 255, 0))
+    screen.blit(over_text, (200, 250))
 
 def player(x, y):  # Create a func named 'player()' with x and y params.
     screen.blit(playerImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
@@ -121,6 +139,8 @@ while running:
                 playerX_change = 10
             if event.key == pygame.K_SPACE:
                 if bullet_state is "ready":
+                    bullet_Sound = mixer.Sound("laser.wav")     # From 'mixer' use the '.Sound()' method.
+                    bullet_Sound.play()   # From 'mixer' use the '.Sound.play()' method without param.
                     # Get current X coordinate of the spaceship.
                     bulletX = playerX
                     fire_bullet(bulletX, bulletY)
@@ -140,6 +160,14 @@ while running:
 
     # Enemy movement.
     for i in range(num_of_enemies):
+
+        # Game Over
+        if enemyY[i] > 440:
+            for j in range(num_of_enemies):
+                enemyY[j] = 2000
+            game_over_text()
+            break
+
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
             enemyX_change[i] = 8
@@ -152,6 +180,8 @@ while running:
         # Collision
         collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
         if collision:
+            explosion_Sound = mixer.Sound("explosion.wav")  # From 'mixer' use the '.Sound()' method.
+            explosion_Sound.play()   # From 'mixer' use the '.Sound.play()' method without param.
             bulletY = 480
             bullet_state = "ready"
             score_value += 1
