@@ -9,7 +9,7 @@ https://github.com/attreyabhatt/Space-Invaders-Pygame/
 import pygame
 import random
 import math
-from pygame import mixer    # Importing the sound mixer module from pygame library.
+from pygame import mixer  # Importing the sound mixer module from pygame library.
 
 # Initialize the pygame
 pygame.init()
@@ -23,7 +23,7 @@ background = pygame.image.load("background.png")
 
 # Background Sound
 mixer.music.load("background.wav")  # Use the 'mixer.music' to load the music as the background music.
-mixer.music.play(-1)    # '-1' is to play on loop continuously.
+mixer.music.play(-1)  # '-1' is to play on loop continuously.
 
 # Game window title and icon
 pygame.display.set_caption("Space Invaders")
@@ -32,6 +32,7 @@ pygame.display.set_caption("Space Invaders")
 icon = pygame.image.load("ufo.png")
 
 # Use the pygame display .set_icon() method and pass in the icon var that contains the png file.
+# This icon image is being displayed on the left side of the window title.
 pygame.display.set_icon(icon)
 
 # Player
@@ -42,49 +43,53 @@ playerY = 480
 playerX_change = 0
 
 # Enemy
+# First set the value of enemy image, X & Y coordinates, speed changes to an empty list.
 enemyImg = []
 enemyX = []
 enemyY = []
 enemyX_change = []
 enemyY_change = []
-num_of_enemies = 5
+num_of_enemies = 5  # For this game, create 5 enemies.
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load("enemy.png"))
     # Set the enemy's starting location axis.
     enemyX.append(random.randint(0, 735))
     enemyY.append(random.randint(50, 150))
-    enemyX_change.append(4)
-    enemyY_change.append(40)
+    enemyX_change.append(4)  # Set the movement pixel speed of the enemy on X-axis.
+    enemyY_change.append(40)  # Set the downward pixel area when the enemy moves downward.
 
 # Bullet
 bulletImg = pygame.image.load("bullet.png")
 # Set the enemy's starting location axis.
 bulletX = 0
-bulletY = 480
+bulletY = 480  # Set the bullet firing Y-axis to be same as the player start position Y-axis.
 bulletX_change = 0
 bulletY_change = 20
 bullet_state = "ready"  # 'ready' means you can't see the bullet on the screen. 'fire' means the bullet is currently
 # moving.
 
 # Score
-score_value = 0
-font = pygame.font.Font("Cream_Peach.ttf", 32)
+score_value = 0  # Set the score value to 0 at start of game.
+font = pygame.font.Font("Cream_Peach.ttf", 32)  # Pass in params for the filename of the font & pixel size of 32.
 
+# X & Y coordinates of the score value text.
 textX = 10
 textY = 10
 
 # Game Over text
-over_font = pygame.font.Font("Cream_Peach.ttf", 64)
+over_font = pygame.font.Font("Cream_Peach.ttf", 64)  # Pass in params for the filename of the font & pixel size of 64.
 
 
 def show_score(x, y):
     score = font.render("Score :" + str(score_value), True, (0, 255, 0))
     screen.blit(score, (x, y))
 
+
 def game_over_text():
     over_text = over_font.render("GAME OVER", True, (0, 255, 0))
     screen.blit(over_text, (200, 250))
+
 
 def player(x, y):  # Create a func named 'player()' with x and y params.
     screen.blit(playerImg, (x, y))  # Use the .blit() method from screen to draw on on the surface of the game window.
@@ -139,8 +144,8 @@ while running:
                 playerX_change = 10
             if event.key == pygame.K_SPACE:
                 if bullet_state is "ready":
-                    bullet_Sound = mixer.Sound("laser.wav")     # From 'mixer' use the '.Sound()' method.
-                    bullet_Sound.play()   # From 'mixer' use the '.Sound.play()' method without param.
+                    bullet_Sound = mixer.Sound("laser.wav")  # From 'mixer' use the '.Sound()' method.
+                    bullet_Sound.play()  # From 'mixer' use the '.Sound.play()' method without param.
                     # Get current X coordinate of the spaceship.
                     bulletX = playerX
                     fire_bullet(bulletX, bulletY)
@@ -181,7 +186,7 @@ while running:
         collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
         if collision:
             explosion_Sound = mixer.Sound("explosion.wav")  # From 'mixer' use the '.Sound()' method.
-            explosion_Sound.play()   # From 'mixer' use the '.Sound.play()' method without param.
+            explosion_Sound.play()  # From 'mixer' use the '.Sound.play()' method without param.
             bulletY = 480
             bullet_state = "ready"
             score_value += 1
