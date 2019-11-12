@@ -24,11 +24,60 @@ class cube(object):
 
 
 class snake(object):
+    body = []
+    turns = {}
+
     def __init__(self, color, pos):
-        pass
+        self.color = color
+        self.head = cube(pos)
+        self.body.append(self.head)
+        self.dirnx = 0
+        self.dirny = 1
 
     def move(self):
-        pass
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+
+            keys = pygame.key.get_pressed()
+
+            for key in keys:
+                if keys[pygame.K_LEFT]:
+                    self.dirnx = -1
+                    self.dirny = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+                elif keys[pygame.K_RIGHT]:
+                    self.dirnx = 1
+                    self.dirny = 0
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+                elif keys[pygame.K_UP]:
+                    self.dirnx = 0
+                    self.dirny = -1
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+                elif keys[pygame.K_DOWN]:
+                    self.dirnx = 0
+                    self.dirny = 1
+                    self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
+
+        for i, c in enumerate(self.body):
+            p = c.pos[:]
+            if p in self.turns:
+                turn = self.turns[p]
+                c.move(turn[0], turn[1])
+                if i == len(self.body) - 1:
+                    self.turns.pop(p)
+            else:
+                if c.dirnx == -1 and c.pos[0] <= 0:
+                    c.pos = (c.rows - 1, c.pos[1])
+                elif c.dirnx == 1 and c.pos[0] >= c.rows - 1:
+                    c.pos = (0, c.pos[1])
+                elif c.dirny == 1 and c.pos[1] >= c.rows - 1:
+                    c.pos = (c.pos[0], 0)
+                elif c.dirny == -1 and c.pos[1] <= 0:
+                    c.pos = (c.pos[0], c.rows - 1)
 
     def reset(self, pos):
         pass
@@ -36,8 +85,12 @@ class snake(object):
     def addCube(self):
         pass
 
-    def draw(self):
-        pass
+    def draw(self, surface):
+        for i, c in enumerate(self.body):
+            if i == 0:
+                c.draw(surface, True)
+            else:
+                c.draw(surface)
 
 
 def drawGrid(w, rows, surface):
@@ -52,7 +105,6 @@ def drawGrid(w, rows, surface):
         # Drawing of the vertical and horizontal grid lines.
         pygame.draw.line(surface, (255, 255, 255), (x, 0), (x, w))
         pygame.draw.line(surface, (255, 255, 255), (0, y), (w, y))
-
 
 
 def redrawWindow(surface):
@@ -82,13 +134,11 @@ def main():
     clock = pygame.time.Clock()
 
     while flag:
-        pygame.time.delay(50)   # To set the speed delay for the snake so that it does not run too fast.
+        pygame.time.delay(50)  # To set the speed delay for the snake so that it does not run too fast.
         clock.tick(10)  # To ensure that the game doesn't run more than 10 frames per sec.
         redrawWindow(win)
 
-
     pass
-
 
 
 main()
