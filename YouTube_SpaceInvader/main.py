@@ -177,8 +177,7 @@ while running:
         if enemyX[i] <= 0:
             enemyX_change[i] = 8
             enemyY[i] += enemyY_change[i]
-        elif enemyX[
-            i] >= 736:  # 736 is set because we need to offset 800 pixels width against 64 pixels of the spaceship.
+        elif enemyX[i] >= 736:  # 736 is set because we need to offset 800 pixels against 64 pixels of the spaceship.
             enemyX_change[i] = -8
             enemyY[i] += enemyY_change[i]
 
