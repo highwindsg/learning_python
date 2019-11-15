@@ -2,7 +2,6 @@
 
 """
 https://www.youtube.com/watch?v=FfWpgLFMI7w&list=PLOgeKhf41meTmtKSF8IKOzFcfh28Ks7Cx&index=155&t=169s
-
 https://github.com/attreyabhatt/Space-Invaders-Pygame/
 """
 
@@ -37,6 +36,7 @@ pygame.display.set_icon(icon)
 
 # Player
 playerImg = pygame.image.load("player.png")
+# playerImg = pygame.image.load("NicEr.png")
 # Set the player's starting location axis.
 playerX = 370
 playerY = 480
@@ -53,6 +53,7 @@ num_of_enemies = 5  # For this game, create 5 enemies.
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load("enemy.png"))
+#    enemyImg.append(pygame.image.load("LilianKeh.png"))
     # Set the enemy's starting location axis.
     enemyX.append(random.randint(0, 735))
     enemyY.append(random.randint(50, 150))
