@@ -53,7 +53,7 @@ num_of_enemies = 5  # For this game, create 5 enemies.
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load("enemy.png"))
-#    enemyImg.append(pygame.image.load("LilianKeh.png"))
+    #    enemyImg.append(pygame.image.load("LilianKeh.png"))
     # Set the enemy's starting location axis.
     enemyX.append(random.randint(0, 735))
     enemyY.append(random.randint(50, 150))
@@ -120,10 +120,10 @@ def isCollision(enemyX, enemyY, bulletX, bulletY):
 
 
 # Game loop
-running = True  # Set the var 'running' to True first so that the window stays open.
+# running = True  # Set the var 'running' to True first so that the window stays open.
 
 """So if the close window is clicked, then change the value of var 'running' to False and close the game window."""
-while running:
+while True:
     # To set the bg color to black.
     # RGB - Red, Green, Blue and number does from 0 to 255. 0 is black.
     screen.fill((0, 0, 0))
