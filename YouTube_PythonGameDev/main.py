@@ -6,6 +6,7 @@ To read more on pygame events, go to http://www.pygame.org/docs/ref/event.html
 """
 
 import pygame
+import time
 
 pygame.init()  # To initialize the pygame module
 
@@ -35,9 +36,16 @@ lead_y_change = 0
 
 clock = pygame.time.Clock()
 
-block_size = 10     # Setting the movement block size.
+block_size = 10  # Setting the movement block size.
+FPS = 30  # Setting the frame per secs.
 
-FPS = 30    # Setting the frame per secs.
+font = pygame.font.SysFont(None, 25)
+
+
+def message_to_screen(msg, color):
+    screen_text = font.render(msg, True, color)
+    gameDisplay.blit(screen_text, [display_width / 2, display_height / 2])
+
 
 while not gameExit:  # This means the gameExit value is still set at False.
     for event in pygame.event.get():  # Use the pygame's .event.get() method to get ALL events in the game window.
@@ -61,7 +69,6 @@ while not gameExit:  # This means the gameExit value is still set at False.
     if lead_x >= display_width or lead_x < 0 or lead_y >= display_height or lead_y < 0:
         gameExit = True
 
-
     lead_x += lead_x_change
     lead_y += lead_y_change
 
@@ -74,5 +81,8 @@ while not gameExit:  # This means the gameExit value is still set at False.
 
     clock.tick(FPS)  # The speed at which the snake moves.
 
+message_to_screen("You Lose", red)
+pygame.display.update()
+time.sleep(2)
 pygame.quit()  # This is to stop the initializing of the pygame.
 quit()
