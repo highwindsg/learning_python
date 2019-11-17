@@ -15,6 +15,7 @@ pygame.init()  # To initialize the pygame module
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
+green = (0, 255, 0)
 
 # Set the game surface display with a param of 800 pixels by 600 pixels in a tuple, and assign the surface to var
 # 'gameDisplay'.
@@ -26,10 +27,16 @@ pygame.display.set_caption("Slither")
 
 clock = pygame.time.Clock()
 
-block_size = 10  # Setting the movement block size.
+block_size = 20  # Setting the movement block size.
 FPS = 30  # Setting the frame per secs.
 
 font = pygame.font.SysFont(None, 25)
+
+
+def snake(block_size, snakeList):
+    for XnY in snakeList:
+        pygame.draw.rect(gameDisplay, green, [XnY[0], XnY[1], block_size, block_size])  # Draw a black rectangle with
+        # block_size to show the snake growing length.
 
 
 def message_to_screen(msg, color):
@@ -48,8 +55,12 @@ def gameLoop():
     lead_x_change = 0
     lead_y_change = 0
 
-    randAppleX = random.randrange(0, display_width - block_size)
-    randAppleY = random.randrange(0, display_height - block_size)
+    snakeList = []
+    snakeLength = 1
+
+    # Rounding off the random range number is to align the snake and apple properly on the exact same axis.
+    randAppleX = round(random.randrange(0, display_width - block_size)) #/ 10.0) * 10.0
+    randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0) * 10.0
 
     while not gameExit:  # This means the gameExit value is still set at False.
 
@@ -59,6 +70,10 @@ def gameLoop():
             pygame.display.update()
 
             for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    gameOver = False
+                    gameExit = True
+
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_q:
                         gameExit = True
@@ -93,10 +108,44 @@ def gameLoop():
         # print(event)    # Print out ALL the keyboard and mouse happening in the game window onto the terminal console.
 
         gameDisplay.fill(white)  # Fill the background of the game window with white color.
-        pygame.draw.rect(gameDisplay, red, [randAppleX, randAppleY, block_size, block_size])
-        pygame.draw.rect(gameDisplay, black, [lead_x, lead_y, block_size, block_size])  # Draw a black rectangle with
-        # [x-axis, y-axis, width, height].
+
+        AppleThickness = 30
+        pygame.draw.rect(gameDisplay, red, [randAppleX, randAppleY, AppleThickness, AppleThickness])
+
+
+        snakeHead = []
+        snakeHead.append(lead_x)
+        snakeHead.append(lead_y)
+        snakeList.append(snakeHead)
+
+        if len(snakeList) > snakeLength:
+            del snakeList[0]
+
+        for eachSegment in snakeList[:-1]:
+            if eachSegment == snakeHead:
+                gameOver = True
+
+        snake(block_size, snakeList)
         pygame.display.update()
+
+#        if lead_x >= randAppleX and lead_x <= randAppleX + AppleThickness:
+#            if lead_y >= randAppleY and lead_y <= randAppleY + AppleThickness:
+#                randAppleX = round(random.randrange(0, display_width - block_size)) #/ 10.0) * 10.0
+#                randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0)* 10.0
+#                snakeLength += 1
+
+        if lead_x > randAppleX and lead_x < randAppleX + AppleThickness or lead_x + block_size > randAppleX and lead_x + block_size < randAppleX + AppleThickness:
+            if lead_y > randAppleX and lead_y < randAppleY + AppleThickness:
+
+                randAppleX = round(random.randrange(0, display_width - block_size))  # / 10.0) * 10.0
+                randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0)* 10.0
+                snakeLength += 1
+
+            elif lead_y + block_size > randAppleY and lead_y + block_size < randAppleY + AppleThickness:
+
+                randAppleX = round(random.randrange(0, display_width - block_size))  # / 10.0) * 10.0
+                randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0)* 10.0
+                snakeLength += 1
 
         clock.tick(FPS)  # The speed at which the snake moves.
 
