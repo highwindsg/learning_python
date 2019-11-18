@@ -25,23 +25,36 @@ display_height = 600
 gameDisplay = pygame.display.set_mode((display_width, display_height))
 pygame.display.set_caption("Slither")
 
+img = pygame.image.load("snakehead2.png")
+
 clock = pygame.time.Clock()
 
 block_size = 20  # Setting the movement block size.
-FPS = 30  # Setting the frame per secs.
+FPS = 15  # Setting the frame per secs.
 
 font = pygame.font.SysFont(None, 25)
 
 
 def snake(block_size, snakeList):
-    for XnY in snakeList:
+
+    gameDisplay.blit(img, (snakeList[-1][0], snakeList[-1][1]))
+
+    for XnY in snakeList[:-1]:
         pygame.draw.rect(gameDisplay, green, [XnY[0], XnY[1], block_size, block_size])  # Draw a black rectangle with
         # block_size to show the snake growing length.
 
 
+def text_objects(text, color):
+    textSurface = font.render(text, True, color)
+    return textSurface, textSurface.get_rect()
+
+
 def message_to_screen(msg, color):
-    screen_text = font.render(msg, True, color)
-    gameDisplay.blit(screen_text, [display_width / 2, display_height / 2])
+    textSurf, textRect = text_objects(msg, color)
+    # screen_text = font.render(msg, True, color)
+    # gameDisplay.blit(screen_text, [display_width / 2, display_height / 2])
+    textRect.center = (display_width / 2), (display_height / 2)
+    gameDisplay.blit(textSurf, textRect)
 
 
 def gameLoop():
