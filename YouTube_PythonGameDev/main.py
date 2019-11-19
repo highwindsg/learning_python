@@ -32,32 +32,85 @@ clock = pygame.time.Clock()
 block_size = 20  # Setting the movement block size.
 FPS = 15  # Setting the frame per secs.
 
-font = pygame.font.SysFont(None, 25)
+direction = "right"
+
+smallfont = pygame.font.SysFont("comicsanms", 25)
+medfont = pygame.font.SysFont("comicsansms", 50)
+largefont = pygame.font.SysFont("comicsansms", 80)
+
+
+def game_intro():
+
+    intro = True
+
+    while intro:
+        gameDisplay.fill(white)
+        message_to_screen("Welcome to Slither",
+                          green,
+                          -100,
+                          "large")
+
+        message_to_screen("The objective of the game is to eat red apples",
+                          black,
+                          -30)
+
+        message_to_screen("The more apples you eat, the longer you get",
+                          black,
+                          10)
+
+        message_to_screen("If you run into yourself, or the edges, you die!",
+                          black,
+                          50)
+
+        message_to_screen("Press C to play or Q to quit.",
+                          black,
+                          180)
+
+        pygame.display.update()
+        clock.tick(15)
+
 
 
 def snake(block_size, snakeList):
 
-    gameDisplay.blit(img, (snakeList[-1][0], snakeList[-1][1]))
+    if direction == "right":
+        head = pygame.transform.rotate(img, 270)
+
+    if direction == "left":
+        head = pygame.transform.rotate(img, 90)
+
+    if direction == "up":
+        head = img
+
+    if direction == "down":
+        head = pygame.transform.rotate(img, 180)
+
+    gameDisplay.blit(head, (snakeList[-1][0], snakeList[-1][1]))
 
     for XnY in snakeList[:-1]:
         pygame.draw.rect(gameDisplay, green, [XnY[0], XnY[1], block_size, block_size])  # Draw a black rectangle with
         # block_size to show the snake growing length.
 
 
-def text_objects(text, color):
-    textSurface = font.render(text, True, color)
+def text_objects(text, color, size):
+    if size == "small":
+        textSurface = smallfont.render(text, True, color)
+    elif size == "medium":
+        textSurface = medfont.render(text, True, color)
+    elif size == "large":
+        textSurface = largefont.render(text, True, color)
+
     return textSurface, textSurface.get_rect()
 
 
-def message_to_screen(msg, color):
-    textSurf, textRect = text_objects(msg, color)
-    # screen_text = font.render(msg, True, color)
-    # gameDisplay.blit(screen_text, [display_width / 2, display_height / 2])
-    textRect.center = (display_width / 2), (display_height / 2)
+def message_to_screen(msg, color, y_displace=0, size="small"):
+    textSurf, textRect = text_objects(msg, color, size)
+    textRect.center = (display_width / 2), (display_height / 2) + y_displace
     gameDisplay.blit(textSurf, textRect)
 
 
 def gameLoop():
+    global direction
     gameExit = False
     gameOver = False
 
@@ -65,7 +118,7 @@ def gameLoop():
     lead_x = display_width / 2
     lead_y = display_height / 2
 
-    lead_x_change = 0
+    lead_x_change = 10
     lead_y_change = 0
 
     snakeList = []
@@ -79,7 +132,16 @@ def gameLoop():
 
         while gameOver == True:
             gameDisplay.fill(white)
-            message_to_screen("Game over, press C to play again or Q to quit", red)
+            message_to_screen("Game over",
+                              red,
+                              y_displace=-50,
+                              size="large")
+
+            message_to_screen("Press C to play again or Q to quit",
+                              black,
+                              50,
+                              size="medium")
+
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -99,15 +161,19 @@ def gameLoop():
                 gameExit = True  # Then set the gameExit var value to True.
             if event.type == pygame.KEYDOWN:  # When detected any cursor key is pressed down,
                 if event.key == pygame.K_LEFT:  # and left cursor key is pressed,
+                    direction = "left"
                     lead_x_change = -block_size  # move to the left by 10 pixels,
                     lead_y_change = 0  # maintain y-axis no change.
                 elif event.key == pygame.K_RIGHT:  # When right cursor key is pressed,
+                    direction = "right"
                     lead_x_change = block_size  # move to the right by 10 pixels.
                     lead_y_change = 0  # maintain y-axis no change.
                 elif event.key == pygame.K_UP:  # When up cursor key is pressed,
+                    direction = "up"
                     lead_y_change = -block_size  # move up by 10 pixels,
                     lead_x_change = 0  # maintain x-axis no change.
                 elif event.key == pygame.K_DOWN:  # When down cursor key is pressed,
+                    direction = "down"
                     lead_y_change = block_size  # move down by 10 pixels,
                     lead_x_change = 0  # maintain x-axis no change.
 
@@ -150,14 +216,14 @@ def gameLoop():
         if lead_x > randAppleX and lead_x < randAppleX + AppleThickness or lead_x + block_size > randAppleX and lead_x + block_size < randAppleX + AppleThickness:
             if lead_y > randAppleX and lead_y < randAppleY + AppleThickness:
 
-                randAppleX = round(random.randrange(0, display_width - block_size))  # / 10.0) * 10.0
-                randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0)* 10.0
+                randAppleX = round(random.randrange(0, display_width - block_size))     # / 10.0) * 10.0
+                randAppleY = round(random.randrange(0, display_height - block_size))    # / 10.0) * 10.0
                 snakeLength += 1
 
             elif lead_y + block_size > randAppleY and lead_y + block_size < randAppleY + AppleThickness:
 
-                randAppleX = round(random.randrange(0, display_width - block_size))  # / 10.0) * 10.0
-                randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0)* 10.0
+                randAppleX = round(random.randrange(0, display_width - block_size))     # / 10.0) * 10.0
+                randAppleY = round(random.randrange(0, display_height - block_size))    # / 10.0) * 10.0
                 snakeLength += 1
 
         clock.tick(FPS)  # The speed at which the snake moves.
@@ -166,4 +232,5 @@ def gameLoop():
     quit()
 
 
+game_intro()
 gameLoop()
