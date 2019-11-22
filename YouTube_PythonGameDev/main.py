@@ -25,10 +25,15 @@ display_height = 600
 gameDisplay = pygame.display.set_mode((display_width, display_height))
 pygame.display.set_caption("Slither")
 
+icon = pygame.image.load("apple.png")
+pygame.display.set_icon(icon)
+
 img = pygame.image.load("snakehead2.png")
+appleimg = pygame.image.load("apple.png")
 
 clock = pygame.time.Clock()
 
+AppleThickness = 30     # The pixel size of apple is 30 by 30 pixels.
 block_size = 20  # Setting the movement block size.
 FPS = 15  # Setting the frame per secs.
 
@@ -39,11 +44,68 @@ medfont = pygame.font.SysFont("comicsansms", 50)
 largefont = pygame.font.SysFont("comicsansms", 80)
 
 
+def pause():
+
+    paused = True
+
+    while paused:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_c:
+                    paused = False
+
+                elif event.key == pygame.K_q:
+                    pygame.quit()
+                    quit()
+
+        gameDisplay.fill(white)
+        message_to_screen("Paused",
+                          black,
+                          -100,
+                          size="large")
+
+        message_to_screen("Press C to continue or Q to quit.",
+                          black,
+                          25)
+
+        pygame.display.update()
+        clock.tick(5)
+
+
+def score(score):
+    text = smallfont.render("Score: " + str(score), True, black)
+    gameDisplay.blit(text, [0, 0])
+
+
+def randAppleGen():
+    randAppleX = round(random.randrange(0, display_width - AppleThickness))  # / 10.0) * 10.0
+    randAppleY = round(random.randrange(0, display_height - AppleThickness))  # / 10.0) * 10.0
+
+    return randAppleX, randAppleY
+
+
 def game_intro():
 
     intro = True
 
     while intro:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_c:
+                    intro = False
+                if event.key == pygame.K_q:
+                    pygame.quit()
+                    quit()
+
         gameDisplay.fill(white)
         message_to_screen("Welcome to Slither",
                           green,
@@ -62,13 +124,12 @@ def game_intro():
                           black,
                           50)
 
-        message_to_screen("Press C to play or Q to quit.",
+        message_to_screen("Press C to play, P to pause or Q to quit.",
                           black,
                           180)
 
         pygame.display.update()
         clock.tick(15)
-
 
 
 def snake(block_size, snakeList):
@@ -111,6 +172,8 @@ def message_to_screen(msg, color, y_displace=0, size="small"):
 
 def gameLoop():
     global direction
+
+    direction = "right"
     gameExit = False
     gameOver = False
 
@@ -124,9 +187,7 @@ def gameLoop():
     snakeList = []
     snakeLength = 1
 
-    # Rounding off the random range number is to align the snake and apple properly on the exact same axis.
-    randAppleX = round(random.randrange(0, display_width - block_size)) #/ 10.0) * 10.0
-    randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0) * 10.0
+    randAppleX, randAppleY = randAppleGen()
 
     while not gameExit:  # This means the gameExit value is still set at False.
 
@@ -177,6 +238,9 @@ def gameLoop():
                     lead_y_change = block_size  # move down by 10 pixels,
                     lead_x_change = 0  # maintain x-axis no change.
 
+                elif event.key == pygame.K_p:
+                    pause()
+
         # Setting the boundaries on x and y axis to stop the game if snake goes out of the game window.
         if lead_x >= display_width or lead_x < 0 or lead_y >= display_height or lead_y < 0:
             gameOver = True
@@ -184,13 +248,9 @@ def gameLoop():
         lead_x += lead_x_change
         lead_y += lead_y_change
 
-        # print(event)    # Print out ALL the keyboard and mouse happening in the game window onto the terminal console.
-
         gameDisplay.fill(white)  # Fill the background of the game window with white color.
 
-        AppleThickness = 30
-        pygame.draw.rect(gameDisplay, red, [randAppleX, randAppleY, AppleThickness, AppleThickness])
-
+        gameDisplay.blit(appleimg, (randAppleX, randAppleY))
 
         snakeHead = []
         snakeHead.append(lead_x)
@@ -205,25 +265,20 @@ def gameLoop():
                 gameOver = True
 
         snake(block_size, snakeList)
-        pygame.display.update()
 
-#        if lead_x >= randAppleX and lead_x <= randAppleX + AppleThickness:
-#            if lead_y >= randAppleY and lead_y <= randAppleY + AppleThickness:
-#                randAppleX = round(random.randrange(0, display_width - block_size)) #/ 10.0) * 10.0
-#                randAppleY = round(random.randrange(0, display_height - block_size)) #/ 10.0)* 10.0
-#                snakeLength += 1
+        score(snakeLength - 1)
+
+        pygame.display.update()
 
         if lead_x > randAppleX and lead_x < randAppleX + AppleThickness or lead_x + block_size > randAppleX and lead_x + block_size < randAppleX + AppleThickness:
             if lead_y > randAppleX and lead_y < randAppleY + AppleThickness:
 
-                randAppleX = round(random.randrange(0, display_width - block_size))     # / 10.0) * 10.0
-                randAppleY = round(random.randrange(0, display_height - block_size))    # / 10.0) * 10.0
+                randAppleX, randAppleY = randAppleGen()
                 snakeLength += 1
 
             elif lead_y + block_size > randAppleY and lead_y + block_size < randAppleY + AppleThickness:
 
-                randAppleX = round(random.randrange(0, display_width - block_size))     # / 10.0) * 10.0
-                randAppleY = round(random.randrange(0, display_height - block_size))    # / 10.0) * 10.0
+                randAppleX, randAppleY = randAppleGen()
                 snakeLength += 1
 
         clock.tick(FPS)  # The speed at which the snake moves.
