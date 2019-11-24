@@ -19,3 +19,6 @@ INFO:root:Time required for ///Users/cay1sgp/Documents/GitHub/learning_python/Yo
 INFO:root:Time required for ///Users/cay1sgp/Documents/GitHub/learning_python/YouTube_Socratica/UnitTests/audio_file.wav = 0.00012493133544921875
 ERROR:root:[Errno 2] No such file or directory: '///Users/cay1sgp/Documents/GitHub/learning_python/YouTube_Socratica/UnitTests/imaginary_file'
 INFO:root:Time required for ///Users/cay1sgp/Documents/GitHub/learning_python/YouTube_Socratica/UnitTests/imaginary_file = 0.00024199485778808594
+INFO:root:Time required for ///Users/cay1sgp/Documents/GitHub/learning_python/YouTube_Socratica/UnitTests/audio_file.wav = 6.818771362304688e-05
+ERROR:root:[Errno 2] No such file or directory: '///Users/cay1sgp/Documents/GitHub/learning_python/YouTube_Socratica/UnitTests/imaginary_file'
+INFO:root:Time required for ///Users/cay1sgp/Documents/GitHub/learning_python/YouTube_Socratica/UnitTests/imaginary_file = 0.0001049041748046875
