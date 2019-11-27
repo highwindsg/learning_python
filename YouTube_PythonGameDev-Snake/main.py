@@ -25,11 +25,14 @@ display_height = 600
 gameDisplay = pygame.display.set_mode((display_width, display_height))
 pygame.display.set_caption("Slither")
 
-icon = pygame.image.load("apple.png")
+#icon = pygame.image.load("apple.png")
+icon = pygame.image.load("NicEr.png")
 pygame.display.set_icon(icon)
 
-img = pygame.image.load("snakehead2.png")
-appleimg = pygame.image.load("apple.png")
+#img = pygame.image.load("snakehead2.png")
+img = pygame.image.load("LilianKeh.png")
+#appleimg = pygame.image.load("apple.png")
+appleimg = pygame.image.load("NicEr.png")
 
 clock = pygame.time.Clock()
 
