@@ -14,7 +14,9 @@ pygame.init()  # To initialize the pygame module
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
+yellow = (200, 200, 0)
 green = (0, 255, 0)
+clock = pygame.time.Clock()
 
 # Set the game surface display with a param of 800 pixels by 600 pixels in a tuple, and assign the surface to var
 # 'gameDisplay'.
@@ -22,7 +24,6 @@ green = (0, 255, 0)
 display_width = 800
 display_height = 600
 gameDisplay = pygame.display.set_mode((display_width, display_height))
-
 
 pygame.display.set_caption("Tanks")
 
@@ -32,10 +33,6 @@ pygame.display.set_caption("Tanks")
 # img = pygame.image.load("snakehead2.png")
 # appleimg = pygame.image.load("apple.png")
 
-clock = pygame.time.Clock()
-
-# AppleThickness = 30     # The pixel size of apple is 30 by 30 pixels.
-# block_size = 20  # Setting the movement block size.
 FPS = 15  # Setting the frame per secs.
 
 smallfont = pygame.font.SysFont("comicsanms", 25)
@@ -114,9 +111,21 @@ def game_intro():
                           black,
                           50)
 
-        message_to_screen("Press C to play, P to pause or Q to quit.",
-                          black,
-                          180)
+        # message_to_screen("Press C to play, P to pause or Q to quit.",
+        #                  black,
+        #                  180)
+
+        pygame.draw.rect(gameDisplay, green, (150, 500, 100, 50))
+        pygame.draw.rect(gameDisplay, yellow, (350, 500, 100, 50))
+        pygame.draw.rect(gameDisplay, red, (550, 500, 100, 50))
+        
+        text_to_button("play", black, 150, 500, 100, 50)
+        text_to_button("controls", black, 350, 500, 100, 50)
+        text_to_button("quit", black, 550, 500, 100, 50)
+        
+
+
+
 
         pygame.display.update()
         clock.tick(15)
@@ -132,6 +141,13 @@ def text_objects(text, color, size):
         textSurface = largefont.render(text, True, color)
 
     return textSurface, textSurface.get_rect()
+
+
+def text_to_button(msg, color, buttonx, buttony, buttonwidth, buttonheight, size="small"):
+    textSurf, textRect = text_objects(msg, color, size)
+    textRect.center = ((buttonx + (buttonwidth / 2)), buttony + (buttonheight /2))
+    gameDisplay.blit(textSurf, textRect)
+    
 
 
 def message_to_screen(msg, color, y_displace=0, size="small"):
