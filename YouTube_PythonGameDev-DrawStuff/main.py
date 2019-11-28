@@ -13,9 +13,17 @@ pygame.init()  # To initialize the pygame module
 # To decide on the color to use in the game window.
 white = (255, 255, 255)
 black = (0, 0, 0)
-red = (255, 0, 0)
+
+red = (200, 0, 0)
+light_red = (255, 0, 0)
+
 yellow = (200, 200, 0)
-green = (0, 255, 0)
+light_yellow = (255, 255, 0)
+
+green = (34, 177, 76)
+light_green = (0, 255, 0)
+
+
 clock = pygame.time.Clock()
 
 # Set the game surface display with a param of 800 pixels by 600 pixels in a tuple, and assign the surface to var
@@ -82,6 +90,7 @@ def game_intro():
     while intro:
 
         for event in pygame.event.get():
+            # print(event)  # This will print out all events on mouse movement to terminal.
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
@@ -115,13 +124,12 @@ def game_intro():
         #                  black,
         #                  180)
 
-        pygame.draw.rect(gameDisplay, green, (150, 500, 100, 50))
-        pygame.draw.rect(gameDisplay, yellow, (350, 500, 100, 50))
-        pygame.draw.rect(gameDisplay, red, (550, 500, 100, 50))
+        cur = pygame.mouse.get_pos()
         
-        text_to_button("play", black, 150, 500, 100, 50)
-        text_to_button("controls", black, 350, 500, 100, 50)
-        text_to_button("quit", black, 550, 500, 100, 50)
+        button("play", 150, 500, 100, 50, green, light_green)
+        button("controls", 350, 500, 100, 50, yellow, light_yellow)
+        button("quit", 550, 500, 100, 50, red, light_red)
+        
         
 
 
@@ -143,6 +151,7 @@ def text_objects(text, color, size):
     return textSurface, textSurface.get_rect()
 
 
+
 def text_to_button(msg, color, buttonx, buttony, buttonwidth, buttonheight, size="small"):
     textSurf, textRect = text_objects(msg, color, size)
     textRect.center = ((buttonx + (buttonwidth / 2)), buttony + (buttonheight /2))
@@ -154,6 +163,20 @@ def message_to_screen(msg, color, y_displace=0, size="small"):
     textSurf, textRect = text_objects(msg, color, size)
     textRect.center = (display_width / 2), (display_height / 2) + y_displace
     gameDisplay.blit(textSurf, textRect)
+
+
+
+def button(text, x, y, width, height, inactive_color, active_color):
+    cur = pygame.mouse.get_pos()
+    
+    if x + width > cur[0] > x and y + height > cur[1] > y:
+        pygame.draw.rect(gameDisplay, active_color, (x, y, width, height))
+    else:
+        pygame.draw.rect(gameDisplay, inactive_color, (x, y, width, height))
+
+    text_to_button(text, black, x, y, width, height)
+ 
+
 
 
 def gameLoop():
