@@ -23,7 +23,6 @@ light_yellow = (255, 255, 0)
 green = (34, 177, 76)
 light_green = (0, 255, 0)
 
-
 clock = pygame.time.Clock()
 
 # Set the game surface display with a param of 800 pixels by 600 pixels in a tuple, and assign the surface to var
@@ -32,6 +31,18 @@ clock = pygame.time.Clock()
 display_width = 800
 display_height = 600
 gameDisplay = pygame.display.set_mode((display_width, display_height))
+
+
+
+tankWidth = 40
+tankHeight = 20
+
+turretwidth = 5
+wheelWidth = 5
+
+
+
+
 
 pygame.display.set_caption("Tanks")
 
@@ -165,6 +176,26 @@ def message_to_screen(msg, color, y_displace=0, size="small"):
     gameDisplay.blit(textSurf, textRect)
 
 
+def tank(x, y):
+    x = int(x)
+    y = int(y)
+    pygame.draw.circle(gameDisplay, black, (x, y), int(tankHeight / 2))
+    pygame.draw.rect(gameDisplay, black, (x-tankHeight, y, tankWidth, tankHeight))
+
+    pygame.draw.line(gameDisplay, black, (x, y), (x-10, y-20), turretwidth)
+    
+    pygame.draw.circle(gameDisplay, black, (x-15, y+20), wheelWidth)
+    pygame.draw.circle(gameDisplay, black, (x-10, y+20), wheelWidth)
+    
+    pygame.draw.circle(gameDisplay, black, (x-15, y+20), wheelWidth)
+    pygame.draw.circle(gameDisplay, black, (x-10, y+20), wheelWidth)
+    pygame.draw.circle(gameDisplay, black, (x-5, y+20), wheelWidth)
+    pygame.draw.circle(gameDisplay, black, (x, y+20), wheelWidth)
+    pygame.draw.circle(gameDisplay, black, (x+5, y+20), wheelWidth)
+    pygame.draw.circle(gameDisplay, black, (x+10, y+20), wheelWidth)
+    pygame.draw.circle(gameDisplay, black, (x+15, y+20), wheelWidth)
+    
+  
 
 def game_controls():
     
@@ -243,6 +274,11 @@ def gameLoop():
     gameOver = False
     FPS = 15
 
+    mainTankX = display_width * 0.9
+    mainTankY = display_height * 0.9
+    tankMove = 0
+
+
     while not gameExit:  # This means the gameExit value is still set at False.
 
         if gameOver == True:
@@ -277,18 +313,30 @@ def gameLoop():
                 gameExit = True  # Then set the gameExit var value to True.
             if event.type == pygame.KEYDOWN:  # When detected any cursor key is pressed down,
                 if event.key == pygame.K_LEFT:  # and left cursor key is pressed,
-                    pass
+                    tankMove = -5
+                    
                 elif event.key == pygame.K_RIGHT:  # When right cursor key is pressed,
-                    pass
+                    tankMove = 5
+                    
                 elif event.key == pygame.K_UP:  # When up cursor key is pressed,
                     pass
+                
                 elif event.key == pygame.K_DOWN:  # When down cursor key is pressed,
                     pass
 
                 elif event.key == pygame.K_p:
                     pause()
+                    
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+                    tankMove = 0
+                    
 
         gameDisplay.fill(white)  # Fill the background of the game window with white color.
+        mainTankX += tankMove
+        tank(mainTankX, mainTankY)
+        
+        
         pygame.display.update()
         clock.tick(FPS)  # The speed at which the snake moves.
 
