@@ -5,7 +5,6 @@
 # description: tex-based space adventure game
 # https://www.youtube.com/watch?v=miuHrP2O7Jw&list=PLOgeKhf41meTmtKSF8IKOzFcfh28Ks7Cx&index=165&t=0s
 
-
 import random
 import time
 
@@ -50,7 +49,3 @@ while playAgain =="yes" or playAgain == "y":
     choice = choosePath()
     checkPath(choice)   # choice is equal to "1" or "2"
     playAgain = input("Do you want to play again? (yes or y to continue playing): ")
-    
-
-
-
