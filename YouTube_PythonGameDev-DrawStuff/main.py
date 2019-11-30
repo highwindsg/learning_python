@@ -87,6 +87,17 @@ def pause():
                     quit()
 
         clock.tick(5)   # 5 FPS
+        
+        
+def barrier():
+    xlocation = (display_width / 2) + random.randint(-0.2 * display_height, 0.2 * display_width)
+    randomHeight = random.randrange(display_height * 0.1, display_height * 0.6)
+   
+    
+
+for x in range(25):
+    barrier()
+    
 
 
 def score(score):
@@ -176,13 +187,28 @@ def message_to_screen(msg, color, y_displace=0, size="small"):
     gameDisplay.blit(textSurf, textRect)
 
 
-def tank(x, y):
+def tank(x, y, turPos):
     x = int(x)
     y = int(y)
+    
+    
+    possibleTurrents = [(x-27, y-2),
+                        (x-26, y-5),
+                        (x-25, y-8),
+                        (x-23, y-12),
+                        (x-20, y-14),
+                        (x-18, y-15),
+                        (x-15, y-17),
+                        (x-13, y-19),
+                        (x-11, y-21)
+                        ]
+    
+    
+    
     pygame.draw.circle(gameDisplay, black, (x, y), int(tankHeight / 2))
     pygame.draw.rect(gameDisplay, black, (x-tankHeight, y, tankWidth, tankHeight))
 
-    pygame.draw.line(gameDisplay, black, (x, y), (x-10, y-20), turretwidth)
+    pygame.draw.line(gameDisplay, black, (x, y), possibleTurrents[turPos], turretwidth)
     
     pygame.draw.circle(gameDisplay, black, (x-15, y+20), wheelWidth)
     pygame.draw.circle(gameDisplay, black, (x-10, y+20), wheelWidth)
@@ -277,6 +303,9 @@ def gameLoop():
     mainTankX = display_width * 0.9
     mainTankY = display_height * 0.9
     tankMove = 0
+    
+    currentTurPos = 0
+    changeTur = 0
 
 
     while not gameExit:  # This means the gameExit value is still set at False.
@@ -319,10 +348,10 @@ def gameLoop():
                     tankMove = 5
                     
                 elif event.key == pygame.K_UP:  # When up cursor key is pressed,
-                    pass
+                    changeTur = 1
                 
                 elif event.key == pygame.K_DOWN:  # When down cursor key is pressed,
-                    pass
+                    changeTur = -1
 
                 elif event.key == pygame.K_p:
                     pause()
@@ -331,11 +360,26 @@ def gameLoop():
                 if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                     tankMove = 0
                     
+                if event.key == pygame.K_UP or event.key == pygame.K_DOLLAR:
+                    changeTur = 0
+                
+                
+                
+                    
 
         gameDisplay.fill(white)  # Fill the background of the game window with white color.
         mainTankX += tankMove
-        tank(mainTankX, mainTankY)
         
+        currentTurPos += changeTur
+        
+        if currentTurPos > 8:
+            currentTurPos = 8
+        elif currentTurPos < 0:
+            currentTurPos = 0
+
+
+
+        tank(mainTankX, mainTankY, currentTurPos)
         
         pygame.display.update()
         clock.tick(FPS)  # The speed at which the snake moves.
