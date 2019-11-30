@@ -89,14 +89,12 @@ def pause():
         clock.tick(5)   # 5 FPS
         
         
-def barrier():
-    xlocation = (display_width / 2) + random.randint(-0.2 * display_height, 0.2 * display_width)
-    randomHeight = random.randrange(display_height * 0.1, display_height * 0.6)
-   
+def barrier(xlocation, randomHeight, barrier_width):
+    
+    pygame.draw.rect(gameDisplay, black, [xlocation, display_height - randomHeight, barrier_width, randomHeight])
     
 
-for x in range(25):
-    barrier()
+
     
 
 
@@ -300,6 +298,8 @@ def gameLoop():
     gameOver = False
     FPS = 15
 
+    barrier_width = 50
+
     mainTankX = display_width * 0.9
     mainTankY = display_height * 0.9
     tankMove = 0
@@ -307,6 +307,9 @@ def gameLoop():
     currentTurPos = 0
     changeTur = 0
 
+    xlocation = (display_width / 2) + random.randint(-0.2 * display_height, 0.2 * display_width)
+    randomHeight = random.randrange(display_height * 0.1, display_height * 0.6)
+   
 
     while not gameExit:  # This means the gameExit value is still set at False.
 
@@ -376,11 +379,15 @@ def gameLoop():
             currentTurPos = 8
         elif currentTurPos < 0:
             currentTurPos = 0
+            
+        if mainTankX - (tankWidth / 2) < xlocation + barrier_width:
+            mainTankX += 5
 
 
 
         tank(mainTankX, mainTankY, currentTurPos)
         
+        barrier(xlocation, randomHeight, barrier_width)
         pygame.display.update()
         clock.tick(FPS)  # The speed at which the snake moves.
 
