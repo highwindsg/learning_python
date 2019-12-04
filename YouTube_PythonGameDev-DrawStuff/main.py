@@ -101,10 +101,21 @@ def fireShell(xy, tankx, tanky, turPos):
         print(startingShell[0], startingShell[1])
         pygame.draw.circle(gameDisplay, red, (startingShell[0], startingShell[1]), 5)
 
-        startingShell[0] -= 5
+        startingShell[0] -= (10 - turPos) * 2
+
+        # y = x ** 2
+        startingShell[1] += int((((startingShell[0] - xy[0]) * 0.015) ** 2) - (turPos + turPos / (12 - turPos)))
+
+        if startingShell[1] > display_height:
+            fire = False
 
         pygame.display.update()
-        clock.tick(5)
+        clock.tick(60)
+
+
+def power(level):
+    text = smallfont.render("Power: " + str(level) + "%", True, black)
+    gameDisplay.blit(text, [display_width / 2, 0])
 
 
 def game_intro():
@@ -296,6 +307,9 @@ def gameLoop():
     currentTurPos = 0
     changeTur = 0
 
+    fire_power = 50
+    power_Change = 0
+
     xlocation = (display_width / 2) + random.randint(-0.2 * display_height, 0.2 * display_width)
     randomHeight = random.randrange(display_height * 0.1, display_height * 0.6)
 
@@ -351,12 +365,21 @@ def gameLoop():
                 elif event.key == pygame.K_SPACE:
                     fireShell(gun, mainTankX, mainTankY, currentTurPos)
 
+                elif event.key == pygame.K_a:
+                    power_Change = -1
+
+                elif event.key == pygame.K_d:
+                    power_Change = 1
+
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                     tankMove = 0
 
                 if event.key == pygame.K_UP or event.key == pygame.K_DOLLAR:
                     changeTur = 0
+
+                if event.key == pygame.K_a or event.key == pygame.K_d:
+                    power_Change = 0
 
         mainTankX += tankMove
 
@@ -369,6 +392,11 @@ def gameLoop():
 
         if mainTankX - (tankWidth / 2) < xlocation + barrier_width:
             mainTankX += 5
+
+        fire_power += power_Change
+
+        power(fire_power)
+
 
         barrier(xlocation, randomHeight, barrier_width)
         pygame.display.update()
