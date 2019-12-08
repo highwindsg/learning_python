@@ -118,8 +118,9 @@ def explosion(x, y, size=50):
         explode = False
 
 
-def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, randomHeight):
+def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, randomHeight, enemyTankX, enemyTankY):
     fire = True
+    damage = 0
 
     startingShell = list(xy)
 
@@ -144,6 +145,11 @@ def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, ran
             hit_x = int((startingShell[0] * display_height - ground_height) / startingShell[1])
             hit_y = int(display_height - ground_height)
             print("Impact:", hit_x, hit_y)
+
+            if enemyTankX + 15 > hit_x > enemyTankX - 15:
+                print("HIT TARGET!")
+                damage = 25
+
             explosion(hit_x, hit_y)
             fire = False
 
@@ -163,13 +169,15 @@ def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, ran
 
         pygame.display.update()
         clock.tick(60)
+    return damage
 
 
 def e_fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, randomHeight, ptankx, ptanky):
-    
+
+    damage = 0
     currentPower = 1
     power_found = False
-    
+
     while not power_found:
         currentPower += 1
         if currentPower > 100:
@@ -227,13 +235,19 @@ def e_fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, r
         startingShell[0] += (12 - turPos) * 2
 
         # y = x ** 2
-        startingShell[1] += int((((startingShell[0] - xy[0]) * 0.015 / (currentPower / 50)) ** 2) - (turPos + turPos / (12 - turPos)))
+
+        gun_power = random.randrange(int(currentPower * 0.90), int(currentPower * 1.10))
+
+        startingShell[1] += int((((startingShell[0] - xy[0]) * 0.015 / (gun_power / 50)) ** 2) - (turPos + turPos / (12 - turPos)))
 
         if startingShell[1] > display_height - ground_height:
             print("Last shell:", startingShell[0], startingShell[1])
             hit_x = int((startingShell[0] * display_height - ground_height) / startingShell[1])
             hit_y = int(display_height - ground_height)
             print("Impact:", hit_x, hit_y)
+            if ptankx + 15 > hit_x > ptankx - 15:
+                print("HIT TARGET!")
+                damage = 25
             explosion(hit_x, hit_y)
             fire = False
 
@@ -253,6 +267,7 @@ def e_fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, r
 
         pygame.display.update()
         clock.tick(60)
+    return damage
 
 
 def power(level):
@@ -304,6 +319,68 @@ def game_intro():
         cur = pygame.mouse.get_pos()
 
         button("play", 150, 500, 100, 50, green, light_green, action="play")
+        button("controls", 350, 500, 100, 50, yellow, light_yellow, action="controls")
+        button("quit", 550, 500, 100, 50, red, light_red, action="quit")
+
+        pygame.display.update()
+        clock.tick(15)
+
+
+def game_over():
+
+    game_over = True
+
+    while game_over:
+        for event in pygame.event.get():
+            # print(event)  # This will print out all events on mouse movement to terminal.
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+
+        gameDisplay.fill(white)
+        message_to_screen("Game Over",
+                          green,
+                          -100,
+                          "large")
+
+        message_to_screen("You died.",
+                          black,
+                          -30)
+
+        # cur = pygame.mouse.get_pos()
+
+        button("play Again", 150, 500, 150, 50, green, light_green, action="play")
+        button("controls", 350, 500, 100, 50, yellow, light_yellow, action="controls")
+        button("quit", 550, 500, 100, 50, red, light_red, action="quit")
+
+        pygame.display.update()
+        clock.tick(15)
+
+
+def you_win():
+
+    win = True
+
+    while win:
+        for event in pygame.event.get():
+            # print(event)  # This will print out all events on mouse movement to terminal.
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+
+        gameDisplay.fill(white)
+        message_to_screen("You won!",
+                          green,
+                          -100,
+                          "large")
+
+        message_to_screen("Congratulations!",
+                          black,
+                          -30)
+
+        # cur = pygame.mouse.get_pos()
+
+        button("play Again", 150, 500, 150, 50, green, light_green, action="play")
         button("controls", 350, 500, 100, 50, yellow, light_yellow, action="controls")
         button("quit", 550, 500, 100, 50, red, light_red, action="quit")
 
@@ -563,8 +640,10 @@ def gameLoop():
                     pause()
 
                 elif event.key == pygame.K_SPACE:
-                    fireShell(gun, mainTankX, mainTankY, currentTurPos, fire_power, xlocation, barrier_width, randomHeight)
-                    e_fireShell(enemy_gun, enemyTankX, enemyTankY, 8, 50, xlocation, barrier_width, randomHeight, mainTankX, mainTankY)
+                    damage = fireShell(gun, mainTankX, mainTankY, currentTurPos, fire_power, xlocation, barrier_width, randomHeight, enemyTankX, enemyTankY)
+                    enemy_health -= damage
+                    damage = e_fireShell(enemy_gun, enemyTankX, enemyTankY, 8, 50, xlocation, barrier_width, randomHeight, mainTankX, mainTankY)
+                    player_health -= damage
 
                 elif event.key == pygame.K_a:
                     power_Change = -1
@@ -605,6 +684,11 @@ def gameLoop():
         barrier(xlocation, randomHeight, barrier_width)
         gameDisplay.fill(green, rect=[0, display_height - ground_height, display_width, ground_height])
         pygame.display.update()
+
+        if player_health < 1:
+            game_over()
+        elif enemy_health < 1:
+            you_win()
         clock.tick(FPS)  # The speed at which the snake moves.
 
     pygame.quit()  # This is to stop the initializing of the pygame.
