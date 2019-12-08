@@ -34,7 +34,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -109,27 +109,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="regex_search" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learning_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regex_search.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,13 +130,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tutorial1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_pymongo_tutorial" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_pymongo_tutorial/tutorial1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.tutorial1" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test1" />
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.regex_search" />
       </list>
     </recent_temporary>
   </component>
@@ -210,22 +210,26 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1221" height="166" key="GridCell.Tab.0.bottom" timestamp="1575676969243">
+    <state width="1188" height="166" key="GridCell.Tab.0.bottom" timestamp="1575777664018">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1221" height="166" key="GridCell.Tab.0.bottom/0.23.1920.1121@0.23.1920.1121" timestamp="1575676969243" />
-    <state width="1221" height="166" key="GridCell.Tab.0.center" timestamp="1575676969243">
+    <state width="1188" height="166" key="GridCell.Tab.0.bottom/0.23.1920.1121@0.23.1920.1121" timestamp="1575777664018" />
+    <state width="1188" height="166" key="GridCell.Tab.0.center" timestamp="1575777664017">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1221" height="166" key="GridCell.Tab.0.center/0.23.1920.1121@0.23.1920.1121" timestamp="1575676969243" />
-    <state width="1221" height="166" key="GridCell.Tab.0.left" timestamp="1575676969242">
+    <state width="1188" height="166" key="GridCell.Tab.0.center/0.23.1920.1121@0.23.1920.1121" timestamp="1575777664017" />
+    <state width="1188" height="166" key="GridCell.Tab.0.left" timestamp="1575777664017">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1221" height="166" key="GridCell.Tab.0.left/0.23.1920.1121@0.23.1920.1121" timestamp="1575676969242" />
-    <state width="1221" height="166" key="GridCell.Tab.0.right" timestamp="1575676969243">
+    <state width="1188" height="166" key="GridCell.Tab.0.left/0.23.1920.1121@0.23.1920.1121" timestamp="1575777664017" />
+    <state width="1188" height="166" key="GridCell.Tab.0.right" timestamp="1575777664017">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1221" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1575676969243" />
+    <state width="1188" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1575777664017" />
+    <state x="923" y="222" key="SettingsEditor" timestamp="1575696639968">
+      <screen x="0" y="23" width="1920" height="1121" />
+    </state>
+    <state x="923" y="222" key="SettingsEditor/0.23.1920.1121@0.23.1920.1121" timestamp="1575696639968" />
     <state x="637" y="415" key="com.intellij.ide.util.TipDialog" timestamp="1575671729252">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
