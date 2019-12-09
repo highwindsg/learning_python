@@ -35,9 +35,13 @@ tankWidth = 40
 tankHeight = 20
 turretWidth = 5
 wheelWidth = 5
-
 ground_height = 35
 
+fire_sound = pygame.mixer.Sound("boom.wav")
+explosion_sound = pygame.mixer.Sound("explosion.wav")
+
+pygame.mixer.music.load("music.wav")
+pygame.mixer.music.play(-1)
 
 pygame.display.set_caption("Tanks")
 
@@ -89,7 +93,7 @@ def score(score):
 
 
 def explosion(x, y, size=50):
-
+    pygame.mixer.Sound.play(explosion_sound)
     explode = True
 
     while explode:
@@ -119,6 +123,7 @@ def explosion(x, y, size=50):
 
 
 def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, randomHeight, enemyTankX, enemyTankY):
+    pygame.mixer.Sound.play(fire_sound)
     fire = True
     damage = 0
 
@@ -146,9 +151,18 @@ def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, ran
             hit_y = int(display_height - ground_height)
             print("Impact:", hit_x, hit_y)
 
-            if enemyTankX + 15 > hit_x > enemyTankX - 15:
-                print("HIT TARGET!")
+            if enemyTankX + 10 > hit_x > enemyTankX - 10:
+                print("CRITICAL HIT!")
                 damage = 25
+            elif enemyTankX + 15 > hit_x > enemyTankX - 15:
+                print("HARD HIT!")
+                damage = 18
+            elif enemyTankX + 25 > hit_x > enemyTankX - 25:
+                print("MEDIUM HIT!")
+                damage = 10
+            elif enemyTankX + 35 > hit_x > enemyTankX - 35:
+                print("LIGHT HIT!")
+                damage = 5
 
             explosion(hit_x, hit_y)
             fire = False
@@ -173,7 +187,7 @@ def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, ran
 
 
 def e_fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, randomHeight, ptankx, ptanky):
-
+    pygame.mixer.Sound.play(fire_sound)
     damage = 0
     currentPower = 1
     power_found = False
@@ -245,9 +259,20 @@ def e_fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, r
             hit_x = int((startingShell[0] * display_height - ground_height) / startingShell[1])
             hit_y = int(display_height - ground_height)
             print("Impact:", hit_x, hit_y)
-            if ptankx + 15 > hit_x > ptankx - 15:
-                print("HIT TARGET!")
+
+            if ptankx + 10 > hit_x > ptankx - 10:
+                print("CRITICAL HIT!")
                 damage = 25
+            elif ptankx + 15 > hit_x > ptankx - 15:
+                print("HARD HIT!")
+                damage = 18
+            elif ptankx + 25 > hit_x > ptankx - 25:
+                print("MEDIUM HIT!")
+                damage = 10
+            elif ptankx + 35 > hit_x > ptankx - 35:
+                print("LIGHT HIT!")
+                damage = 5
+
             explosion(hit_x, hit_y)
             fire = False
 
@@ -589,7 +614,7 @@ def gameLoop():
     fire_power = 50
     power_Change = 0
 
-    xlocation = (display_width / 2) + random.randint(-0.2 * display_height, 0.2 * display_width)
+    xlocation = (display_width / 2) + random.randint(-0.1 * display_height, 0.1 * display_width)
     randomHeight = random.randrange(display_height * 0.1, display_height * 0.6)
 
     while not gameExit:  # This means the gameExit value is still set at False.
@@ -642,6 +667,32 @@ def gameLoop():
                 elif event.key == pygame.K_SPACE:
                     damage = fireShell(gun, mainTankX, mainTankY, currentTurPos, fire_power, xlocation, barrier_width, randomHeight, enemyTankX, enemyTankY)
                     enemy_health -= damage
+
+                    possibleMovement = ["f", "r"]
+                    moveIndex = random.randrange(0, 2)
+
+                    for x in range(random.randrange(0, 10)):
+
+                        if display_width * 0.3 > enemyTankX > display_width * 0.03:
+                            if possibleMovement[moveIndex] == "f":
+                                enemyTankX += 5
+                            elif possibleMovement[moveIndex] == "r":
+                                enemyTankX -= 5
+
+                            gameDisplay.fill(white)  # Fill the background of the game window with white color.
+                            health_bars(player_health, enemy_health)
+                            gun = tank(mainTankX, mainTankY, currentTurPos)
+                            enemy_gun = enemy_tank(enemyTankX, enemyTankY, 8)
+                            fire_power += power_Change
+
+                            power(fire_power)
+
+                            barrier(xlocation, randomHeight, barrier_width)
+                            gameDisplay.fill(green, rect=[0, display_height - ground_height, display_width, ground_height])
+                            pygame.display.update()
+
+                            clock.tick(FPS)  # The speed at which the snake moves.
+
                     damage = e_fireShell(enemy_gun, enemyTankX, enemyTankY, 8, 50, xlocation, barrier_width, randomHeight, mainTankX, mainTankY)
                     player_health -= damage
 
@@ -678,6 +729,13 @@ def gameLoop():
         gun = tank(mainTankX, mainTankY, currentTurPos)
         enemy_gun = enemy_tank(enemyTankX, enemyTankY, 8)
         fire_power += power_Change
+
+        if fire_power > 100:
+            fire_power = 100
+        elif fire_power < 1:
+            fire_power = 1
+
+
 
         power(fire_power)
 
