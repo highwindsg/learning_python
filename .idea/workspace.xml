@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9edc8bfa-19aa-42c2-8e16-00bd33306919" name="Default Changelist" comment="rename main folder">
+      <change afterPath="$PROJECT_DIR$/YouTube_PythonOOPtutorial/tutorial1_Class_Instances.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YouTube_PythonOOPtutorial/tutorial1a.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YouTube_PythonGameDev-DrawStuff/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/YouTube_PythonGameDev-DrawStuff/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CardGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/CardGame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,28 +47,7 @@
     </option>
     <option name="myUseExistingConsole" value="true" />
   </component>
-  <component name="RunManager" selected="Python.main (2)">
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learning_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_SpaceInvader" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_SpaceInvader/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.tutorial1a">
     <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tutorial1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,11 +98,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonGameDev" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonGameDev/test1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial/tutorial1_Class_Instances.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,13 +132,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tutorial1a" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learning_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial/tutorial1a.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tutorial1a" />
+        <item itemvalue="Python.tutorial1 (1)" />
         <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.tutorial1" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.test1" />
-        <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -210,29 +212,29 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1188" height="166" key="GridCell.Tab.0.bottom" timestamp="1575932136106">
+    <state width="1195" height="166" key="GridCell.Tab.0.bottom" timestamp="1576106398260">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1188" height="166" key="GridCell.Tab.0.bottom/0.23.1920.1121@0.23.1920.1121" timestamp="1575932136106" />
-    <state width="1188" height="166" key="GridCell.Tab.0.center" timestamp="1575932136106">
+    <state width="1195" height="166" key="GridCell.Tab.0.bottom/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
+    <state width="1195" height="166" key="GridCell.Tab.0.center" timestamp="1576106398260">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1188" height="166" key="GridCell.Tab.0.center/0.23.1920.1121@0.23.1920.1121" timestamp="1575932136106" />
-    <state width="1188" height="166" key="GridCell.Tab.0.left" timestamp="1575932136105">
+    <state width="1195" height="166" key="GridCell.Tab.0.center/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
+    <state width="1195" height="166" key="GridCell.Tab.0.left" timestamp="1576106398259">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1188" height="166" key="GridCell.Tab.0.left/0.23.1920.1121@0.23.1920.1121" timestamp="1575932136105" />
-    <state width="1188" height="166" key="GridCell.Tab.0.right" timestamp="1575932136106">
+    <state width="1195" height="166" key="GridCell.Tab.0.left/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398259" />
+    <state width="1195" height="166" key="GridCell.Tab.0.right" timestamp="1576106398260">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state width="1188" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1575932136106" />
+    <state width="1195" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
     <state x="923" y="222" key="SettingsEditor" timestamp="1575696639968">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
     <state x="923" y="222" key="SettingsEditor/0.23.1920.1121@0.23.1920.1121" timestamp="1575696639968" />
-    <state x="637" y="415" key="com.intellij.ide.util.TipDialog" timestamp="1575927717191">
+    <state x="637" y="415" key="com.intellij.ide.util.TipDialog" timestamp="1576098167675">
       <screen x="0" y="23" width="1920" height="1121" />
     </state>
-    <state x="637" y="415" key="com.intellij.ide.util.TipDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1575927717191" />
+    <state x="637" y="415" key="com.intellij.ide.util.TipDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1576098167675" />
   </component>
 </project>

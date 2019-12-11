@@ -155,7 +155,7 @@ class Game:
         w = w.format(winner)
         print(w)
 
-    # p1n - player1 name; p1c - player1 card.
+    # p1n - P1 name; p1c - P1 card.
     def draw(self, p1n, p1c, p2n, p2c):
         d = "{} drew {}, and {} drew {}."
         d = d.format(p1n, p1c, p2n, p2c)
