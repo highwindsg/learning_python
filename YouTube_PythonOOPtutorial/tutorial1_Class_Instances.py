@@ -2,7 +2,6 @@
 
 # Python Object-Oriented Programming
 # https://www.youtube.com/watch?v=ZDa-Z5JzLYM
-# Create an empty class Employee().
 
 
 class Employee:

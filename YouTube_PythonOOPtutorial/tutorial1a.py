@@ -21,6 +21,7 @@ class Player:   # Create a class named Player.
 # set Player class to an instance of var p1 with params.
 p1 = Player("male", "warrior", 80, 20, "sword")
 p2 = Player("female", "cleric", 60, 50, "staff")
+p3 = Player("male", "dwarf", 70, 0, "axe")
 
 print("The character is a", p1.gender + " " + p1.char_class + ".")
 print("He has", str(p1.hit_point) + " hit point and " + str(p1.magic_point) + " magic point.")
@@ -28,6 +29,6 @@ print("The", p1.char_class + " also wields a " + p1.weapon + ".")
 print("This", p1.char_class + " has a total constitution of " + str(p1.constitution) + ".")
 print("")
 
-print("The number of players are", + Player.num_of_p, ".")  # This will print out the total number of players as var
-# p1 and p2 are created, instantiated in line 22 and 23.
+print("The total number of players are " + str(Player.num_of_p) + ".")  # This will print out the total number of
+# players as var p1 and p2 are created, instantiated in line 22 and 23.
 
