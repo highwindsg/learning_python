@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+
+# https://www.youtube.com/watch?v=RSl87lqOXDE
+
+
+class Employee:
+	raise_amt = 1.04  # Setting a class var of raise_amount with a value of 1.04 or 4%.
+
+	def __init__(self, first, last, pay):  # Define a init constructor func with params self, first, last and pay.
+		self.first = first  # From self, set a instance var of first and assign it to first.
+		self.last = last  # From self, set a instance var of last and assign it to last.
+		self.pay = pay  # From self, set a instance var of pay and assign it to pay.
+		self.email = first + "." + last + "@email.com"  # From self, set a new instance var of email and assign it with
+		# var instance of first and last and domain name.
+
+	def fullname(self):  # Create a func named fullname with param self.
+		return "{} {}".format(self.first, self.last)
+
+	def apply_raise(self):  # Create a func named apply_raise with param self.
+		self.pay = int(self.pay * self.raise_amt)  # From self, set a instance var of pay and assign it to itself
+	# and multiply by 4%.
+
+
+class Developer(Employee):  # Create a subclass named Developer with param Employee. Therefore this new subclass
+	# inherits all the attribs and methods from the Employee class.
+	raise_amt = 1.10    # Explicitly set a new value to the var raise_amt in subclass to 1.05 or 4%.
+
+	# Because we want to add in a programming language for the employee, we need to initiate the new param with other
+	# params of the Employee class as we still need the rest of the params.
+	def __init__(self, first, last, pay, prog_lang):
+		super().__init__(first, last, pay)  # Using the super() func to initiate the existing params so to avoid typing
+		# every new line to pass in the self instance var and params again.
+		self.prog_lang = prog_lang  # From self, set a instance var of prog_lang and assign it to prog_lang.
+
+
+class Manager(Employee):     # Create a subclass named Developer with param Employee. Therefore this new subclass
+	# inherits all the attribs and methods from the Employee class.
+	# To pass in a list of employees the manager supervises.
+	def __init__(self, first, last, pay, employees=None):
+		super().__init__(first, last, pay)  # Using the super() func to initiate the existing params so to avoid typing
+		# every new line to pass in the self instance var and params again.
+		if employees is None:
+			self.employees = []
+		else:
+			self.employees = employees
+
+	def add_emp(self, emp):
+		if emp not in self.employees:
+			self.employees.append(emp)
+
+	def remove_emp(self, emp):
+		if emp in self.employees:
+			self.employees.remove(emp)
+
+	def print_emps(self):
+		for emp in self.employees:
+			print("-->", emp.fullname())
+
+
+dev_1 = Developer("Corey", "Schafer", 50000, "Python")  # Set emp_1 to an instance of class Employee with params.
+dev_2 = Developer("Test", "Employee", 60000, "Java")  # Set emp_2 to an instance of class Employee with params.
+
+# Using the help func and pass in the Developer subclass will show you what attribs and methods are being inherited.
+# print(help(Developer))
+# print("")
+
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
+print("")
+
+print(dev_1.prog_lang)
+print("")
+
+mgr_1 = Manager("Sue", "Smith", 90000, [dev_1])
+print(mgr_1.email)
+mgr_1.add_emp(dev_2)
+# mgr_1.remove_emp(dev_1)   # This line will remove the employee dev_1.
+mgr_1.print_emps()
+print("")
+
+
+# Using Python isinstance() and issubclass()
+# isinstance will tell us if an object is an instance of a class.
+print(isinstance(mgr_1, Manager))   # This will print out if var mgr_1 is an instance of Manager class, which is True.
+print(isinstance(mgr_1, Developer))     # Even though Developer and Manager both inherits from the Employee class,
+# they aren't part of each other's inheritance, which is therefore False.
+print("")
+
+# issubclass will tell us if a class is a subclass of another existing class.
+print(issubclass(Developer, Employee))      # This will print out if Developer is a subclass of the Employee class,
+# which is True.
+print(issubclass(Manager, Employee))    # This will print out if Manager is a subclass of the Employee class,
+# which is True.
+print(issubclass(Manager, Developer))   # This will print ot if Manager is a subclass of the Developer class,
+# which is False.
+print("")
