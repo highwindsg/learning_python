@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9edc8bfa-19aa-42c2-8e16-00bd33306919" name="Default Changelist" comment="rename main folder">
+      <change afterPath="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial6-Conditions_Booleans_IfElseElif.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial7-forloops_whileloops.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial5-dictionaries.py" beforeDir="false" afterPath="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial5-dictionaries.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
     </option>
     <option name="myUseExistingConsole" value="true" />
   </component>
-  <component name="RunManager" selected="Python.tutorial5-dictionaries">
+  <component name="RunManager" selected="Python.tutorial7-forloops_whileloops">
     <configuration name="list_tuples_sets" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -68,48 +69,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tutorial1a" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learning_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial/tutorial1a.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tutorial2_Class_Variables_Methods" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learning_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonOOPtutorial/tutorial2_Class_Variables_Methods.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="tutorial5-dictionaries" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,6 +82,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial5-dictionaries.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tutorial6-Conditions_Booleans_IfElseElif" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="learning_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial6-Conditions_Booleans_IfElseElif.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tutorial7-forloops_whileloops" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="learning_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial7-forloops_whileloops.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tutorial7-forloops_whileloops" />
+        <item itemvalue="Python.tutorial6-Conditions_Booleans_IfElseElif" />
         <item itemvalue="Python.tutorial5-dictionaries" />
         <item itemvalue="Python.list_tuples_sets" />
         <item itemvalue="Python.tutorial7___name__-__main__" />
-        <item itemvalue="Python.tutorial2_Class_Variables_Methods" />
-        <item itemvalue="Python.tutorial1a" />
       </list>
     </recent_temporary>
   </component>
@@ -219,25 +220,25 @@
       <screen x="0" y="23" width="1680" height="974" />
     </state>
     <state x="143" y="114" key="CommitChangelistDialog2/0.23.1680.974@0.23.1680.974" timestamp="1576378838245" />
-    <state width="1197" height="158" key="GridCell.Tab.0.bottom" timestamp="1577251869203">
+    <state width="1197" height="158" key="GridCell.Tab.0.bottom" timestamp="1577263956330">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
-    <state width="1197" height="158" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1577251869203" />
+    <state width="1197" height="158" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1577263956330" />
     <state width="1195" height="166" key="GridCell.Tab.0.bottom/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
-    <state width="1197" height="158" key="GridCell.Tab.0.center" timestamp="1577251869202">
+    <state width="1197" height="158" key="GridCell.Tab.0.center" timestamp="1577263956329">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
-    <state width="1197" height="158" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1577251869202" />
+    <state width="1197" height="158" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1577263956329" />
     <state width="1195" height="166" key="GridCell.Tab.0.center/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
-    <state width="1197" height="158" key="GridCell.Tab.0.left" timestamp="1577251869201">
+    <state width="1197" height="158" key="GridCell.Tab.0.left" timestamp="1577263956329">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
-    <state width="1197" height="158" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1577251869201" />
+    <state width="1197" height="158" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1577263956329" />
     <state width="1195" height="166" key="GridCell.Tab.0.left/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398259" />
-    <state width="1197" height="158" key="GridCell.Tab.0.right" timestamp="1577251869202">
+    <state width="1197" height="158" key="GridCell.Tab.0.right" timestamp="1577263956330">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
-    <state width="1197" height="158" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1577251869202" />
+    <state width="1197" height="158" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1577263956330" />
     <state width="1195" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
     <state x="683" y="196" key="SettingsEditor" timestamp="1576183804365">
       <screen x="0" y="23" width="1680" height="974" />
