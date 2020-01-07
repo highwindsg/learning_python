@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9edc8bfa-19aa-42c2-8e16-00bd33306919" name="Default Changelist" comment="rename main folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YouTube_Python-Build_Blockchain_Cryptocurrency/blockchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/YouTube_Python-Build_Blockchain_Cryptocurrency/blockchain.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -239,15 +238,16 @@
     </state>
     <state width="1197" height="153" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1578214996409" />
     <state width="1195" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
-    <state x="683" y="196" key="SettingsEditor" timestamp="1576183804365">
+    <state x="683" y="196" key="SettingsEditor" timestamp="1578217743023">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
-    <state x="683" y="196" key="SettingsEditor/0.23.1680.974@0.23.1680.974" timestamp="1576183804365" />
+    <state x="683" y="196" key="SettingsEditor/0.23.1680.974@0.23.1680.974" timestamp="1578217743023" />
     <state x="923" y="222" key="SettingsEditor/0.23.1920.1121@0.23.1920.1121" timestamp="1575696639968" />
-    <state x="557" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1578123772854">
-      <screen x="0" y="23" width="1680" height="974" />
+    <state x="557" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1578433874632">
+      <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state x="557" y="364" key="com.intellij.ide.util.TipDialog/0.23.1680.974@0.23.1680.974" timestamp="1578123772854" />
+    <state x="557" y="363" key="com.intellij.ide.util.TipDialog/0.23.1680.972@0.23.1680.972" timestamp="1578433874632" />
+    <state x="557" y="364" key="com.intellij.ide.util.TipDialog/0.23.1680.974@0.23.1680.974" timestamp="1578217752817" />
     <state x="637" y="415" key="com.intellij.ide.util.TipDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1576098167675" />
   </component>
 </project>
