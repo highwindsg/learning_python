@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9edc8bfa-19aa-42c2-8e16-00bd33306919" name="Default Changelist" comment="rename main folder">
+      <change afterPath="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial_VariableScope_global_non-global_sttmt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +46,7 @@
     </option>
     <option name="myUseExistingConsole" value="true" />
   </component>
-  <component name="RunManager" selected="Python.blockchain">
+  <component name="RunManager" selected="Python.tutorial_VariableScope_global_non-global_sttmt">
     <configuration name="blockchain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,27 +110,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tutorial7-forloops_whileloops" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="learning_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial7-forloops_whileloops.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="tutorial8-Functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learning_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,13 +131,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tutorial_VariableScope_global_non-global_sttmt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="learning_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial_VariableScope_global_non-global_sttmt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tutorial_VariableScope_global_non-global_sttmt" />
         <item itemvalue="Python.blockchain" />
         <item itemvalue="Python.misc" />
         <item itemvalue="Python.intro" />
         <item itemvalue="Python.tutorial8-Functions" />
-        <item itemvalue="Python.tutorial7-forloops_whileloops" />
       </list>
     </recent_temporary>
   </component>
@@ -218,24 +219,28 @@
       <screen x="0" y="23" width="1680" height="974" />
     </state>
     <state x="143" y="114" key="CommitChangelistDialog2/0.23.1680.974@0.23.1680.974" timestamp="1576378838245" />
-    <state width="1197" height="153" key="GridCell.Tab.0.bottom" timestamp="1578214996409">
-      <screen x="0" y="23" width="1680" height="974" />
+    <state width="1197" height="152" key="GridCell.Tab.0.bottom" timestamp="1578526590387">
+      <screen x="0" y="23" width="1680" height="972" />
     </state>
+    <state width="1197" height="152" key="GridCell.Tab.0.bottom/0.23.1680.972@0.23.1680.972" timestamp="1578526590387" />
     <state width="1197" height="153" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1578214996409" />
     <state width="1195" height="166" key="GridCell.Tab.0.bottom/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
-    <state width="1197" height="153" key="GridCell.Tab.0.center" timestamp="1578214996408">
-      <screen x="0" y="23" width="1680" height="974" />
+    <state width="1197" height="152" key="GridCell.Tab.0.center" timestamp="1578526590386">
+      <screen x="0" y="23" width="1680" height="972" />
     </state>
+    <state width="1197" height="152" key="GridCell.Tab.0.center/0.23.1680.972@0.23.1680.972" timestamp="1578526590386" />
     <state width="1197" height="153" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1578214996408" />
     <state width="1195" height="166" key="GridCell.Tab.0.center/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
-    <state width="1197" height="153" key="GridCell.Tab.0.left" timestamp="1578214996408">
-      <screen x="0" y="23" width="1680" height="974" />
+    <state width="1197" height="152" key="GridCell.Tab.0.left" timestamp="1578526590385">
+      <screen x="0" y="23" width="1680" height="972" />
     </state>
+    <state width="1197" height="152" key="GridCell.Tab.0.left/0.23.1680.972@0.23.1680.972" timestamp="1578526590385" />
     <state width="1197" height="153" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1578214996408" />
     <state width="1195" height="166" key="GridCell.Tab.0.left/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398259" />
-    <state width="1197" height="153" key="GridCell.Tab.0.right" timestamp="1578214996409">
-      <screen x="0" y="23" width="1680" height="974" />
+    <state width="1197" height="152" key="GridCell.Tab.0.right" timestamp="1578526590386">
+      <screen x="0" y="23" width="1680" height="972" />
     </state>
+    <state width="1197" height="152" key="GridCell.Tab.0.right/0.23.1680.972@0.23.1680.972" timestamp="1578526590386" />
     <state width="1197" height="153" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1578214996409" />
     <state width="1195" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
     <state x="683" y="196" key="SettingsEditor" timestamp="1578217743023">
@@ -243,10 +248,10 @@
     </state>
     <state x="683" y="196" key="SettingsEditor/0.23.1680.974@0.23.1680.974" timestamp="1578217743023" />
     <state x="923" y="222" key="SettingsEditor/0.23.1920.1121@0.23.1920.1121" timestamp="1575696639968" />
-    <state x="557" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1578433874632">
+    <state x="557" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1578524571119">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state x="557" y="363" key="com.intellij.ide.util.TipDialog/0.23.1680.972@0.23.1680.972" timestamp="1578433874632" />
+    <state x="557" y="363" key="com.intellij.ide.util.TipDialog/0.23.1680.972@0.23.1680.972" timestamp="1578524571119" />
     <state x="557" y="364" key="com.intellij.ide.util.TipDialog/0.23.1680.974@0.23.1680.974" timestamp="1578217752817" />
     <state x="637" y="415" key="com.intellij.ide.util.TipDialog/0.23.1920.1121@0.23.1920.1121" timestamp="1576098167675" />
   </component>
