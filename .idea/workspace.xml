@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9edc8bfa-19aa-42c2-8e16-00bd33306919" name="Default Changelist" comment="rename main folder">
-      <change afterPath="$PROJECT_DIR$/YouTube_PythonTutorialforBeginners/tutorial_VariableScope_global_non-global_sttmt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9edc8bfa-19aa-42c2-8e16-00bd33306919" name="Default Changelist" comment="rename main folder" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,28 +216,28 @@
       <screen x="0" y="23" width="1680" height="974" />
     </state>
     <state x="143" y="114" key="CommitChangelistDialog2/0.23.1680.974@0.23.1680.974" timestamp="1576378838245" />
-    <state width="1197" height="152" key="GridCell.Tab.0.bottom" timestamp="1578526590387">
+    <state width="1197" height="152" key="GridCell.Tab.0.bottom" timestamp="1578526837411">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state width="1197" height="152" key="GridCell.Tab.0.bottom/0.23.1680.972@0.23.1680.972" timestamp="1578526590387" />
+    <state width="1197" height="152" key="GridCell.Tab.0.bottom/0.23.1680.972@0.23.1680.972" timestamp="1578526837411" />
     <state width="1197" height="153" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1578214996409" />
     <state width="1195" height="166" key="GridCell.Tab.0.bottom/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
-    <state width="1197" height="152" key="GridCell.Tab.0.center" timestamp="1578526590386">
+    <state width="1197" height="152" key="GridCell.Tab.0.center" timestamp="1578526837410">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state width="1197" height="152" key="GridCell.Tab.0.center/0.23.1680.972@0.23.1680.972" timestamp="1578526590386" />
+    <state width="1197" height="152" key="GridCell.Tab.0.center/0.23.1680.972@0.23.1680.972" timestamp="1578526837410" />
     <state width="1197" height="153" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1578214996408" />
     <state width="1195" height="166" key="GridCell.Tab.0.center/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
-    <state width="1197" height="152" key="GridCell.Tab.0.left" timestamp="1578526590385">
+    <state width="1197" height="152" key="GridCell.Tab.0.left" timestamp="1578526837410">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state width="1197" height="152" key="GridCell.Tab.0.left/0.23.1680.972@0.23.1680.972" timestamp="1578526590385" />
+    <state width="1197" height="152" key="GridCell.Tab.0.left/0.23.1680.972@0.23.1680.972" timestamp="1578526837410" />
     <state width="1197" height="153" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1578214996408" />
     <state width="1195" height="166" key="GridCell.Tab.0.left/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398259" />
-    <state width="1197" height="152" key="GridCell.Tab.0.right" timestamp="1578526590386">
+    <state width="1197" height="152" key="GridCell.Tab.0.right" timestamp="1578526837410">
       <screen x="0" y="23" width="1680" height="972" />
     </state>
-    <state width="1197" height="152" key="GridCell.Tab.0.right/0.23.1680.972@0.23.1680.972" timestamp="1578526590386" />
+    <state width="1197" height="152" key="GridCell.Tab.0.right/0.23.1680.972@0.23.1680.972" timestamp="1578526837410" />
     <state width="1197" height="153" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1578214996409" />
     <state width="1195" height="166" key="GridCell.Tab.0.right/0.23.1920.1121@0.23.1920.1121" timestamp="1576106398260" />
     <state x="683" y="196" key="SettingsEditor" timestamp="1578217743023">
