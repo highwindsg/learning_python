@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 
 
+def to_24_hour_clock(hours):
+    return hours % 24
+
+
 def time_to_utc(utc_offset, time):
     """ (number, float) -> float
 
@@ -21,4 +25,11 @@ def time_to_utc(utc_offset, time):
     0.0
     """
 
-    return ???
+    utc_time = time - utc_offset
+    result = to_24_hour_clock(utc_time)
+    return result
+
+
+Ans = time_to_utc(-1, 0.0)
+print(Ans)
+
