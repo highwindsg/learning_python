@@ -14,6 +14,7 @@ def seconds_difference(time_1, time_2):
     0.0
     """
     
+    return time2 - time1
 
 
 def hours_difference(time_1, time_2):
@@ -31,7 +32,8 @@ def hours_difference(time_1, time_2):
     >>> hours_difference(1800.0, 1800.0)
     0.0
     """
-
+    
+    return (time2 - time2) / 60 / 60
 
 
 def to_float_hours(hours, minutes, seconds):
@@ -39,6 +41,8 @@ def to_float_hours(hours, minutes, seconds):
 
     Return the total number of hours in the specified number
     of hours, minutes, and seconds.
+    Divide mins by 60 = hours.
+    Divide secs by 3600 = hours.
 
     Precondition: 0 <= minutes < 60  and  0 <= seconds < 60
 
@@ -49,7 +53,8 @@ def to_float_hours(hours, minutes, seconds):
     >>> to_float_hours(1, 0, 36)
     1.01
     """
-
+    
+    return hours + (minutes / 60) + (seconds / 3600)
 
 
 def to_24_hour_clock(hours):
