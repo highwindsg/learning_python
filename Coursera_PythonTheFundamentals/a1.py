@@ -14,7 +14,7 @@ def seconds_difference(time_1, time_2):
     0.0
     """
     
-    return time2 - time1
+    return time_2 - time_1
 
 
 def hours_difference(time_1, time_2):
@@ -33,7 +33,7 @@ def hours_difference(time_1, time_2):
     0.0
     """
     
-    return (time2 - time2) / 60 / 60
+    return (time_2 - time_1) / 60 / 60
 
 
 def to_float_hours(hours, minutes, seconds):
@@ -83,23 +83,56 @@ def to_24_hour_clock(hours):
 
 ### Write your get_hours function definition here:
 
-def get_hours(hours):
-    hours * 1
-    return hours
+def get_hours(seconds):
+    """ (int) -> int
+    
+    secs is a number of secs since midnight.
+    Return the number of hours that have elapsed since midnight.
+
+    >>> get_hours(3600)
+    1
+    >>> get_hours(7400)
+    2
+    """
+    hours = seconds // 3600
+    result = to_24_hour_clock(hours)
+    return result
 
 
 ### Write your get_minutes function definition here:
 
-def get_minutes(minutes):
-    minutes / 60
-    return minutes
+def get_minutes(seconds):                                                 
+    """ (int) -> int                                                      
+                                                                         
+    Seconds is a number of seconds since midnight.                        
+    Return the number of minutes that have elapsed since midnight.        
+                                                                         
+    >>> get_minutes(3800)                                                 
+    3                                                                     
+    >>> get_minutes(7600)                                                 
+    6                                                                     
+    """                                                                   
+    minutes = seconds // 60                                               
+    result = minutes % 60                                                 
+    return result
 
 
 ### Write your get_seconds function definition here:
 
 def get_seconds(seconds):
-    seconds / 3600
-    return seconds
+    """ (int) => int
+
+    Seconds is a number of seconds since midnight.
+    Return the number of seconds that have elapsed since midnight.
+
+    >>> get_seconds(3800)
+    20
+    >>> get_seconds(7600)
+    40
+    """
+    seconds_after_midnight = seconds % (3600 * 24)
+    result = seconds_after_midnight % 60
+    return result
 
 
 def time_to_utc(utc_offset, time):
