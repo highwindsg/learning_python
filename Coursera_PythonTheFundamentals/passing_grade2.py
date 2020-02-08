@@ -8,7 +8,7 @@ grade2 = 80.0
 if grade1 >= 50:
     total = total + grade1
     grade_count = grade_count + 1
-else:
+if grade2 >= 50:
     total = total + grade2
     grade_count = grade_count + 1
 

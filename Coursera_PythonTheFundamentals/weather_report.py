@@ -9,7 +9,7 @@ def weather_report(temp):
 
 
 print(weather_report(10))
-print(weather_report(30))
 print(weather_report(-5))
+print(weather_report(30))
 print(weather_report(20))
 

@@ -10,5 +10,5 @@ def fruit_color(fruit):
         return "green"
 
 
-print(fruit_color("peach"))
+print(fruit_color("apple"))
 
