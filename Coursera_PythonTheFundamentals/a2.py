@@ -66,3 +66,22 @@ def contains_sequence(dna1, dna2):
         return False
 
 
+def is_valid_sequence(dna):
+    """ (str) -> bool
+
+    Shows True if only the uppercase characters of "A", "T", "C", and "G"
+    is returned.
+
+    >>> is_valid_sequence("ATCG")
+    True
+    >>> is_valid_sequence("HURE")
+    False
+    """
+    for char in dna:
+        if char not in ("ATCG") and char in ("0123456789"):
+            return False
+        else:
+            return True
+
+
+# def insert_sequence():
