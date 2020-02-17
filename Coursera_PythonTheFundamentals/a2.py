@@ -58,7 +58,6 @@ def contains_sequence(dna1, dna2):
     True
     >>> contains_sequence('ATCGGC', 'GT')
     False
-
     """
     if dna2 in dna1:
         return True
@@ -84,4 +83,17 @@ def is_valid_sequence(dna):
             return True
 
 
-# def insert_sequence():
+def insert_sequence(dna1, dna2, idx):
+    """ (str, str, int) -> str
+
+    Return the DNA sequence obtained by inserting the second DNA sequence
+    into the first DNA sequence at the given index.
+
+    >>> insert_sequence("CCGG", "AT", 2)
+    "CCATGG"
+    >>> insert_sequence("ATG", "GCG", 4)
+    "ATGGCG"
+    """
+    return dna1[:idx] + dna2 + dna1[idx:]
+
+
