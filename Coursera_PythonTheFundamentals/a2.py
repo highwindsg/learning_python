@@ -76,8 +76,14 @@ def is_valid_sequence(dna):
     >>> is_valid_sequence("HURE")
     False
     """
+#    for char in dna:
+#        if char not in ("ATCG") and char in ("0123456789"):
+#            return False
+#        else:
+#            return True
+
     for char in dna:
-        if char not in ("ATCG") and char in ("0123456789"):
+        if char not in ("ATCG"):
             return False
         else:
             return True
@@ -96,4 +102,45 @@ def insert_sequence(dna1, dna2, idx):
     """
     return dna1[:idx] + dna2 + dna1[idx:]
 
+
+def get_complement(nucleotide):
+    """ (str) -> str
+
+    Return the nucleotide's complement. "A" complementary part is "T", and
+    "C" complementary part is "G".
+
+    >>> get_complement("A")
+    T
+    >>> get_complement("G")
+    C
+    """
+    for char in nucleotide:
+        if char == "A":
+            return "T"
+        if char == "T":
+            return "A"
+        if char == "C":
+            return "G"
+        if char == "G":
+            return "C"
+        else:
+            return None
+
+
+def get_complementary_sequence(dna):
+    """ (str) -> str
+
+    Return the DNA sequence that is complementary to the given DNA sequence.
+    For example, if you call this function with 'AT' as the argument,
+    it should return 'TA'.
+
+    >>> get_complementary_sequence("AT"):
+    "TA"
+    >>> get_complementary_sequence("GCTA"):
+    "CGAT"
+    """
+    sequence = ""   # Initially, set the sequence with nothing.
+    for char in dna:
+        sequence += get_complement(char)
+    return sequence
 
