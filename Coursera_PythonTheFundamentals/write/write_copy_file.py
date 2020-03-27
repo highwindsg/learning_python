@@ -10,9 +10,15 @@
 # filename in a selected directory.
 >>> from_filename = tkinter.filedialog.askopenfile()
 
+# Alternatively, can just use the file path.
+>>> from_filename = "/Users/cay1sgp/Documents/GitHub/learning_python/Coursera_PythonTheFundamentals/read/romeo.txt"
+
 # Using the tkinter module asksaveasfilename func to choose the
 # filename you want to create and a directory location.
 >>> to_filename = tkinter.filedialog.asksaveasfilename()
+
+# Alternatively, ...
+# >>> to_filename = "/Users/cay1sgp/Documents/GitHub/learning_python/Coursera_PythonTheFundamentals/write/romeo_copy.txt"
 
 # Open the existing filename in read mode and assign to var
 # file_file.
