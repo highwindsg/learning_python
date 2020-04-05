@@ -1,0 +1,7 @@
+Copy two
+Eugene - Salesman
+Eddie - Salesman
+Tina - Admin
+Julia - Accountant
+Thomas - Manager
+Jane - Human Resources
