@@ -19,6 +19,10 @@ def shift_left(L):
     for i in range(1, len(L)):
         L[i - 1] = L[i]
 
+# For a shift_right operation.
+#   for i in range(1, len(L)):
+#       L[len(L) - i] = L[len(L) - i - 1]
+
     L[-1] = first_item
 
 
