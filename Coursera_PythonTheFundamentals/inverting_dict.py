@@ -23,7 +23,9 @@ for fruit in fruit_to_colour:
 
 # Invert fruit_to_colour.
 colour_to_fruit = {}    # First create a empty dict.
+
 for fruit in fruit_to_colour:
+    # What colour is the fruit?
     colour = fruit_to_colour[fruit]     # fruit is an accumulator.
 
     # If colour is not already a key in the accumulator,
