@@ -3,7 +3,7 @@
 # Open the file using the open() func and assign it to var obj 'f'.
 f = open("///Users/cay1sgp/Documents/GitHub/learning_python/YouTube_Socratica/guido_bio.txt")
 
-# Use the .read() method on var obj 'f' in read mode, and assign to state of the read mode to
+# Use the .read() method on var obj 'f' in read mode, and assign the state of the read mode to
 # var obj 'text'.
 text = f.read()
 
