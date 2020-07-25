@@ -20,3 +20,11 @@ values = mydict.values()    # Use the .values() method on 'mydict' dict
 total = sum(values) # Use the sum() func with 'values' as param and
                     # assign the sum values to var 'total'.
 print(total)
+
+# Calculate the division of values from key items in a dict.
+mydict = {"cat": 12, "dog": 6, "elephant": 23, "bear": 20}
+answer = mydict.get("cat") // mydict.get("dog")
+print(answer)
+print("dog" in mydict)  # Boolean answer true or false if 'dog' is in dict.
+
+

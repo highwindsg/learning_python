@@ -18,6 +18,13 @@ keys = list(inventory.keys())   # Use the .keys() method on dict.
 print(keys)
 print("")
 
+# Assign to var 'events' a list of the keys from dict 'medal_events'.
+medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
+# Using the .keys() method on dict to create the list.
+events = list(medal_events.keys())
+print(events)
+print("")
+
 # Printing out the values only in a list.
 print(list(inventory.values()))
 print("")
