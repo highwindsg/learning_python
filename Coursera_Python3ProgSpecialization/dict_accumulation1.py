@@ -46,7 +46,7 @@ for c in txt:
 #        x[c] += 1   # 'x[c]' becuase 'c' is 's'.
     if c not in x:
         # Important below.
-        # So as long as a character has not been counted before, then initialize it with a new counter.
+        # If a character has not been counted before, then initialize it with a new counter.
         x[c] = 0
     x[c] += 1
 
@@ -54,8 +54,12 @@ print("t: " + str(x["t"]) + " occurences")
 print("s: " + str(x["s"]) + " occurences")
 print("a: " + str(x["a"]) + " occurences")
 print("b: " + str(x["b"]) + " occurences")
-f.close()
 print(x)    # therefore dict 's' will show how many occurrences for every character.
 
 print("")
 
+# To print out the number of every single characters in the 'x' dict.
+for letter in x:
+    print("There are ", x[letter], "'", letter, "'s")
+
+f.close()

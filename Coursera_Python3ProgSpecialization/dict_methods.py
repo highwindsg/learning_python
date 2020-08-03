@@ -25,6 +25,13 @@ events = list(medal_events.keys())
 print(events)
 print("")
 
+# Create a list of the countries that are in the dictionary 'golds',
+# and assign that list to the variable name 'countries'.
+golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
+countries = list(golds.keys())
+print(countries)
+print("")
+
 # Printing out the values only in a list.
 print(list(inventory.values()))
 print("")
