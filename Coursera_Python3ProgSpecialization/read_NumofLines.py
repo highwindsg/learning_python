@@ -7,5 +7,5 @@ f = open("travel_plans2.txt")
 num_lines = len(f.readlines())
 print(num_lines)
 
-# Raad more at https://pythonexamples.org/python-file-operations/
+# Read more at https://pythonexamples.org/python-file-operations/
 

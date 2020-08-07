@@ -14,8 +14,8 @@ lett_d = {}
 for c in product:   # For every character in the 'product' string,
     if c not in lett_d: # if a character is not seen in dict 'lett_d',
         lett_d[c] = 0   # then initialize that character key with value 0.
-    lett_d[c] += 1  # Then increase the counter of that characrter by 1 if seen before.
-print(lett_d)
+    lett_d[c] += 1  # Then increase the counter of that character by 1,
+print(lett_d)       # regardless whether it is seen before or not.
 
 print("")
 
@@ -29,3 +29,33 @@ for key in keys:    # For every key in the keys list,
                                         # than the value of 'lett_d[max_value],
         max_value = key # then assign this 'key' value the latest 'max_value'.
 print(max_value)
+
+print("")
+
+
+"""
+Create the dictionary characters that shows each character from the
+string sally and its frequency. Then, find the most frequent letter
+based on the dictionary. Assign this letter to the variable best_char.
+"""
+
+sally = "sally sells sea shells by the sea shore"
+
+characters = {}
+
+for c in sally:
+    if c not in characters:
+        characters[c] = 0
+    characters[c] += 1
+print(characters)
+
+keys = list(characters.keys())
+print(keys)
+best_char = keys[0]
+
+for key in keys:
+    if characters[key] > characters[best_char]:
+        best_char = key
+print(best_char)
+
+print("")
