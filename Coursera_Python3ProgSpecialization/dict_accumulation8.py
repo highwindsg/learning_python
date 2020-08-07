@@ -7,7 +7,7 @@ the key with the lowest value in this dictionary and assign that key to
 'min_value' variable. Therefore there are two parts to this question.
 """
 
-placement = "Beaches are cool places to visit in spring however the Mackinow bridge is near. Most people visit Mackinow later."
+placement = "Beaches are cool places to visit in spring however the Mackinow Bridge is near. Most people visit Mackinow later since the island is a cool place to explore."
 
 d = {}  # First create a empty dict 'd'.
 
