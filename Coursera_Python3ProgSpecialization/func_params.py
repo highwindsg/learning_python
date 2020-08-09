@@ -12,3 +12,15 @@ def hello3(s, n):
 hello3("Bob", 4)
 hello3("", 1)
 hello3("Kitty", 11)
+
+print("")
+
+def hello4(s):
+    print("Hello " + s)
+    print("Glad to meet you")
+
+
+hello4("Iman" + " and Jackie")
+hello4("Class " * 3)
+
+print("")
