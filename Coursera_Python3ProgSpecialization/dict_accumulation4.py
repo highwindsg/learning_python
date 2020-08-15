@@ -9,9 +9,11 @@ stri = "what can I do"
 char_d = {}
 
 for c in stri:
-    if c not in char_d:
-        char_d[c] = 0
-    char_d[c] += 1
+    if c not in char_d: # So if the alphanet character is not in 'stri',
+        char_d[c] = 0   # initialize that character with 0.
+    char_d[c] += 1  # Regardless if the character is in stri or not,
+                    # still needs to increase the counter for the loop
+                    # to continue to the next one.
 print(char_d)
 
 print("")
