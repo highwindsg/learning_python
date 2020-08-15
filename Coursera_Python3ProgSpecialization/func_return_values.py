@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 def square(x):
-    y = x * x
-    return y
+    # y = x * x     # This line can be redundant and multiplication
+    return x * x    # can be done on the return line.
 
 toSquare = 10
 result = square(toSquare)
@@ -39,5 +39,44 @@ list2 = ["Rey", "Ayo", "Lauren", "Natalie"]
 
 print(longer_than_five(list1))
 print(longer_than_five(list2))
+
+print("")
+
+""" How many lines will the following code print? """
+
+def show_me_numbers(list_of_ints):
+    print(10)
+    print("Next we'll accumulate the sum")
+    accum = 0
+    for num in list_of_ints:
+        accum = accum + num
+    return accum
+    print("All done with accumulation1")
+
+show_me_numbers([4, 2, 4])
+
+print("")
+
+"""
+Write a function called decision that takes a string as input,
+and then checks the number of characters.
+If it has over 17 characters, return “This is a long string”,
+if it is shorter or has 17 characters, return “This is a short
+string”.
+"""
+
+def decision(str):
+    
+    words = str.split()
+    num_words = len(words)
+    if num_words > 17:
+        ans = "This is a long string"
+    else:
+        ans = "This is a short string"
+    return ans
+        
+print(decision("Well hello dolly"))
+print(decision("In olden days a glimps of stocking was looked on a something shocking but heaven knows, anything goes"))
+print(decision("how do you do sir"))
 
 print("")

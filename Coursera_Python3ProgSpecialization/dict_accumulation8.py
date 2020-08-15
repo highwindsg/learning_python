@@ -52,6 +52,7 @@ for c in sally:
 print(characters)
 print("")
 
+# Convert dict 'characters' into a list by using the .keys() method.
 keys = list(characters.keys())
 print(keys)
 worst_char = keys[0]
