@@ -53,13 +53,14 @@ print(characters)
 print("")
 
 # Convert dict 'characters' into a list by using the .keys() method.
-keys = list(characters.keys())
-print(keys)
-worst_char = keys[0]
+char_lst = list(characters.keys())
+print(char_lst)
+worst_char = char_lst[0]    # Assuming first item in list is worst_char,
+                            # so that can start to make comparison next.
 
-for key in keys:
-    if characters[key] < characters[worst_char]:
-        worst_char = key
+for item in char_lst:
+    if characters[item] < characters[worst_char]:
+        worst_char = item
 print(worst_char)
 print("")
 

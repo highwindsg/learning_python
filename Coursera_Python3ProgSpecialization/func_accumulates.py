@@ -17,8 +17,9 @@ print(y)
 print("")
 
 """
-Write a function called count that takes a list of numbers as
-input and returns a count of the number of elements in the list.
+Write a function called count that takes a list of numbers or
+characters elements as input and returns a count of the number
+of elements in the list.
 """
 
 def count(seq):
