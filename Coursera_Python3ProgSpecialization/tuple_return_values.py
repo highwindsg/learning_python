@@ -67,3 +67,4 @@ def info(name, age, birth_year, year_in_college, hometown):
 
 print(info("Tina", 20, 1996, "sophomore", "Detroit"))
 print("")
+
