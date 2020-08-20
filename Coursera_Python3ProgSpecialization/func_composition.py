@@ -18,3 +18,17 @@ result = sum_of_squares(a, b, c)
 print(result)
 print("")
 
+
+
+"""
+What are the possible types of variable z?
+"""
+
+def cyu3(x, y, z):
+   if x - y > 0:
+      return y -2
+   else:
+      z.append(y)
+      return x + 3
+
+""" Ans: List. Because append can be performed on lists. """

@@ -17,7 +17,7 @@ word_counts = {}    # Create a empty dict accumulator.
 for word in words:  # Loop through every word in 'words'.
     if word not in word_counts:
         word_counts[word] = 0   # If word is not seen before, then initialize that word counter to 0.
-    word_counts[word] += 1
+    word_counts[word] += 1  # Then regardless if the word is seen before or not, go to next word by increasing the counter by 1.
 print(word_counts)
 
 print("")

@@ -11,3 +11,4 @@ for akey in mydict:
         total = total + mydict[akey]
 
 print(total)
+print("")
