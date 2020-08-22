@@ -29,7 +29,34 @@ while count <= 15:
         eve_nums.append(count)
     count += 1
 print(count)
+print(eve_nums)
 print("")
+
+
+"""
+Write a function called stop_at_four that iterates through a list
+of numbers. Using a while loop, append each number to a new list
+until the number 4 appears. The function should return the new
+list.
+"""
+
+def stop_at_four(list):
+
+    idx = 0
+    new_lst = []
+
+    while (idx < len(list)) and (list[idx] != 4):   # True and True = True
+        new_lst.append(list[idx])   # Add the number referenced by
+                                    # the index from the 'list' into
+                                    # the new_lst.
+        idx += 1    # Then increase the idx count by 1 to look at
+                    # the next number in 'list'.
+    return new_lst
+
+# Func call and parse in one param of a list and print out.
+print(stop_at_four([3, 7, 5, 9, 9, 0, 4, 3, 2, 5]))
+print("")
+
 
 """
 Below is provided a for loop that sums all the elements in list1.
