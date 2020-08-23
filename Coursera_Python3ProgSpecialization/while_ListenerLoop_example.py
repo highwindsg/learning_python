@@ -8,3 +8,5 @@ while (x != 0):
 
 print(theSum)
 print("")
+# Note that zero is a sentinel value used to signal the end of the loop.
+
