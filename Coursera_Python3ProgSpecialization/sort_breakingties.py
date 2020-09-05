@@ -61,3 +61,29 @@ print("")
 
 """ Note that the above methods can be used for any numerical value 
 that we want to sort, however this will not work for strings. """
+
+"""
+Sorting the weather of city names and temperature.
+"""
+
+weather = {
+    'Reykjavik': {'temp':60, 'condition': 'rainy'},
+    'Buenos Aires': {'temp': 55, 'condition': 'cloudy'},
+    'Cairo': {'temp': 96, 'condition': 'sunny'},
+    'Berlin': {'temp': 89, 'condition': 'sunny'},
+    'Caloocan': {'temp': 78, 'condition': 'sunny'}
+    }
+print(weather)
+print("")
+
+# Sorting the weather first by city name (alphabetically),
+# then temperature (lowest to highest).
+sorted_weather = sorted(weather, key=lambda w: (w, weather[w]['temp']))
+print(sorted_weather)
+print("")
+
+# Reverse sorting the weather first by city name (reverse alphabetically),
+# then temperature (lowest to highest).
+sorted_weather_reverse = sorted(weather, key=lambda w: (w, -weather[w]['temp']), reverse=True)
+print(sorted_weather_reverse)
+print("")
