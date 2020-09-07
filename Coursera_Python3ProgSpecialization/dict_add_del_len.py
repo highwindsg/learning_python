@@ -20,3 +20,14 @@ numItems = len(inventory)
 print(numItems)
 print("")
 #print(type(inventory.keys()))
+
+
+"""
+Add a key-value pair to the dictionary places that reflects that the 
+2016 Olympics were held in Brazil. Do not rewrite the entire 
+dictionary to do this!
+"""
+
+places = {"Australia":2000, "Greece":2004, "China":2008, "England":2012}
+places["Brazil"] = 2016 # This will append the key 'Brazil' to the last of he dict.
+print(places)

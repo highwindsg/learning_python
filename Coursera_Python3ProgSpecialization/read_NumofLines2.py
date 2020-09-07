@@ -15,4 +15,5 @@ for aline in emotionfile:
 
 
 print("Number of lines in the file:", num_lines)
+print("")
 
