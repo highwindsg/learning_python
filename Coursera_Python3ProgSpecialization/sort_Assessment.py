@@ -87,7 +87,7 @@ ks = medals.keys()
 print(ks)
 # The var 'top_three' below will sort the dict 'medals' from highest
 # to lowest. And with slicing [:3] will then filter out only top three.
-top_three = sorted(ks,key=lambda x : g(x,medals),reverse = True)[:3]
+top_three = sorted(ks,key=lambda x: g(x,medals),reverse = True)[:3]
 print(top_three)
 print("")
 
@@ -121,29 +121,31 @@ def g2(k,v):
 
 ks = groceries.keys()
 print(ks)
-most_needed = sorted(ks,key=lambda x : g2(x,groceries),reverse = True)
+most_needed = sorted(ks,key=lambda x: g2(x,groceries),reverse = True)
 print(most_needed)
 print("")
 
 
 
 """
-Create a function called last_four that takes in an ID number and 
+Create a function called 'last_four(x)' that takes in an ID number and 
 returns the last four digits. For example, the number 17573005 should 
 return 3005. Then, use this function to sort the list of ids stored 
-in the variable, ids, from lowest to highest. Save this sorted list 
-in the variable, sorted_ids. Hint: Remember that only strings can be 
+in the variable 'ids' from lowest to highest. Save this sorted list 
+in the variable 'sorted_ids'. Hint: Remember that only strings can be 
 indexed, so conversions may be needed.
 """
 
-#def last_four(x):
+def last_four(x):
+    return str(x)[-4:]
 
-
-#ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
-
-
-
-
+ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
+# Using lambda expression:
+sorted_ids = sorted(ids, key=lambda x: str(x)[-4:])
+# Or using a named function:
+#sorted_ids = sorted(ids, key=last_four)
+print(sorted_ids)
+print("")
 
 
 
@@ -153,24 +155,23 @@ lambda and not using a defined function. Save this sorted list in the
 variable sorted_id.
 """
 
-#ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
+ids = [17573005, 17572342, 17579000, 17570002, 17572345, 17579329]
 
-
-
-
-
+# Using lambda expression:
+sorted_id = sorted(ids, key=lambda x: str(x))
+print(sorted_id)
+print("")
 
 
 
 """
-Sort the following list by each element’s second letter a to z. Do so 
-by using lambda. Assign the resulting value to the variable 
+Sort the following list by each element’s second letter a to z.
+Do so by using lambda. Assign the resulting value to the variable 
 lambda_sort.
 """
 
-#ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
+ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
 
-
-
-
-
+lambda_sort = sorted(ex_lst, key=lambda x: x[1])
+print(lambda_sort)
+print("")
