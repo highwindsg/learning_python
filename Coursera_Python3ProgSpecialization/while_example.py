@@ -15,6 +15,7 @@ print(sumTo(1000))
 print("")
 
 
+
 """
 Write a while loop that is initialized at 0 and stops at 15.
 If the counter is an even number, append the counter to a list
@@ -31,6 +32,7 @@ while count <= 15:
 print(count)
 print(eve_nums)
 print("")
+
 
 
 """
@@ -58,6 +60,7 @@ print(stop_at_four([3, 7, 5, 9, 9, 0, 4, 3, 2, 5]))
 print("")
 
 
+
 """
 Write a function, sublist, that takes in a list of numbers as the
 parameter. In the function, use a while loop to return a sublist
@@ -80,6 +83,7 @@ print(sublist([1, 2, 3, 4, 5, 6, 7, 8]))
 print("")
 
 
+
 """
 Write a function called check_nums that takes a list as its
 parameter, and contains a while loop that only stops once the
@@ -99,6 +103,7 @@ def check_nums(list):
 
 print(check_nums([1, 2, 3, 4, 5, 6, 7, 8]))
 print("")
+
 
 
 """
@@ -123,6 +128,7 @@ print(sub_list(["One", "Two", "Three", "STOP", "Go"]))
 print("")
 
 
+
 """
 Write a function called stop_at_z that iterates through a list of
 strings. Using a while loop, append each string to a new list
@@ -141,6 +147,8 @@ def stop_at_z(str):
     return new_str_lst
 
 print(stop_at_z(['c', 'b', 'd', 'z', 'zebra', 'z', 'h', 'r']))
+print("")
+
 
 
 """
@@ -167,6 +175,7 @@ while idx < len(list1):
     idx += 1
 print(accum)
 print("")
+
 
 
 """
@@ -197,6 +206,7 @@ while idx < len(lst):
     
 print(sum2)
 print("")
+
 
 
 """
