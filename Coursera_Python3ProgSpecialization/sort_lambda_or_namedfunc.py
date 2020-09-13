@@ -48,3 +48,33 @@ def s_cities_count(cities_list):
 
 print(sorted(states, key=lambda state: s_cities_count(states[state])))
 print("")
+
+
+
+"""
+Write code to switch the order of the winners list so that it is now 
+A to Z by last name. Assign this list to the variable z_winners.
+"""
+
+winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
+
+z_winners = sorted(winners, key = lambda x: x.split()[-1])
+print(z_winners)
+print("")
+
+
+
+"""
+What how will the following data be sorted?
+Ans: first city name (reverse alphabetically), then temperature (lowest to highest).
+"""
+
+weather = {'Reykjavik': {'temp':60, 'condition': 'rainy'},
+           'Buenos Aires': {'temp': 55, 'condition': 'cloudy'},
+           'Cairo': {'temp': 96, 'condition': 'sunny'},
+           'Berlin': {'temp': 89, 'condition': 'sunny'},
+           'Caloocan': {'temp': 78, 'condition': 'sunny'}}
+
+sorted_weather = sorted(weather, key=lambda w: (w, -weather[w]['temp']), reverse=True)
+print(sorted_weather)
+print("")
