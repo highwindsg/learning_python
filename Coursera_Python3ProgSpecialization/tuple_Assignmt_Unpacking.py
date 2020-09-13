@@ -1,9 +1,28 @@
 #!/usr/bin/env python3
 
+"""
+With only one line of code, assign the variables city, country, and 
+year to the values of the tuple olymp.
+"""
+
+olymp = ('Rio', 'Brazil', 2016)
+
+city = olymp[0]
+country = olymp[1]
+year = olymp[2]
+print(city)
+print(country)
+print(year)
+print("")
+
+
+
+"""
+Checking the data type of 'julia'.
+"""
 julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
-
 print(type(julia))
-
+print("")
 """
 The number of var names on the left-hand side of the assignment
 statement (line 16) must have the equal the number of values that
@@ -12,7 +31,6 @@ are on the right-hand side (line 3).
 Unpacking a tuple on the right side and assigning them to 
 vars on the left side.
 """
-
 name, surname, birth_year, movie, movie_year, profession, birth_place = julia
 print(name)
 print(surname)
@@ -21,8 +39,9 @@ print(movie)
 print(movie_year)
 print(profession)
 print(birth_place)
-
 print("")
+
+
 
 A, B, C, D = 1, 2, 3, 4
 print(A)

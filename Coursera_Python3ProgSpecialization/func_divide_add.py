@@ -22,3 +22,10 @@ def sum(num):
 number = 10
 print(divide(number))
 print(sum(number))
+
+# Alternatively a slightly shorter script:
+#def divide(num):
+#    return num / 2
+
+#def sum(num):
+#    return divide(num) + 6

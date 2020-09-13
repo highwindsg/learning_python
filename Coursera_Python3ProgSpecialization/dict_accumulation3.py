@@ -58,3 +58,27 @@ for word in words:
 print(wrd_d)
 
 print("")
+
+
+
+"""
+Provided is a string saved to the variable name sentence. Split the 
+string into a list of words, then create a dictionary that contains 
+each word and the number of times it occurs. Save this dictionary to 
+the variable name word_counts.
+"""
+
+sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
+
+words = sentence.split()
+wrd_d = {}
+
+for word in words:  # Loop through every word in 'words'.
+    if word not in wrd_d:
+        wrd_d[word] = 0 # If word is not seen before, then initialize that wrd_d counter to 0.
+    wrd_d[word] += 1    # Then regardless if the word is seen before or not, go to next word by increasing the counter by 1.
+print(wrd_d)
+word_counts = wrd_d
+print(word_counts)
+print("")
+
