@@ -187,7 +187,7 @@ for line in rows:
     words = line.split()
     numbers = words[-1]
     twrt = numbers.split(',')
-    print ('retweets: ', twrt[1], 'replies: ', twrt[2])
+    print('retweets: ', twrt[1], 'replies: ', twrt[2])
     pos_sco = 0
     neg_sco = 0
     for word in words:
@@ -196,7 +196,7 @@ for line in rows:
         if word in negative_words:
             neg_sco = neg_sco + 1
     net_sco = pos_sco - neg_sco
-    print ('positive words: ', pos_sco, 'negative words: ', neg_sco, 'Net score: ', net_sco )
+    print('positive words: ', pos_sco, 'negative words: ', neg_sco, 'Net score: ', net_sco )
     row_string = '{}, {}, {}, {}, {}'.format(twrt[1], twrt[2], pos_sco, neg_sco, net_sco)
     outfile.write(row_string)
     outfile.write('\n')
