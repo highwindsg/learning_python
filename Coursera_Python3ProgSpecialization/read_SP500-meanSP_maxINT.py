@@ -17,9 +17,13 @@ line = f.readlines()
 sum = 0
 lst = []
 for lin in line[6:18]:
+    # print(lin)
     lin = lin.split(",")
+    # print(lin)
     sum += float(lin[1])
+    # print(sum)
     lst += [lin[5]]
+    # print(lst)
 
 mean_SP = sum/12
 print(mean_SP)
