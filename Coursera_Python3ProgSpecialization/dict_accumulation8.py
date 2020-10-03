@@ -45,6 +45,8 @@ sally = "sally sells sea shells by the sea shore and by the road"
 
 characters = {}
 
+# First create the dict 'characters' with the characters as keys and
+# the frequency of occurances as values.
 for c in sally:
     if c not in characters:
         characters[c] = 0
@@ -52,7 +54,7 @@ for c in sally:
 print(characters)
 print("")
 
-# Convert dict 'characters' into a list by using the .keys() method.
+# Then convert dict 'characters' into a list by using the .keys() method.
 char_lst = list(characters.keys())
 print(char_lst)
 worst_char = char_lst[0]    # Assuming first item in list is worst_char,
@@ -63,6 +65,7 @@ for item in char_lst:
         worst_char = item
 print(worst_char)
 print("")
+
 
 
 """

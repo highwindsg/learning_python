@@ -37,3 +37,39 @@ credits = 0
 for course in Junior:
     credits = credits + Junior[course]
 print(credits)
+print("")
+
+"""
+Create the dictionary characters that shows each character from the 
+string sally and its frequency. Then, find the most frequent letter 
+based on the dictionary. Assign this letter to the variable best_char.
+"""
+
+sally = "sally sells sea shells by the sea shore"
+characters = {}
+
+# First create the dict 'characters'.
+for c in sally:
+    if c not in characters:
+        characters[c] = 0
+    characters[c] += 1
+print(characters)
+print("")
+
+# Then convert the dict into a list with the keys only.
+# Duplicated letters will only be listed once.
+char_lst = list(characters.keys())
+print(char_lst)
+print("")
+
+# Assume the first letter in the list as the best character first.
+best_char = char_lst[0]
+
+# Comparing if the item value in characters dict is greater than the 
+# value in best_char var. If yes, then the value in var item will replace
+# value of var best_char.
+for item in char_lst:
+    if characters[item] > characters[best_char]:
+        best_char = item
+print(best_char)
+print("")
