@@ -21,4 +21,4 @@ total = 0   # Initializing accumulator var.
 for continent in travel:
     total = total + travel[continent]   # Updating accumulator var.
 
-print(total)
+print(total)rom

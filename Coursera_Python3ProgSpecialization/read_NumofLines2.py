@@ -17,3 +17,14 @@ for aline in emotionfile:
 print("Number of lines in the file:", num_lines)
 emotionfile.close()
 print("")
+
+
+# Alternatively using 'with open()'.
+num_lines = 0
+
+with open("emotion_words.txt") as emotionfile:
+    for aline in emotionfile:
+        num_lines += 1
+
+print(num_lines)
+print("")
