@@ -20,20 +20,23 @@ for lin in line[6:18]:
     # print(lin)
     lin = lin.split(",")
     # print(lin)
-    sum += float(lin[1])
+    sum = sum + float(lin[1])    # From the second column.
     # print(sum)
-    lst += [lin[5]]
-    # print(lst)
+    lst += [lin[5]] # From the fifth column.
+    print(lst)
 
 mean_SP = sum/12
 print(mean_SP)
+print("")
 
 big = lst[0]
 for i in range(len(lst)):
-    if lst[i]>big:
+    if lst[i] > big:
         big = lst[i]
 max_interest = float(big)
 print(max_interest)
+print("")
+
 
 """
 Explanation:
