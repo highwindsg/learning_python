@@ -20,5 +20,5 @@ secs_finally_remaining = secs_still_remaining % 60
 print(
     hours, "hours",
     minutes, "mins",
-    secs_finally_remaining, "and secs"
+    "and", secs_finally_remaining, "secs"
 )
