@@ -9,3 +9,19 @@ Formula for calculating Miles per Gallon (MPG):
 (end – start) = miles driven
 Miles Driven / Gallons Used = MPG
 """
+
+miles = float(input("Enter miles driven: "))
+gallons = float(input("Number of gallons used: "))
+MPG = miles // gallons
+print("Your car uses", MPG, "gallons per mile.")
+print("")
+
+# Or create a function.
+def mpg(miles, gallons):
+    miles = float(miles) // gallons
+    km = miles * 0.425
+    print("Your car uses", miles, "mpg or in km/litre,", km)
+    return miles
+
+mpg(30, 12)
+print("")
