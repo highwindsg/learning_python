@@ -29,11 +29,11 @@ mean_SP = sum/12
 print(mean_SP)
 print("")
 
-big = lst[0]
+highest = lst[0]
 for i in range(len(lst)):
-    if lst[i] > big:
-        big = lst[i]
-max_interest = float(big)
+    if lst[i] > highest:
+        highest = lst[i]
+max_interest = float(highest)
 print(max_interest)
 print("")
 
