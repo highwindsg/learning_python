@@ -6,6 +6,8 @@
 total = 0
 mydict = {"cat": 12, "dog": 6, "elephant": 23, "bear": 20}
 
+# It adds the values of the keys that have length greater than 3.
+# Therefore they are the sum of the numbers of elephant and bear.
 for akey in mydict:
     if len(akey) > 3:
         total = total + mydict[akey]
