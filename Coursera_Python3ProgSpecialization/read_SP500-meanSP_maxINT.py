@@ -21,9 +21,10 @@ for lin in line[6:18]:
     lin = lin.split(",")
     # print(lin)
     sum = sum + float(lin[1])    # From the second column.
-    # print(sum)
+    print("Sum is:", sum)
     lst += [lin[5]] # From the fifth column.
     print(lst)
+print("")
 
 mean_SP = sum/12
 print(mean_SP)
@@ -49,11 +50,11 @@ open the for loop to read the data from 6/1/16 to 5/1/17
 divide the lin in the form of a list using .split
 find sum of all the SP500 values
 start adding the value of 6th element from lin in the string lst
-mean_SP = sum/12 (june - may =12 months)
+mean_SP = sum/12 (june - may = 12 months)
 print mean_SP
 initialize the first element of lst to big, assuming that it is
 the biggest interest rate among all
-open the loop starting fron i=0 to i= length of string lst
+open the loop starting from i=0 to i= length of string lst
 check if big is greater than rest of the values present in lst
 if no then replace the value of big by the greater digit
 since all the elements in lst are in the form of a string so

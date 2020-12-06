@@ -12,7 +12,7 @@ for akey in mydict:
     if len(akey) > 3:
         total = total + mydict[akey]
 
-print(total)
+print("Total of values where items has more than 3 characters =", total)
 print("")
 
 
