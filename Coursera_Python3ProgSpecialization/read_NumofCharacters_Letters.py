@@ -5,12 +5,13 @@
 
 f = open("school_prompt2.txt", "r")
 text = f.read()
+print(text)
 num_char = len(text)
-print(num_char)
+# print(num_char)
 
 # https://pythonexamples.org/python-count-number-of-characters-in-text-file/
 
-print("")
+print("Number of characters or letters in the file:", num_char)
 
 # Using the file school_prompt2.txt, find the number of words 
 # in the file and assign that value to the variable num_char.
@@ -19,6 +20,5 @@ file = open("school_prompt2.txt", "r")
 data = file.read()
 words = data.split()
 num_words = len(words)
-print(num_words)
-
+print("Number of words in the file:", num_words)
 print("")
