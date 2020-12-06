@@ -17,7 +17,7 @@ def mult(num):
     return result
 
 
-print(addit(5))
+print(addit(10))
 print(mult(2))
 
 print("")
