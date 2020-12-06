@@ -3,7 +3,7 @@
 # Find the number of lines in the file, travel_plans2.txt, and assign it to
 # the variable num_lines.
 
-f = open("travel_plans2.txt")
+f = open("travel_plans2.txt", "r")
 num_lines = len(f.readlines())
 print(num_lines)
 

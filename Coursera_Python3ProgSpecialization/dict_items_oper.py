@@ -34,9 +34,34 @@ print("")
 
 # Given the dictionary swimmers, add an additional key-value pair to 
 # the dictionary with "Phelps" as the key and the integer 23 as the 
-# value. 
+# value.
 
 swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4}
 swimmers["Phelps"] = 23
 print(swimmers)
+print("")
+
+# The dictionary golds contains information about how many gold medals each
+# country won in the 2016 Olympics. But today, Spain won 2 more gold medals.
+# Update golds to reflect this information.
+golds = {"Italy": 12,
+         "USA": 33,
+         "Brazil": 15,
+         "China": 27,
+         "Spain": 19,
+         "Canada": 22,
+         "Argentina": 8,
+         "England": 29
+         }
+
+golds["Spain"] = golds["Spain"] + 2
+print(golds)
+print("")
+
+# Every four years, the summer Olympics are held in a different country.
+# Add a key-value pair to the dictionary places that reflects that the 2016 Olympics
+# were held in Brazil. Do not rewrite the entire dictionary to do this!
+places = {"Australia":2000, "Greece":2004, "China":2008, "England":2012}
+places["Brazil"] = 2016
+print(places)
 print("")
