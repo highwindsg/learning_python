@@ -25,3 +25,11 @@ lst = [1, 2, 3, 4]
 print(total(lst))
 print("")
 
+
+
+# Write a function that adds three numbers.
+def addNum(x, y, z):
+    return (x + y + z)
+
+print(addNum(3, 5, 4))
+print("")

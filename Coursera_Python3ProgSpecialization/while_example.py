@@ -22,15 +22,15 @@ If the counter is an even number, append the counter to a list
 called eve_nums.
 """
 
-count = 0
-eve_nums = []
+count = 0   # Initialize counter to start at zero first.
+eve_nums = []   # Initialize an empty list first.
 
 while count <= 15:
     if count %2 == 0:
         eve_nums.append(count)
     count += 1
 print(count)
-print(eve_nums)
+print("The list of even numbers count are:", eve_nums)
 print("")
 
 

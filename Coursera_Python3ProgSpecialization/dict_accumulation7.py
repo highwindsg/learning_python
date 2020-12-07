@@ -20,9 +20,9 @@ schedule = {
 total_credits = 0   # Initialize accumulator var.
 for course in schedule:
     total_credits = total_credits + schedule[course]
-print(total_credits)
-
+print("Total number of credits earned so far:", total_credits)
 print("")
+
 
 """
 The dictionary Junior shows a schedule for a junior year semester.
@@ -38,6 +38,7 @@ for course in Junior:
     credits = credits + Junior[course]
 print(credits)
 print("")
+
 
 """
 Create the dictionary characters that shows each character from the 
@@ -56,11 +57,13 @@ for c in sally:
 print(characters)
 print("")
 
+
 # Then convert the dict into a list with the keys only.
 # Duplicated letters will only be listed once.
 char_lst = list(characters.keys())
 print(char_lst)
 print("")
+
 
 # Assume the first letter in the list as the best character first.
 best_char = char_lst[0]

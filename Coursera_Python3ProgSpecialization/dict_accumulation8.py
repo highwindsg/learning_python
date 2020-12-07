@@ -98,9 +98,9 @@ p = "Summer is a great time to go outside. You have to be careful of the sun tho
 
 low_d = {}
 
-for c in p.lower():
-    if c not in low_d:
-        low_d[c] = 0
-    low_d[c] += 1
+for char in p.lower():
+    if char not in low_d:
+        low_d[char] = 0
+    low_d[char] += 1
 print(low_d)
 print("")
