@@ -1,4 +1,4 @@
-iprint("Hello")
+print("Hello")
 print("And now?")
 <<<<<<< HEAD
 prin
