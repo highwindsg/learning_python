@@ -1,7 +1,9 @@
 print("Hello")
 print("And now?")
 <<<<<<< HEAD
-prin
+
+
+print
 =======
 print("Hell)
 print("Hello again")
