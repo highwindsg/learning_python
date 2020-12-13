@@ -23,9 +23,24 @@ import turtle
 
 
 wn = turtle.Screen()
-wn.bgcolor = input("Please enter the background color:", wn.bgcolor)
+bgcolor = input("Please enter the background color: ")
+wn.bgcolor(bgcolor)
 
 alex = turtle.Turtle()
-alex.color = input("Please enter the color of turtle alex:", alex.color)
+color = input("Please enter the color of turtle alex: ")
+alex.color(color)
 
-#... unfinish....
+width = int(input("Please enter the thickness of the line (>= 0 interger number): "))
+alex.pensize(width)
+
+alex.forward(150)   # tell alex to move forward by 150 units.
+alex.left(90)   # turn on its left by 90 degrees.
+alex.forward(75)    # complete the second side of a rectangle.
+alex.left(90)   # turn on its left by 90 degrees.
+alex.forward(150)   # complete the third side of a rectangle..
+alex.left(90)   # turn on its left by 90 degrees.
+alex.forward(75)    # complete the last side of a rectangle.
+
+# turtle.Screen().exitonclick()   # close the window once clicked inside.
+# Alternatively,
+wn.exitonclick()    # close the window once clicked inside.
