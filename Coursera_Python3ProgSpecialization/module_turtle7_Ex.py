@@ -45,4 +45,11 @@ for _ in range(3):
     bob.left(360/3)
 
 
+# A pentagon
+for _ in range(5):
+    bob.color("orange")
+    bob.forward(100)
+    bob.left(360/5)
+
+
 wn.exitonclick()

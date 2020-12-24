@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import turtle
+
 wn = turtle.Screen()
 
 alex = turtle.Turtle()
@@ -25,5 +26,6 @@ alex.stamp()    # Leaving a turtle footprint.
 alex.forward(80)
 alex.up()
 alex.forward(50)
+
 
 wn.exitonclick()
