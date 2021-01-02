@@ -41,6 +41,17 @@ words in the list contain the letter “a”, the program is looking
 for items in the list that are just the letter “a”.
 """
 
+# Q. What will be stored in the variable ty below?
+qu = "wow, welcome week! Were you wanting to go?"
+ty = qu.count("we")
+print(ty)
+print("")
+"""
+There is a difference between "we" and "We" which means there are 
+only two in the string.
+"""
+
+
 
 # The .index() method can be helpful for both strings and lists and
 # requires on argument.
@@ -76,7 +87,27 @@ seasons = [
     "summer",
     "fall"
 ]
+
+rooms = [
+    "bathroom",
+    "kitchen",
+    "living room",
+    "bedroom",
+    "closet",
+    "foyer"
+]
+
 # If it is unable to find the argument in the string or list, 
 # then an error will occur.
-print(seasons.index("autumn"))  # Error! As 'autumn' is not in the list.
+
+#print(seasons.index("autumn"))  # Error! As 'autumn' is not in the list.
+print(rooms.index("kitchen"))
+#print(rooms.index("garden"))    # Error! As 'garden' in not in the list.
+print("")
+
+
+# Q. What will be stored in the variable ty below?
+qu = "wow, welcome week!"
+ty = qu.index("we")
+print(ty)
 print("")
