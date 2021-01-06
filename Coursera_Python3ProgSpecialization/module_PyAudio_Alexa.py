@@ -25,6 +25,7 @@ def talk(text):
 # Set up a try and except block just in case microphone is not receiving well so that the
 # program can try to listen again.
 
+
 def take_command():
     try:
         with sr.Microphone() as source: # Using microphone as a source,
@@ -44,6 +45,7 @@ def take_command():
     except:
         pass
     return command
+    
 
 def run_alexa():
     command = take_command()
@@ -69,6 +71,10 @@ def run_alexa():
         talk(info)
     elif "joke" in command:
         talk(pyjokes.get_joke())
+    elif "who are you" in command:
+        talk("You can call me whatever you want.")
+    else:
+        talk("Please say again, I didn't get what you mean.")
 
-
-run_alexa()
+while True:
+    run_alexa()
