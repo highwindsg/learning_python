@@ -8,7 +8,7 @@ with sr.Microphone() as source:
     r.adjust_for_ambient_noise(source,duration=1)
     # r.energy_threshold()
     print("say anything : ")
-    audio= r.listen(source, timeout=10)
+    audio = r.listen(source, timeout=10)
     try:
         text = r.recognize_google(audio)
         print(text)

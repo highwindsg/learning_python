@@ -11,9 +11,10 @@ import wikipedia
 import pyjokes
 
 listener = sr.Recognizer()
+print(sr.Microphone.list_microphone_names())
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[4].id)
+engine.setProperty('voices', voices[4].id)
 engine.say("Hi! I'm Alexa, your IT Space special agent.")
 engine.say("What can I do for you?")
 engine.runAndWait()
