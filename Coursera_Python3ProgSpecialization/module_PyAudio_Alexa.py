@@ -39,41 +39,44 @@ def take_command():
             #if 'alexa' in command:
             if '' in command:
                 #command = command.replace("alexa", "")
-                command = command.replace("", "")
-                print("You said:", command)
+                your_cmd = command.replace("", "")
+                print("You said:", your_cmd)
 
     except:
         pass
-    return command
+    return your_cmd
     
 
 def run_alexa():
     command = take_command()
     #print(command)
-    if "play" in command:
-        song = command.replace("play", "")
-        talk("Playing " + song)
-        #print(song)
-        pywhatkit.playonyt(song)
-    elif "time" in command:
-        time = datetime.datetime.now().strftime("%I:%M %p")
-        print(time)
-        talk("Current time is " + time)
-    elif "who is" in command:
-        person = command.replace("who is", "")
-        info = wikipedia.summary(person, 1)
-        print(info)
-        talk(info)
-    elif "what is" in command:
-        thing = command.replace("what is", "")
-        info = wikipedia.summary(thing, 1)
-        print(info)
-        talk(info)
-    elif "joke" in command:
-        talk(pyjokes.get_joke())
-    elif "who are you" in command:
-        talk("You can call me whatever you want.")
-    else:
+    try:
+        if "play" in command:
+            song = command.replace("play", "")
+            talk("Playing " + song)
+            #print(song)
+            pywhatkit.playonyt(song)
+        elif "time" in command:
+            time = datetime.datetime.now().strftime("%I:%M %p")
+            print(time)
+            talk("Current time is " + time)
+        elif "who is" in command:
+            person = command.replace("who is", "")
+            info = wikipedia.summary(person, 1)
+            print(info)
+            talk(info)
+        elif "what is" in command:
+            thing = command.replace("what is", "")
+            info = wikipedia.summary(thing, 1)
+            print(info)
+            talk(info)
+        elif "joke" in command:
+            talk(pyjokes.get_joke())
+        elif "who are you" in command:
+            talk("You can call me whatever you want.")
+        else:
+            talk("Please say again, I didn't get what you mean.")
+    except wikipedia.exceptions.PageError:
         talk("Please say again, I didn't get what you mean.")
 
 while True:
