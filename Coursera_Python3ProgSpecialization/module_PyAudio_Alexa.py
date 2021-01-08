@@ -13,9 +13,13 @@ import pyjokes
 
 
 listener = sr.Recognizer() # To create a listening recognizer as set var.
+print(sr.Microphone.list_microphone_names())
 engine = pyttsx3.init() # To initialize this text-to-speech engine.
 voices = engine.getProperty("voices")
 engine.setProperty("voice", voices[4].id)   # voices index 4 is female id voice for Alexa.
+engine.say("Hi! I'm Alexa, your IT Space special agent.")
+engine.say("What can I do for you?")
+
 
 def talk(text):
     engine.say(text)
