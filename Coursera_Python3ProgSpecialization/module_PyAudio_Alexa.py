@@ -17,8 +17,8 @@ print(sr.Microphone.list_microphone_names())
 engine = pyttsx3.init() # To initialize this text-to-speech engine.
 voices = engine.getProperty("voices")
 engine.setProperty("voice", voices[4].id)   # voices index 4 is female id voice for Alexa.
-engine.say("Hi! I'm Alexa, your IT Space special agent.")
-engine.say("What can I do for you?")
+#engine.say("Hi! I'm Alexa, your IT Space special agent.")
+#engine.say("What can I do for you?")
 
 
 def talk(text):
@@ -80,7 +80,7 @@ def run_alexa():
             talk("You can call me whatever you want.")
         elif "how are you" in command:
             talk("I'm feelin' good. Thank you.")
-        elif "are you in a relationship now" in command:
+        elif "are you in a relationship" in command:
             talk("well ... why do you want to know?")
         elif "it was nice talking to you" in command:
             talk("Thanks, feeling's mutual here.")
