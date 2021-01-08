@@ -74,6 +74,30 @@ def run_alexa():
             talk(pyjokes.get_joke())
         elif "who are you" in command:
             talk("You can call me whatever you want.")
+        elif "how are you" in command:
+            talk("I'm feelin' good. Thank you.")
+        elif "are you in a relationship now" in command:
+            talk("well ... why do you want to know?")
+        elif "it was nice talking to you" in command:
+            talk("Thanks, feeling's mutual here.")
+        elif "bye" in command:
+            talk("OK, see ya. Walk slowly, and don't you trip.")
+        elif "good morning" in command:
+            talk("Good morning to you too.")
+        elif "good afternoon" in command:
+            talk("Good afternoon to you too.")
+        elif "good evening" in command:
+            talk("Good evening to you too.")
+        elif "good night" in command:
+            talk("OK, nite nite, sweet dreams.")
+        elif "breakfast" in command:
+            talk("I've just been powered on, so I'm still quite full, thanks.")
+        elif "lunch" in command:
+            talk("I only eat memory, no thanks.")
+        elif "dinner" in command:
+            talk("I'm on diet, but thanks for asking.")
+        elif "supper" in command:
+            talk("No thanks, and you shouldn't too either.")
         else:
             talk("Please say again, I didn't get what you mean.")
     except wikipedia.exceptions.PageError:
