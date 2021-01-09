@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Learning_ArduinoUno_PlatformIO",
+			"path": "../learning_arduino/Learning_ArduinoUno_PlatformIO"
+		}
+	],
+	"settings": {}
+}
