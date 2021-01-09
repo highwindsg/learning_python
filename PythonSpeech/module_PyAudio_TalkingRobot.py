@@ -116,3 +116,83 @@ hate_list = [
     "lick my ass",
     "kill yourself",
 ]
+
+
+def Listen():
+    """
+    Takes users voice as input and converts it to text.
+    """
+    speech = sr.Recognizer()    # says beep before listening.
+
+    # Takes input from microphone.
+    with sr.Microphone() as source:
+        winsound.Beep(frequency = 2500, duration = 100)
+        print("Say >>")
+        voice = speech.listen(sound)
+        text = speech.recognize_google(voice)
+        print(text)
+
+    return text # Return what was said.
+
+
+def Respond():
+    print(f"Talking the: {t}")  # for debugging
+
+    talk.say(t)
+    talk.setProperty("rate", 90)    # 90 words per minute
+    talk.runAndWait()
+
+
+def Decide(listen):
+    """
+    Takes decision based on what user says.
+    """
+    print(f" Command = {listen}.")  # for debugging
+
+    # see what user said is in any of the list or not.
+    if listen in hi_list:
+        Respond("Hi there, Good to see you.")
+
+    elif listen in bye_list:
+        Respond("I liked talking with you, okay take care.")
+
+    elif listen in hate_list:
+        Respond("Hate you too.")
+
+    elif listen in question_list:
+        Respond("I am talking bot. The talking robot written in Python. My creator Caven is trying to make me start.")
+
+    elif listen in response_neg_list:
+        Respond("I am very sorry, I was just joking")
+
+    elif listen in slang_list:
+        Respond("You are bad in English")
+
+    elif listen in r_u_there:
+        Respond("For, you, always sir")
+
+    else:
+        Respond("Sorry, I don't understand. Please say again")
+
+    
+while True: # loop forever.
+    """
+    The robot needs sa wakeup command so that it can start listening to it.
+    """
+
+    try:
+        speech = sr.Recognizer()
+
+        # Take input from microphone
+        with sr.Microphone() as source:
+            print("call>>")
+            voice = speech.listen(source)
+            called = speech.recognize_google(voice)
+            print(called)   # print what it heard, debugging only
+
+            if called in call_list:
+                comm = Listen() # listen to what user says
+                Decide(comm)    # take decision and respond
+    
+    except: # No wake up word found
+        pass
