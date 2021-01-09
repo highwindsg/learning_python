@@ -126,7 +126,7 @@ def Listen():
 
     # Takes input from microphone.
     with sr.Microphone() as source:
-        winsound.Beep(frequency = 2500, duration = 100)
+        #winsound.Beep(frequency = 2500, duration = 100)
         print("Say >>")
         voice = speech.listen(sound)
         text = speech.recognize_google(voice)
@@ -135,11 +135,11 @@ def Listen():
     return text # Return what was said.
 
 
-def Respond():
+def Respond(t):
     print(f"Talking the: {t}")  # for debugging
 
     talk.say(t)
-    talk.setProperty("rate", 90)    # 90 words per minute
+    #talk.setProperty("rate", 90)    # 90 words per minute
     talk.runAndWait()
 
 
@@ -177,7 +177,7 @@ def Decide(listen):
     
 while True: # loop forever.
     """
-    The robot needs sa wakeup command so that it can start listening to it.
+    The robot needs a wakeup command so that it can start listening to it.
     """
 
     try:
@@ -185,7 +185,7 @@ while True: # loop forever.
 
         # Take input from microphone
         with sr.Microphone() as source:
-            print("call>>")
+            print("Call >>")
             voice = speech.listen(source)
             called = speech.recognize_google(voice)
             print(called)   # print what it heard, debugging only

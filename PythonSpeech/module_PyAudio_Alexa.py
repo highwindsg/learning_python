@@ -41,7 +41,7 @@ def take_command():
             command = listener.recognize_google(voice) #  Using the listener's google API, and pass in the voice.
             command = command.lower()
             #if 'alexa' in command:
-            if '' in command:
+            if "" in command:
                 #command = command.replace("alexa", "")
                 your_cmd = command.replace("", "")
                 print("You said:", your_cmd)
@@ -101,7 +101,9 @@ def run_alexa():
         elif "dinner" in command:
             talk("I'm on diet, but thanks for asking.")
         elif "supper" in command:
-            talk("No thanks, and you shouldn't too either.")
+            talk("No thanks, and you shouldn't either.")
+        elif "how's the weather" or "how is the weather" in command:
+            talk("why don't you just look out the window.")
         else:
             talk("Please say again, I didn't get what you mean.")
     except wikipedia.exceptions.PageError:
