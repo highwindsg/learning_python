@@ -148,3 +148,83 @@ ls = ['run', 'world', 'travel', 'lights', 'moon', 'baseball', 'sea']
 new = ls[2:4]
 print(new)
 print("")
+
+
+"""
+Write code to determine how many 9’s are in the list nums and assign that value to the 
+variable how_many. Do not use a for loop to do this.
+"""
+
+nums = [4, 2, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
+
+how_many = (nums.count(9))
+print(how_many)
+print("")
+
+
+"""
+Write code that uses slicing to get rid of the second 8 so that there are only two 8’s in the list 
+bound to the variable nums.
+"""
+
+nums = [4, 2, 8, 23.4, 8, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
+
+#print(nums[4])
+#nums.pop(4)
+del nums[4:5]
+print(nums)
+print("")
+
+
+"""
+Assign the number of elements in lst to the variable num_lst.
+"""
+
+lst = [
+    "hi", 
+    "goodbye", 
+    "python", 
+    "106", 
+    "506", 
+    91, 
+    ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 
+    109, 
+    "chair", 
+    "pizza", 
+    "wolverine", 
+    2017, 
+    3.92, 
+    1817, 
+    "account", 
+    "readings", 
+    "papers", 
+    12, 
+    "facebook", 
+    "twitter", 
+    193.2, 
+    "snapchat", 
+    "leaders and the best", 
+    "social", 
+    "1986", 
+    9, 
+    29, 
+    "holiday", 
+    ["women", "olympics", "gold", "rio", 21, "2016", "men"], 
+    "26trombones"
+    ]
+
+num_lst = len(lst)
+print(num_lst)
+print("")
+
+
+"""
+Create a variable called wrds and assign to it a list whose elements are the words in the string sent. 
+Do not worry about punctuation.
+"""
+
+sent = "The bicentennial for our university was in 2017"
+
+wrds = sent.split()
+print(wrds)
+print("")
