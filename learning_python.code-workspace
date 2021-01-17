@@ -6,6 +6,10 @@
 		{
 			"name": "Learning_ArduinoUno_PlatformIO",
 			"path": "../learning_arduino/Learning_ArduinoUno_PlatformIO"
+		},
+		{
+			"name": "Arduino Blink Test",
+			"path": "../learning_arduino/Arduino Blink Test"
 		}
 	],
 	"settings": {}
