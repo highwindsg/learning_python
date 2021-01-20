@@ -8,8 +8,13 @@
 			"path": "../learning_arduino/Learning_ArduinoUno_PlatformIO"
 		},
 		{
+<<<<<<< Updated upstream
 			"name": "Arduino Blink Test",
 			"path": "../learning_arduino/Arduino Blink Test"
+=======
+			"name": "ESP32 Blink Test",
+			"path": "../learning_arduino/ESP32 Blink Test"
+>>>>>>> Stashed changes
 		}
 	],
 	"settings": {}
