@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
 
 """
+Write one for loop to print out each character of the string my_str on a separate line.
+"""
+
+my_str = "MICHIGAN"
+
+for c in my_str:
+    print(c)
+print("")
+
+
+
+"""
 In Robert McCloskey’s book Make Way for Ducklings, the names of the ducklings are 
 Jack, Kack, Lack, Mack, Nack, Ouack, Pack, and Quack. 
 Loop the output of these names in order.
@@ -68,3 +80,81 @@ for item in num_list:
     print(item, item*item)
 print("")
 
+
+
+"""
+Write a program that will go through a list of temperatures and print them out to the user.
+"""
+
+temperatures = [-3, 78, 95, 28, 56, 42, 56, 42, 56, 81, -10, -1]
+
+for temp in temperatures:
+    print("The weather outside is: " + str(temp))
+print("")
+
+
+
+"""
+Write a program that will print out a greeting to each student in the list. 
+This list should also keep track of how many students have been greeted and note that 
+each time a new student has been greeted.
+"""
+
+students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
+num_students = 0
+
+for name in students:
+    print("Welcome to class, " + name + ".")
+    num_students += 1
+    print(str(num_students) + "student(s) have entered the classroom.")
+print("")
+
+
+
+"""
+Write one for loop to print out each element of the list 'several_things'. 
+Then, write another for loop to print out the TYPE of each element of the list 'several_things'. 
+To complete this problem you should have written two different for loops, 
+each of which iterates over the list 'several_things', 
+but each of those 2 for loops should have a different result.
+"""
+
+several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
+
+for i in several_things:
+    print(i)
+print("")
+
+for j in several_things:
+    print(j, "is of", type(j))
+print("")
+
+
+
+"""
+Write code that uses iteration to print out the length of each element of the list stored in 'str_list'.
+"""
+
+str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
+
+for item in str_list:
+    print(len(item))
+print("")
+
+
+
+"""
+Write code to count the number of characters in original_str using the accumulation pattern and assign 
+the answer to a variable num_chars. Do NOT use the len function to solve the problem (if you use it while 
+you are working on this problem, comment it out afterward!)
+"""
+
+original_str = "The quick brown rhino jumped over the extremely lazy fox."
+
+num_chars = 0
+
+for c in original_str:
+    num_chars += 1
+
+print(num_chars)
+print("")
