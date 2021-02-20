@@ -65,7 +65,7 @@ print(atpos)
 sppos = data.find(" ", atpos)
 print(sppos)
 
-host = data[atpos+1 : sppos]    # To find out the host name by using slicing
+host = data[atpos+1 : sppos]    # To find out the host name by using slicing.
 print(host)
 print("")
 
