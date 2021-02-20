@@ -66,3 +66,38 @@ for line in file4:
         print(line)
         
 print("")
+
+
+
+"""
+Using regex and find numbers with decicals.
+"""
+
+import re
+
+file = open("mbox-short.txt")
+numlist = list()
+
+for line in file:
+    line = line.rstrip()
+    stuff = re.findall("X-DSPAM-Confidence: ([0-9.]+)", line)
+    if len(stuff) != 1:
+        continue
+    num = float(stuff[0])
+    numlist.append(num)
+print("Maximum:", max(numlist))
+print("")
+
+
+
+"""
+If you want a special regular expression character to just behave normally, use a back slash '\'.
+"""
+
+import re
+
+x3 = "We just received $10.00 for cookies."
+y3 = re.findall("\$[0-9.]+", x3)
+print(y3)
+print("")
+
