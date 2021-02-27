@@ -4,7 +4,7 @@
 import urllib.request, urllib.parse, urllib.error
 
 # From urllib module's request func, use the '.urlopen()' method to parse in the URL to the web content,
-# and assign the values to var 'fhand'.
+# and assign the values to var 'file'.
 file = urllib.request.urlopen("http://data.pr4e.org/romeo.txt")
 
 for line in file:   # For every line in var 'file',

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+To print out the content of a non https webpage.
+"""
+
 # Import the module 'urllib' and functions '.request', '.parse', '.error'.
 import urllib.request, urllib.parse, urllib.error
 
