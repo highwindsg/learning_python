@@ -8,7 +8,7 @@ import urllib.request, urllib.parse, urllib.error
 file = urllib.request.urlopen("http://data.pr4e.org/romeo.txt")
 
 counts = dict() # Create and empty counts dictionary.
-print(counts)
+#print(counts)
 
 for line in file:   # For every line in 'file',
     words = line.decode().split()   # decode it and split it, then assign the values to var 'words'.

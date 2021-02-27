@@ -1,4 +1,4 @@
-#!/usr/env python3
+#!/usr/bin/env python3
 
 # Import the functions from 'urllib module - request, parse, error'.
 import urllib.request, urllib.parse, urllib.error
