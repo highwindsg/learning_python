@@ -74,6 +74,8 @@ import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 import ssl
 
+
+# Ignore SSL certificates errors.
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
@@ -86,15 +88,20 @@ soup = BeautifulSoup(html, "html.parser")
 
 Sequence = []   # Initialise a empty Sequence list first.
 tags = soup("a")
+print(tags)
+print("")
 
-for i in range(count):
+for item in range(count):
     link = tags[position].get("href", None)
-    print("Retrieving:",link)
+    print("Retrieving:", link)
     Sequence.append(tags[position].contents[0])
+    print(Sequence)
+    print("")
     html = urllib.request.urlopen(link, context=ctx).read()
     soup = BeautifulSoup(html, "html.parser")
+    # Retrieve the anchor tags.
     tags = soup("a")
     link = tags[position].get("href", None)
     
-print(Sequence[-1])
+print("The last name in sequence:", Sequence[-1])
 print("")
