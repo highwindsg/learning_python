@@ -19,15 +19,20 @@ while True:
                          }
                         )
     print("Retrieving", url)
-    connection = urllib.request.urlopen(url)
+    connection = urllib.request.urlopen(url, context=ctx)
     data = connection.read().decode()
-    headers = dict(connection.hetheaders())
-    print("Remaining", headers["x-rate-linmit-remaining"])
+    
     js = json.loads(data)
-    print(json.dumps(js, indent=4))
+    print(json.dumps(js, indent=2))
+    
+    headers = dict(connection.getheaders())
+    print("Remaining", headers["x-rate-linmit-remaining"])
     
     for u in js["users"]:
         print(u["screen_name"])
+        if "status" not in u:
+            print("   * No status found   ")
+            continue
         s = u["status"]["text"]
         print("    ", s[:50])
         
