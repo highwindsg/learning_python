@@ -26,7 +26,7 @@ while True:
     print(json.dumps(js, indent=2))
     
     headers = dict(connection.getheaders())
-    print("Remaining", headers["x-rate-linmit-remaining"])
+    print("Remaining", headers["x-rate-linmit-remaining"])  # Twitter tells you how many more API requests remaining.
     
     for u in js["users"]:
         print(u["screen_name"])

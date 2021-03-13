@@ -40,6 +40,5 @@ while True:
     
     """
     Self homework. Search google or youtube on how to use the API key in line 8.
-    My Google API key is: key=AIzaSyC6qM8BkM3geu1Dunt_P1JMpsHTgUfc_Z0
     """
     
