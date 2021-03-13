@@ -5,7 +5,7 @@ import json
 
 
 # Google API key may be needed for authentication.
-serviceurl = "http://maps.googleapis.com/maps/api/geocode/json?address=Ann+Arbor%2C+MI&key=AIzaSyC6qM8BkM3geu1Dunt_P1JMpsHTgUfc_Z0"    
+serviceurl = "http://maps.googleapis.com/maps/api/geocode/json?address=Ann+Arbor%2C+MI"    
 
 while True:
     address = input("Enter location: ")
