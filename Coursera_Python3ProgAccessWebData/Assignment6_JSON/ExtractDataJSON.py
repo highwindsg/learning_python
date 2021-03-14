@@ -28,7 +28,6 @@ data = uh.read().decode()
 print("Retrieved", len(data), "characters")
 
 info = json.loads(data)
-Count = 0
 Sum = 0
 
 for item in info["comments"]:
