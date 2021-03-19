@@ -13,7 +13,9 @@ print("")
 """
 What word does the following sequence of numbers represent in ASCII:
 108, 105, 110, 101
+108, 105, 115, 116
 """
 
 print(ord("l"), ord("i"), ord("n"), ord("e"))
+print(ord("l"), ord("i"), ord("s"), ord("t"))
 print("")
