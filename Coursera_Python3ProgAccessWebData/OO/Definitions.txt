@@ -1,0 +1,15 @@
+Definitions:
+============
+
+Class - a template
+
+Attribute - A variable within a Class
+
+Method - A function within a Class
+
+Object - A particular instance of a Class
+
+Constructor - Code that runs when an object is created
+
+Inheritance - The ability to extend a class to make a new class
+
