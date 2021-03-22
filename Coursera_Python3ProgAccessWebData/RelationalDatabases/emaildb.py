@@ -4,7 +4,7 @@ import sqlite3
 
 
 # From the sqlite3 module, use the .connect() method and parse in the db name, and assign to var conn.
-conn = sqlite3.connect("emaildb.sqlite")    # Connect to the db.
+conn = sqlite3.connect("emaildb.sqlite")    # Creates and connects to the db.
 # From the conn obj, get the .cursor() method and assign it to the var cur.
 cur = conn.cursor() # After connecting to the db, this line is to represent the cursur at the db console.
 
@@ -37,23 +37,23 @@ for line in fh:
     if row is None:
         cur.execute('''
                     INSERT INTO Counts (email, count)
-                    VALUES (?, 1)
-                    ''', 
-                    (email, )   # A tuple with a single value.
+                    VALUES (?, 1)''', (email, ) # Therefore ? placeholder is the email, and 1 is the count.
                     )
     else:
         cur.execute("UPDATE Counts SET count = count + 1 WHERE email = ?", (email, ))
         
-    conn.commit()
+    conn.commit()   # Write from memory to disk.
     
     
-# https://www.sqlite.org/lang_select.html
+# https://www.sqlite.org/lang_select.html to read more.
+# Parsing the SQL statement instructions into var obj 'sqlstr'.
 sqlstr = "SELECT email, count FROM Counts ORDER BY count DESC LIMIT 10"
 
+# Execute the SQL instructions for every row and parse the var obj as param into the cur.execute() function.
+# This will be run as a for loop for every row of record.
 for row in cur.execute(sqlstr):
     print(str(row[0]), row[1])
 
 
 cur.close()
 print("")
-    
