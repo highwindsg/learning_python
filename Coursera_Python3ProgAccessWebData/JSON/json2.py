@@ -17,14 +17,15 @@ input = '''[
     }
 ]'''
 
-info = json.loads(input)
+info = json.loads(input)    # Use the '.loads()' func from json library and parse in the var obj 'input'.
+# And then assign it to var 'info'.
 print(type(info))
-print("User count:", len(info))
+print("User count:", len(info)) # From 'info' get its length.
 print("")
 
 for item in info:
-    print("Name:", item["name"])
-    print("Id:", item["id"])
-    print("Attribute of x:", item["x"])
+    print("Name:", item["name"])    # Get the key value of item tag 'name'.
+    print("Id:", item["id"])    # Get the key value of item tag 'id'.
+    print("Attribute of x:", item["x"]) # Get the key value of item tag 'x'.
     print("")
     

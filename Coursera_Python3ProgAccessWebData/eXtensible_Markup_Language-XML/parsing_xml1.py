@@ -3,7 +3,7 @@
 import xml.etree.ElementTree as ET
 
 
-""" A triple quoted string (eg. ''' ... ... ''') in Python is a multi-line string.
+""" A triple single quoted string (eg. ''' ... ... ''') in Python is a multi-line string.
 Below explains how to pull out data from xml.
 """
 

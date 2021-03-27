@@ -39,6 +39,7 @@ print("")
 print("User count:", len(lst))
 
 for item in lst:
+    
     # From the item, use the .find() method and parse in the 'name' tag and
     # display it's value by appending the '.text' option. And print out the Name.
     print("Name", item.find("name").text)
