@@ -20,9 +20,14 @@ for line in fh:
     
     if not line.startswith('From: '):
         continue
-    pieces = line.split()[1]
-    org = pieces.split('@')[1]
+
+    pieces = line.split()[1]    # This will split out the email address.
+    print(pieces)
+
+    org = pieces.split('@')[1]  # This will split out only the email domain name after '@'.
     print(org)
+    print("")
+
     cur.execute('SELECT count FROM Counts WHERE org = ?', (org, ))
     row = cur.fetchone()
     
