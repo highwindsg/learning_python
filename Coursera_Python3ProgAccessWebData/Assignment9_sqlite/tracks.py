@@ -71,27 +71,34 @@ for entry in all:
     rating = lookup(entry, 'Rating')
     length = lookup(entry, 'Total Time')
 
-    if name is None or artist is None or album is None : 
+    if name is None or artist is None or album is None or genre is None : 
         continue
 
-    print(name, artist, album, genre, count, rating, length)
+    #print(name, artist, album, genre, count, rating, length)
 
     cur.execute('''INSERT OR IGNORE INTO Artist (name) 
         VALUES ( ? )''', ( artist, ) )
     cur.execute('SELECT id FROM Artist WHERE name = ? ', (artist, ))
     artist_id = cur.fetchone()[0]
 
-    cur.execute('''INSERT OR IGNORE INTO Album (title, artist_id) 
+    cur.execute('''INSERT OR IGNORE INTO Genre (name)
+        VALUES ( ? )''', ( genre, ) )
+    cur.execute('SELECT id FROM Genre WHERE name = ? ', (genre, ))
+    genre_id = cur.fetchone()[0]
+    
+    cur.execute('''INSERT OR IGNORE INTO Album (title, artist_id)
         VALUES ( ?, ? )''', ( album, artist_id ) )
     cur.execute('SELECT id FROM Album WHERE title = ? ', (album, ))
     album_id = cur.fetchone()[0]
 
-    cur.execute('''INSERT OR IGNORE INTO Genre (name) 
-        VALUES ( ?, ? )''', ( genre, album, artist_id ) )
-    cur.execute('SELECT id FROM Genre WHERE title = ? ', (genre, ))
-    genre_id = cur.fetchone()[0]
-
     cur.execute('''INSERT OR REPLACE INTO Track (title, album_id, genre_id, len, rating, count) 
-        VALUES ( ?, ?, ?, ?, ? )''', ( name, album_id, genre_id, length, rating, count ) )
+        VALUES ( ?, ?, ?, ?, ?, ? )''', ( name, album_id, genre_id, length, rating, count ) )
 
     conn.commit()
+
+sqlstr='SELECT Track.title, Artist.name, Album.title,Genre.name FROM Track JOIN Genre JOIN Album JOIN Artist ON Track.genre_id=Genre.ID and Track.album_id=Album.id AND Album.artist_id=Artist.id ORDER BY Artist.name LIMIT 3'
+
+for row in cur.execute(sqlstr):
+    print(str(row[0]),str(row[1]),str(row[2]),str(row[3]))
+    
+cur.close()
