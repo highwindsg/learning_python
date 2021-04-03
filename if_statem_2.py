@@ -6,3 +6,4 @@ if myColor == "Red":
 if myColor != "Red":
     print("Your Color is NOT Red")
 
+
