@@ -41,9 +41,11 @@ CREATE TABLE Member (
 ''')
 
 fname = input('Enter file name: ')
-if len(fname) < 1:
-    fname = 'roster_data.json'
+if len(fname) < 1:  # This is to assume that the json file is already
+    fname = 'roster_data.json'  # located in the same folder as the
+    # *.py application file.
 
+# A few sample line of the JSON file below.
 #[
 #  [
 #    "Eisha",
