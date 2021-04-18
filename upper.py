@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 print("How are you?")
 feeling = input()
 if feeling.lower() == "great":  # Whatever case the user enters the word, it will be changed
