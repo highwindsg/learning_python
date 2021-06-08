@@ -27,13 +27,20 @@ def bmi(w, h):
     else:   # therefore any numbers greater than 30, will be obese.
         return "Obese"
 
-
-# Alternate clever solution
 """
+# Alternate clever solution
+
 def bmi(weight, height):
     b = weight / height ** 2
     return ['Underweight', 'Normal', 'Overweight', 'Obese'][(b > 30) + (b > 25) + (b > 18.5)]
+
+
+# Alternate lambda solution
+
+bmi = lambda w,h: (lambda b=w/h**2: ["Underweight", "Normal", "Overweight", "Obese"][(18.5<b) + (25<b) + (30<b)])()
+
 """
+
 
 print(bmi(50, 1.80))
 print(bmi(80, 1.80))
