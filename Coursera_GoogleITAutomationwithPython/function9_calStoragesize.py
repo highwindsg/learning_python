@@ -21,7 +21,7 @@ def calculate_storage(filesize):
     # Depending on whether there's a remainder or not, return
     # the total number of bytes required to allocate enough blocks
     # to store your data.
-    if partial_block_remainder > 0:
+    if partial_block_remainder > 0: # if there is a remainder from modulo in line 18.
         return block_size * (full_blocks + 1)
     return full_blocks * block_size
 
