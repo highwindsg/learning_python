@@ -70,3 +70,9 @@ def print_range(start, end):
 
 print_range(1, 5)  # Should print 1 2 3 4 5 (each number on its own line) 
 print("")
+
+
+
+"""
+Note: A while loop is great for performing an action over and over until a condition has changed.
+"""
