@@ -28,4 +28,16 @@ Using the help() func to seek help to understand about a func you have forgotten
 help(function_name)
 """
 
-help(least_difference)
+#help(least_difference)
+print("")
+
+
+
+"""
+Separating a print() func output with a 'sep=' param.
+And ending a print() func output with a 'end=" "' by not going to a new line.
+"""
+
+print(1, 2, 3, sep=" < ")
+print(4, 5, 6, end=" ")
+#print("")
