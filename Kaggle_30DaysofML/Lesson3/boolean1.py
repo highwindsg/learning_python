@@ -51,3 +51,13 @@ print(True or True and False)
 evaluate 'and' before 'or'."""
 print("")
 
+
+
+"""
+Python has a bool() function which turns things into bools.
+"""
+print(bool(1)) # all numbers are treated as true, except 0.
+print(bool(0))
+print(bool("asdf")) # all things are treated as true, except the empty string "".
+print(bool(""))
+print("")
